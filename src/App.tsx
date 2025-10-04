@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -34,7 +34,7 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <BrowserRouter basename="/maria-popescu">
+    <HashRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-brand-bg text-brand-text font-sans">
         <Header />
@@ -44,7 +44,7 @@ function App() {
         <WhatsappButton />
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
