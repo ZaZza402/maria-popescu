@@ -16,7 +16,7 @@ const NotFoundPage: React.FC = () => {
         {/* Logo Section */}
         <div className="mb-8">
           <img 
-            src="/assets/leaves-logo.svg" 
+            src="./assets/leaves-logo.svg" 
             alt="Maria Popescu Psychology Logo" 
             className="w-16 h-16 mx-auto mb-4 opacity-60"
           />

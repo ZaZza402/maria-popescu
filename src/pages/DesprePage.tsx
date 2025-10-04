@@ -20,7 +20,7 @@ const DesprePage: React.FC = () => {
               <div className="relative">
                 <div className="w-80 h-96 lg:w-96 lg:h-[480px] bg-gradient-to-br from-brand-accent to-brand-primary rounded-2xl shadow-soft overflow-hidden">
                   <img 
-                    src="/assets/female_portrait.jpg" 
+                    src="./assets/female_portrait.jpg" 
                     alt="Maria Popescu - Psiholog Clinician"
                     className="w-full h-full object-cover"
                   />

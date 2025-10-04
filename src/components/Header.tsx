@@ -47,7 +47,7 @@ const Header = () => {
             <div className="flex items-center gap-4">
               <div className="h-12 w-12 flex items-center justify-center">
                 <img 
-                  src="/assets/leaves-logo.svg" 
+                  src="./assets/leaves-logo.svg" 
                   alt="Maria Popescu Psychology Logo" 
                   className="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
                 />
@@ -68,15 +68,15 @@ const Header = () => {
           </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm">
-          <a
-            href="/"
+          <Link
+            to="/"
             className={`transition-colors hover:text-brand-accent ${
               isActiveRoute('/') ? 'text-brand-accent font-medium' : 'text-brand-text'
             }`}
             style={{ outline: 'none', boxShadow: 'none' }}
           >
             Acasă
-          </a>
+          </Link>
           <Link
             to="/despre"
             className={`transition-colors hover:text-brand-accent ${
@@ -228,7 +228,7 @@ const Header = () => {
           }}>
             <div style={{ marginBottom: '16px' }}>
               <img 
-                src="/assets/leaves-logo.svg" 
+                src="./assets/leaves-logo.svg" 
                 alt="Maria Popescu Psychology Logo" 
                 style={{ 
                   width: '50px',
