@@ -34,7 +34,7 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/maria-popescu">
       <ScrollToTop />
       <div className="min-h-screen bg-brand-bg text-brand-text font-sans">
         <Header />
