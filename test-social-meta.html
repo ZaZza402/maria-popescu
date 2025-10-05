@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Meta Tags Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .preview-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #C2A678;
+        }
+        .meta-section {
+            margin-bottom: 30px;
+        }
+        .meta-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2A1810;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #C2A678;
+            padding-bottom: 5px;
+        }
+        .meta-item {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        .meta-property {
+            color: #C2A678;
+            font-weight: bold;
+        }
+        .meta-content {
+            color: #2A1810;
+        }
+        .preview-box {
+            border: 2px dashed #C2A678;
+            padding: 20px;
+            margin: 15px 0;
+            background: #fff;
+            border-radius: 8px;
+        }
+        .preview-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #1877f2;
+            margin-bottom: 5px;
+        }
+        .preview-description {
+            color: #606770;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        .preview-url {
+            color: #90949c;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+        .logo-preview {
+            width: 60px;
+            height: 60px;
+            background: url('./public/assets/leaves-logo.svg') center/contain no-repeat;
+            float: right;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #2A1810;">🔍 Social Media Meta Tags Verification</h1>
+    
+    <div class="preview-card">
+        <h2 style="color: #C2A678; margin-top: 0;">📘 Facebook/LinkedIn Preview</h2>
+        <div class="preview-box">
+            <div class="logo-preview"></div>
+            <div class="preview-title">Maria Popescu - Psiholog Clinician | Cabinet de Psihologie</div>
+            <div class="preview-description">Servicii de psihologie clinică cu experiență de peste 10 ani. Terapie individuală, de cuplu și de familie. Programări online și la cabinet în București.</div>
+            <div class="preview-url">yourusername.github.io</div>
+        </div>
+    </div>
+
+    <div class="preview-card">
+        <h2 style="color: #1da1f2; margin-top: 0;">🐦 Twitter Card Preview</h2>
+        <div class="preview-box">
+            <div class="logo-preview"></div>
+            <div class="preview-title">Maria Popescu - Psiholog Clinician</div>
+            <div class="preview-description">Psiholog clinician și psihoterapeut cognitiv-comportamental. Consiliere psihologică profesională pentru copii și adulți.</div>
+            <div class="preview-url">yourusername.github.io</div>
+        </div>
+    </div>
+
+    <div class="preview-card">
+        <h2 style="color: #25d366; margin-top: 0;">💬 WhatsApp Preview</h2>
+        <div class="preview-box">
+            <div class="logo-preview"></div>
+            <div class="preview-title">Maria Popescu - Psiholog Clinician | Cabinet de Psihologie</div>
+            <div class="preview-description">Servicii de psihologie clinică cu experiență de peste 10 ani...</div>
+            <div class="preview-url">yourusername.github.io</div>
+        </div>
+    </div>
+
+    <div class="meta-section">
+        <div class="meta-title">🏷️ Open Graph Tags (Facebook, LinkedIn, WhatsApp)</div>
+        <div class="meta-item">
+            <span class="meta-property">og:type:</span> 
+            <span class="meta-content">website</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">og:title:</span> 
+            <span class="meta-content">Maria Popescu - Psiholog Clinician | Cabinet de Psihologie</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">og:description:</span> 
+            <span class="meta-content">Servicii de psihologie clinică cu experiență de peste 10 ani...</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">og:image:</span> 
+            <span class="meta-content">./assets/leaves-logo.svg</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">og:site_name:</span> 
+            <span class="meta-content">Maria Popescu - Psiholog Clinician</span>
+        </div>
+    </div>
+
+    <div class="meta-section">
+        <div class="meta-title">🐦 Twitter Card Tags</div>
+        <div class="meta-item">
+            <span class="meta-property">twitter:card:</span> 
+            <span class="meta-content">summary_large_image</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">twitter:title:</span> 
+            <span class="meta-content">Maria Popescu - Psiholog Clinician</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">twitter:image:</span> 
+            <span class="meta-content">./assets/leaves-logo.svg</span>
+        </div>
+    </div>
+
+    <div class="meta-section">
+        <div class="meta-title">🔍 Structured Data (JSON-LD)</div>
+        <div class="meta-item">
+            <span class="meta-property">@type:</span> 
+            <span class="meta-content">ProfessionalService</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">name:</span> 
+            <span class="meta-content">Maria Popescu - Psiholog Clinician</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-property">serviceType:</span> 
+            <span class="meta-content">Consiliere psihologică, Psihoterapie...</span>
+        </div>
+    </div>
+
+    <div class="preview-card">
+        <h2 style="color: #2A1810; margin-top: 0;">✅ Testing Checklist</h2>
+        <ul style="line-height: 1.6;">
+            <li><strong>Facebook Debugger:</strong> <a href="https://developers.facebook.com/tools/debug/" target="_blank">Test your URL here</a></li>
+            <li><strong>Twitter Card Validator:</strong> <a href="https://cards-dev.twitter.com/validator" target="_blank">Test your Twitter cards</a></li>
+            <li><strong>LinkedIn Inspector:</strong> <a href="https://www.linkedin.com/post-inspector/" target="_blank">Test LinkedIn sharing</a></li>
+            <li><strong>WhatsApp:</strong> Send the URL in a WhatsApp chat to see the preview</li>
+            <li><strong>Google Rich Results:</strong> <a href="https://search.google.com/test/rich-results" target="_blank">Test structured data</a></li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #C2A678; color: white; border-radius: 10px;">
+        <h3 style="margin: 0;">🎉 Social Media Sharing is Ready!</h3>
+        <p style="margin: 10px 0 0 0;">Your website now has comprehensive social media metadata for rich previews across all major platforms.</p>
+    </div>
+</body>
+</html>

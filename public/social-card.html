@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Share Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1200px;
+            height: 630px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #F8F5F0 0%, #ffffff 100%);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .card {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(194, 166, 120, 0.2);
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background-image: url('./assets/leaves-logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+        }
+        
+        .content {
+            text-align: left;
+        }
+        
+        .name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            font-weight: 600;
+            color: #C2A678;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #2A1810;
+            margin: 10px 0 0 0;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            color: #6B7280;
+            margin: 15px 0 0 0;
+            font-weight: 300;
+        }
+        
+        .accent-line {
+            width: 80px;
+            height: 3px;
+            background: #C2A678;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo"></div>
+        <div class="content">
+            <h1 class="name">Maria Popescu</h1>
+            <div class="accent-line"></div>
+            <p class="title">Psiholog Clinician</p>
+            <p class="subtitle">Cabinet de Psihologie</p>
+        </div>
+    </div>
+</body>
+</html>
