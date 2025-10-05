@@ -8,6 +8,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    // Target modern browsers to reduce polyfills
+    target: 'es2018',
     // Enable default minification
     minify: true,
     rollupOptions: {
@@ -16,7 +18,6 @@ export default defineConfig({
           // Separate vendor chunks for better caching
           'react-vendor': ['react', 'react-dom'],
           'router-vendor': ['react-router-dom'],
-          'animation-vendor': ['framer-motion'],
         },
       },
     },

@@ -1,17 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import OptimizedImage from '../components/OptimizedImage';
 
 const HomePage: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="min-h-screen"
-    >
+    <div className="min-h-screen animate-fade-in-up">
       {/* Hero Section with Professional Photo */}
       <section className="relative bg-gradient-to-br from-brand-light to-white py-16 lg:py-24">
         <div className="container mx-auto max-w-6xl px-4">
@@ -498,7 +491,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 };
 

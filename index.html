@@ -16,12 +16,27 @@
     <!-- Load fonts with display=swap for better CLS -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Critical Resource Preloading -->
-    <link rel="preload" href="./assets/female_portrait.jpg" as="image" type="image/jpeg">
+    <!-- Critical Resource Preloading for LCP -->
+    <link rel="preload" href="./assets/female_portrait.jpg" as="image" type="image/jpeg" fetchpriority="high">
     <link rel="prefetch" href="./assets/leaves-logo.svg" as="image" type="image/svg+xml">
     
-    <!-- Font Awesome Icons - with preload -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Font Awesome Icons - async load to prevent render blocking -->
+    <script>
+      // Async load Font Awesome to prevent render blocking
+      function loadFontAwesome() {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      }
+      // Load after DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadFontAwesome);
+      } else {
+        loadFontAwesome();
+      }
+    </script>
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
     
     <title>Maria Popescu - Psiholog Clinician</title>
