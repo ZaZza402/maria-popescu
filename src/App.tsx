@@ -9,10 +9,8 @@ import ScrollToTop from './components/ScrollToTop';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ServiciiPage = lazy(() => import('./pages/ServiciiPage'));
 const DesprePage = lazy(() => import('./pages/DesprePage'));
-const FaqPage = lazy(() => import('./pages/FaqPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const ArticolePage = lazy(() => import('./pages/ArticolePage'));
-const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
@@ -36,8 +34,6 @@ function AnimatedRoutes() {
         <Route path="/despre" element={<DesprePage />} />
         <Route path="/servicii" element={<ServiciiPage />} />
         <Route path="/articole" element={<ArticolePage />} />
-        <Route path="/galerie" element={<GalleryPage />} />
-        <Route path="/faq" element={<FaqPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="*" element={<NotFoundPage />} />

@@ -104,24 +104,6 @@ const Header = () => {
           >
             Articole
           </Link>
-          <Link
-            to="/galerie"
-            className={`transition-colors hover:text-brand-accent ${
-              isActiveRoute('/galerie') ? 'text-brand-accent font-medium' : 'text-brand-text'
-            }`}
-            style={{ outline: 'none', boxShadow: 'none' }}
-          >
-            Galerie
-          </Link>
-          <Link
-            to="/faq"
-            className={`transition-colors hover:text-brand-accent ${
-              isActiveRoute('/faq') ? 'text-brand-accent font-medium' : 'text-brand-text'
-            }`}
-            style={{ outline: 'none', boxShadow: 'none' }}
-          >
-            FAQ
-          </Link>
         </nav>
 
         {/* Contact Info & Mobile Menu Toggle */}
@@ -286,7 +268,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{ 
                   display: 'block', 
-                  padding: '12px 20px', 
+                  padding: '16px 20px', 
                   fontSize: '18px', 
                   fontWeight: '500', 
                   color: '#2A1810', 
@@ -315,7 +297,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{ 
                   display: 'block', 
-                  padding: '12px 20px', 
+                  padding: '16px 20px', 
                   fontSize: '18px', 
                   fontWeight: '500', 
                   color: '#2A1810', 
@@ -344,7 +326,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{ 
                   display: 'block', 
-                  padding: '12px 20px', 
+                  padding: '16px 20px', 
                   fontSize: '18px', 
                   fontWeight: '500', 
                   color: '#2A1810', 
@@ -368,67 +350,9 @@ const Header = () => {
               >
                 Articole
               </Link>
-              <Link 
-                to="/galerie" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                style={{ 
-                  display: 'block', 
-                  padding: '12px 20px', 
-                  fontSize: '18px', 
-                  fontWeight: '500', 
-                  color: '#2A1810', 
-                  textAlign: 'center', 
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  opacity: '0',
-                  animation: 'fadeInUp 0.5s ease 1.05s forwards',
-                  transform: 'translateY(20px)'
-                }}
-                onMouseEnter={(e) => {
-                  const target = e.target as HTMLElement;
-                  target.style.color = '#C2A678';
-                  target.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  const target = e.target as HTMLElement;
-                  target.style.color = '#2A1810';
-                  target.style.transform = 'translateY(0px)';
-                }}
-              >
-                Galerie
-              </Link>
-              <Link 
-                to="/faq" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                style={{ 
-                  display: 'block', 
-                  padding: '12px 20px', 
-                  fontSize: '18px', 
-                  fontWeight: '500', 
-                  color: '#2A1810', 
-                  textAlign: 'center', 
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  opacity: '0',
-                  animation: 'fadeInUp 0.5s ease 1.1s forwards',
-                  transform: 'translateY(20px)'
-                }}
-                onMouseEnter={(e) => {
-                  const target = e.target as HTMLElement;
-                  target.style.color = '#C2A678';
-                  target.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  const target = e.target as HTMLElement;
-                  target.style.color = '#2A1810';
-                  target.style.transform = 'translateY(0px)';
-                }}
-              >
-                Întrebări Frecvente
-              </Link>
               
-              {/* Contact CTA */}
-              <div style={{ paddingTop: '16px' }}>
+              {/* Contact CTA with improved spacing */}
+              <div style={{ paddingTop: '32px' }}>
                 <Link 
                   to="/contact" 
                   onClick={() => setIsMobileMenuOpen(false)}

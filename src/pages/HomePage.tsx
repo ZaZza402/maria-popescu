@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import OptimizedImage from '../components/OptimizedImage';
+import ElegantCarousel from '../components/ElegantCarousel';
 
 const HomePage: React.FC = () => {
   return (
@@ -198,87 +199,8 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Gallery Preview Section */}
-      <section className="py-16 lg:py-20 bg-gradient-to-br from-brand-light to-white">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-serif text-brand-primary mb-4">
-              Spațiile Noastre
-            </h2>
-            <p className="text-lg text-brand-text/80 max-w-2xl mx-auto">
-              Descoperiți atmosfera caldă și profesională a cabinetului nostru de psihoterapie
-            </p>
-          </div>
-          
-          <div className="relative overflow-hidden rounded-xl">
-            {/* Image Carousel */}
-            <div className="flex transition-transform duration-700 ease-in-out" style={{transform: `translateX(0%)`}}>
-              <div className="w-full flex-shrink-0 relative">
-                <div className="grid md:grid-cols-3 gap-4 h-96">
-                  <div className="relative overflow-hidden rounded-lg group">
-                    <img 
-                      src="./assets/female_portrait.jpg" 
-                      alt="Sala principală de consultații"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                      <div className="text-white">
-                        <h3 className="font-semibold text-lg">Sala de Consultații</h3>
-                        <p className="text-sm opacity-90">Spațiu confortabil pentru sesiuni individuale</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="relative overflow-hidden rounded-lg group">
-                    <img 
-                      src="./assets/female_portrait.jpg" 
-                      alt="Zona de relaxare"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                      <div className="text-white">
-                        <h3 className="font-semibold text-lg">Zona de Relaxare</h3>
-                        <p className="text-sm opacity-90">Spațiu dedicat tehnicilor de relaxare</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="relative overflow-hidden rounded-lg group">
-                    <img 
-                      src="./assets/female_portrait.jpg" 
-                      alt="Zona de joacă pentru copii"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                      <div className="text-white">
-                        <h3 className="font-semibold text-lg">Zona pentru Copii</h3>
-                        <p className="text-sm opacity-90">Jocuri și activități terapeutice</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Navigation Dots */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-              <button className="w-3 h-3 rounded-full bg-white/80 transition-all duration-300"></button>
-              <button className="w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
-              <button className="w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
-            </div>
-          </div>
-          
-          <div className="text-center mt-8">
-            <Link 
-              to="/galerie" 
-              className="inline-flex items-center gap-2 px-8 py-3 bg-brand-accent text-white hover:bg-brand-primary rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
-            >
-              <span>Vezi Galeria Completă</span>
-              <i className="fas fa-arrow-right text-sm"></i>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Elegant Gallery Carousel */}
+      <ElegantCarousel />
 
       {/* Articles Section */}
       <section className="py-16 lg:py-20 bg-white">
