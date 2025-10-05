@@ -1,35 +1,50 @@
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsappButton from './components/WhatsappButton';
 import ScrollToTop from './components/ScrollToTop';
-import HomePage from './pages/HomePage';
-import ServiciiPage from './pages/ServiciiPage';
-import DesprePage from './pages/DesprePage';
-import FaqPage from './pages/FaqPage';
-import ContactPage from './pages/ContactPage';
-import ArticolePage from './pages/ArticolePage';
-import GalleryPage from './pages/GalleryPage';
-import PrivacyPage from './pages/PrivacyPage';
-import NotFoundPage from './pages/NotFoundPage';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ServiciiPage = lazy(() => import('./pages/ServiciiPage'));
+const DesprePage = lazy(() => import('./pages/DesprePage'));
+const FaqPage = lazy(() => import('./pages/FaqPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ArticolePage = lazy(() => import('./pages/ArticolePage'));
+const GalleryPage = lazy(() => import('./pages/GalleryPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-light to-white">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-4 border-brand-accent border-t-transparent mx-auto mb-4"></div>
+      <p className="text-brand-text/80">Se încarcă...</p>
+    </div>
+  </div>
+);
 
 function AnimatedRoutes() {
   const location = useLocation();
   
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/despre" element={<DesprePage />} />
-        <Route path="/servicii" element={<ServiciiPage />} />
-        <Route path="/articole" element={<ArticolePage />} />
-        <Route path="/galerie" element={<GalleryPage />} />
-        <Route path="/faq" element={<FaqPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/despre" element={<DesprePage />} />
+          <Route path="/servicii" element={<ServiciiPage />} />
+          <Route path="/articole" element={<ArticolePage />} />
+          <Route path="/galerie" element={<GalleryPage />} />
+          <Route path="/faq" element={<FaqPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }

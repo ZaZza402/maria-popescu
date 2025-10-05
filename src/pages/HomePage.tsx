@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import OptimizedImage from '../components/OptimizedImage';
 
 const HomePage: React.FC = () => {
   return (
@@ -52,10 +53,14 @@ const HomePage: React.FC = () => {
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="w-80 h-96 lg:w-96 lg:h-[480px] bg-gradient-to-br from-brand-accent to-brand-primary rounded-2xl shadow-soft overflow-hidden">
-                  <img 
+                  <OptimizedImage
                     src="./assets/female_portrait.jpg" 
                     alt="Maria Popescu - Psiholog și Psihoterapeut"
                     className="w-full h-full object-cover"
+                    priority={true}
+                    loading="eager"
+                    width={384}
+                    height={480}
                   />
                 </div>
                 {/* Decorative elements */}
