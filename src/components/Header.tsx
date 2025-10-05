@@ -49,18 +49,18 @@ const Header = () => {
                 <img 
                   src="./assets/leaves-logo.svg" 
                   alt="Maria Popescu Psychology Logo" 
-                  className="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
+                  className="h-12 w-12 transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
               
               <div className="block">
                 {/* Main Name - Dancing Script for entire name with brand color */}
-                <div className="text-brand-accent" style={{fontFamily: 'Dancing Script, cursive', fontSize: '1.5em'}}>
+                <div className="text-brand-accent" style={{fontFamily: 'Dancing Script, cursive', fontSize: '2em'}}>
                   Maria Popescu
                 </div>
                 
                 {/* Subtitle - smaller, more structured */}
-                <div className="text-[#6B7280] text-[10px] font-medium uppercase tracking-[0.2em] mt-0.5" style={{fontFamily: 'Inter, sans-serif'}}>
+                <div className="text-[#6B7280] text-[8px] font-medium uppercase tracking-[0.2em] mt-0.5" style={{fontFamily: 'Inter, sans-serif'}}>
                   Psiholog Clinician
                 </div>
               </div>
@@ -103,6 +103,15 @@ const Header = () => {
             style={{ outline: 'none', boxShadow: 'none' }}
           >
             Articole
+          </Link>
+          <Link
+            to="/galerie"
+            className={`transition-colors hover:text-brand-accent ${
+              isActiveRoute('/galerie') ? 'text-brand-accent font-medium' : 'text-brand-text'
+            }`}
+            style={{ outline: 'none', boxShadow: 'none' }}
+          >
+            Galerie
           </Link>
           <Link
             to="/faq"
@@ -231,8 +240,8 @@ const Header = () => {
                 src="./assets/leaves-logo.svg" 
                 alt="Maria Popescu Psychology Logo" 
                 style={{ 
-                  width: '50px',
-                  height: '50px',
+                  width: '60px',
+                  height: '60px',
                   margin: '0 auto', 
                   display: 'block'
                 }}
@@ -360,6 +369,35 @@ const Header = () => {
                 Articole
               </Link>
               <Link 
+                to="/galerie" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                style={{ 
+                  display: 'block', 
+                  padding: '12px 20px', 
+                  fontSize: '18px', 
+                  fontWeight: '500', 
+                  color: '#2A1810', 
+                  textAlign: 'center', 
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease',
+                  opacity: '0',
+                  animation: 'fadeInUp 0.5s ease 1.05s forwards',
+                  transform: 'translateY(20px)'
+                }}
+                onMouseEnter={(e) => {
+                  const target = e.target as HTMLElement;
+                  target.style.color = '#C2A678';
+                  target.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  const target = e.target as HTMLElement;
+                  target.style.color = '#2A1810';
+                  target.style.transform = 'translateY(0px)';
+                }}
+              >
+                Galerie
+              </Link>
+              <Link 
                 to="/faq" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{ 
@@ -407,7 +445,7 @@ const Header = () => {
                     boxShadow: '0 8px 12px -3px rgba(0, 0, 0, 0.1)',
                     transition: 'all 0.4s ease',
                     opacity: '0',
-                    animation: 'smoothZoomIn 0.8s ease 1.3s forwards',
+                    animation: 'smoothZoomIn 0.8s ease 1.35s forwards',
                     transform: 'scale(0.8)'
                   }}
                   onMouseEnter={(e) => {

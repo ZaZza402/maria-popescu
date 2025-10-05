@@ -1,5 +1,19 @@
 import { Link } from 'react-router-dom';
 
+/*
+ * Footer Brand Section CSS Variables for Size Control:
+ * 
+ * --footer-brand-gap: Gap between logo and text (default: 12px)
+ * --footer-logo-size: Logo width and height (default: 32px)
+ * --footer-name-size: "Maria Popescu" font size (default: 1.125rem)
+ * --footer-name-line-height: Name line height (default: 1.4)
+ * --footer-subtitle-size: "Psiholog Clinician" font size (default: 0.75rem)
+ * --footer-subtitle-spacing: Subtitle letter spacing (default: 0.1em)
+ * 
+ * Usage: Add these CSS variables to your global CSS or component styles
+ * Example: :root { --footer-logo-size: 40px; --footer-name-size: 1.25rem; }
+ */
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-brand-light to-white border-t border-brand-accent/20 py-12">
@@ -8,17 +22,33 @@ const Footer = () => {
           
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center mb-4" style={{gap: 'var(--footer-brand-gap, 12px)'}}>
               <img 
                 src="./assets/leaves-logo.svg" 
                 alt="Maria Popescu Psychology Logo" 
-                className="w-8 h-8"
+                style={{
+                  width: 'var(--footer-logo-size, 32px)',
+                  height: 'var(--footer-logo-size, 32px)'
+                }}
               />
               <div>
-                <h3 className="text-brand-accent font-semibold" style={{fontFamily: 'Dancing Script, cursive'}}>
+                <h3 
+                  className="text-brand-accent font-semibold" 
+                  style={{
+                    fontFamily: 'Dancing Script, cursive',
+                    fontSize: 'var(--footer-name-size, 1.325rem)',
+                    lineHeight: 'var(--footer-name-line-height, 1.4)'
+                  }}
+                >
                   Maria Popescu
                 </h3>
-                <p className="text-brand-primary text-xs uppercase tracking-wide">
+                <p 
+                  className="text-brand-primary uppercase tracking-wide" 
+                  style={{
+                    fontSize: 'var(--footer-subtitle-size, 0.5rem)',
+                    letterSpacing: 'var(--footer-subtitle-spacing, 0.1em)'
+                  }}
+                >
                   Psiholog Clinician
                 </p>
               </div>

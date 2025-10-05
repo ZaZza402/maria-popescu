@@ -10,6 +10,7 @@ import DesprePage from './pages/DesprePage';
 import FaqPage from './pages/FaqPage';
 import ContactPage from './pages/ContactPage';
 import ArticolePage from './pages/ArticolePage';
+import GalleryPage from './pages/GalleryPage';
 import PrivacyPage from './pages/PrivacyPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -23,6 +24,7 @@ function AnimatedRoutes() {
         <Route path="/despre" element={<DesprePage />} />
         <Route path="/servicii" element={<ServiciiPage />} />
         <Route path="/articole" element={<ArticolePage />} />
+        <Route path="/galerie" element={<GalleryPage />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />

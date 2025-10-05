@@ -11,62 +11,6 @@ const DesprePage: React.FC = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="min-h-screen"
     >
-      {/* Hero Section with Professional Photo */}
-      <section className="relative bg-gradient-to-br from-brand-light to-white py-16 lg:py-24">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Photo Section */}
-            <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="w-80 h-96 lg:w-96 lg:h-[480px] bg-gradient-to-br from-brand-accent to-brand-primary rounded-2xl shadow-soft overflow-hidden">
-                  <img 
-                    src="./assets/female_portrait.jpg" 
-                    alt="Maria Popescu - Psiholog Clinician"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand-accent/20 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-primary/20 rounded-full blur-xl"></div>
-              </div>
-            </div>
-            
-            {/* Content Section */}
-            <div className="order-2 lg:order-1">
-              <h1 className="text-4xl lg:text-6xl mb-4">
-                <span className="text-brand-accent font-light" style={{fontFamily: 'Playfair Display, Georgia, serif'}}>Maria </span>
-                <span className="text-brand-accent font-light" style={{fontFamily: 'Playfair Display, Georgia, serif'}}>Popescu</span>
-              </h1>
-              <div className="text-lg text-gray-600 font-medium uppercase tracking-[0.2em] mb-6" style={{fontFamily: 'Inter, sans-serif'}}>
-                PSIHOLOG CLINICIAN
-              </div>
-              <div className="text-lg text-brand-text/80 mb-8">
-                Psihoterapeut Cognitiv-Comportamental
-              </div>
-              <p className="text-lg text-brand-text/80 mb-8 leading-relaxed">
-                Sunt psiholog clinician și psihoterapeut cognitiv-comportamental, cu o vastă experiență 
-                în lucrul cu copii și adulți. Îmi doresc să creez un spațiu sigur, cald și confidențial, 
-                unde fiecare persoană să se simtă ascultată și înțeleasă.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  to="/contact" 
-                  className="px-10 py-4 bg-brand-accent text-white hover:bg-brand-primary hover:shadow-xl hover:scale-[1.02] rounded-lg font-bold text-center transition-all duration-300 shadow-lg text-lg"
-                >
-                  Programează Consultație →
-                </Link>
-                <Link 
-                  to="/servicii" 
-                  className="px-6 py-3 border border-brand-accent/60 text-brand-primary hover:border-brand-accent hover:text-brand-accent rounded-lg font-medium text-center transition-colors text-sm"
-                >
-                  Vezi Serviciile
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Me Section */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-brand-light to-white">
         <div className="container mx-auto max-w-6xl px-4">
