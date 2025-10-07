@@ -219,17 +219,17 @@ const HomePage: React.FC = () => {
               {
                 title: 'Gestionarea Anxietății',
                 excerpt: 'Tehnici practice pentru reducerea anxietății în viața de zi cu zi',
-                date: '15 Ian 2024'
+                date: '15 Aug 2025'
               },
               {
                 title: 'Importanța Autoingrijirii',
                 excerpt: 'Cum să îți acorzi timpul necesar pentru menținerea echilibrului',
-                date: '8 Ian 2024'
+                date: '8 Sept 2025'
               },
               {
                 title: 'Comunicarea Eficientă',
                 excerpt: 'Îmbunătățește-ți relațiile prin tehnici de comunicare',
-                date: '2 Ian 2024'
+                date: '2 Oct 2025'
               }
             ].map((article, index) => (
               <article key={index} className="bg-gradient-to-br from-brand-light to-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-out cursor-pointer border border-brand-accent/20">

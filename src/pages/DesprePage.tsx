@@ -11,6 +11,28 @@ const DesprePage: React.FC = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="min-h-screen"
     >
+      {/* Hero Section with Portrait */}
+      <section className="pt-20 pb-12 bg-gradient-to-br from-brand-light to-white">
+        <div className="container mx-auto max-w-4xl px-4 text-center">
+          <div className="mb-8">
+            <img 
+              src="./assets/female_portrait.jpg" 
+              alt="Maria Popescu - Psiholog Clinician" 
+              className="w-48 h-48 lg:w-56 lg:h-56 rounded-full mx-auto object-cover shadow-2xl border-4 border-white ring-4 ring-brand-accent/20"
+            />
+          </div>
+          <h1 className="text-4xl lg:text-5xl font-serif text-brand-primary mb-4">
+            Maria Popescu
+          </h1>
+          <p className="text-xl lg:text-2xl text-brand-accent font-medium mb-2">
+            Psiholog Clinician
+          </p>
+          <p className="text-lg text-brand-text/80 max-w-2xl mx-auto">
+            Psihoterapeut cognitiv-comportamental cu experiență în lucrul cu copii și adulți
+          </p>
+        </div>
+      </section>
+
       {/* About Me Section */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-brand-light to-white">
         <div className="container mx-auto max-w-6xl px-4">

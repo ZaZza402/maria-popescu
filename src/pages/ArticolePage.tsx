@@ -33,7 +33,7 @@ const ArticolePage: React.FC = () => {
                 Descoperă tehnici practice pentru reducerea anxietății și 
                 îmbunătățirea calității vieții tale.
               </p>
-              <span className="text-sm text-brand-accent font-medium">15 ianuarie 2024</span>
+              <span className="text-sm text-brand-accent font-medium">15 August 2025</span>
             </div>
           </article>
 
@@ -48,7 +48,7 @@ const ArticolePage: React.FC = () => {
                 Învață să îți acorzi timpul și atenția necesare pentru 
                 menținerea sănătății mentale.
               </p>
-              <span className="text-sm text-brand-accent font-medium">8 ianuarie 2024</span>
+              <span className="text-sm text-brand-accent font-medium">8 Septembrie 2025</span>
             </div>
           </article>
 
@@ -63,7 +63,7 @@ const ArticolePage: React.FC = () => {
                 Îmbunătățește-ți relațiile prin dezvoltarea abilităților 
                 de comunicare eficientă.
               </p>
-              <span className="text-sm text-brand-accent">2 ianuarie 2024</span>
+              <span className="text-sm text-brand-accent">2 Octombrie 2025</span>
             </div>
           </article>
 
@@ -78,7 +78,7 @@ const ArticolePage: React.FC = () => {
                 Explorează beneficiile mindfulness-ului și cum să îl 
                 integrezi în rutina ta zilnică.
               </p>
-              <span className="text-sm text-brand-accent">28 decembrie 2023</span>
+              <span className="text-sm text-brand-accent">28 decembrie 2025</span>
             </div>
           </article>
         </div>
