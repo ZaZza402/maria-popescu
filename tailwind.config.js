@@ -20,13 +20,16 @@ export default {
         }
       },
       fontFamily: {
-        // Reliable Typography System with proper fallbacks
+        // Complete Typography System with all project fonts
         sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Arial', 'sans-serif'],
-        serif: ['Playfair Display', 'DM Serif Text', 'Times New Roman', 'Georgia', 'serif'],
+        serif: ['Playfair Display', 'DM Serif Text', 'Georgia', 'Times New Roman', 'serif'],
         signature: ['Brittany Signature', 'Brush Script MT', 'Segoe Script', 'cursive'],
-        display: ['Playfair Display', 'DM Serif Text', 'Times New Roman', 'Georgia', 'serif'],
+        display: ['Playfair Display', 'DM Serif Text', 'Georgia', 'Times New Roman', 'serif'],
         script: ['Brittany Signature', 'Brush Script MT', 'Segoe Script', 'cursive'],
-        amsterdam: ['Amsterdam Handwriting', 'Brush Script MT', 'Segoe Script', 'cursive']
+        amsterdam: ['Amsterdam Handwriting', 'Brush Script MT', 'Segoe Script', 'cursive'],
+        georgia: ['Georgia', 'Times New Roman', 'serif'],
+        dmserif: ['DM Serif Text', 'Georgia', 'Times New Roman', 'serif'],
+        felix: ['Felix Titling', 'Georgia', 'Times New Roman', 'serif']
       },
       boxShadow: {
         soft: '0 10px 30px rgba(31,60,77,0.08)'
