@@ -257,7 +257,7 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
               
-              <blockquote className="hero-text text-sm lg:text-base text-brand-text/80 mb-8 leading-relaxed italic border-l-2 border-brand-primary pl-4 breathing-element">
+              <blockquote className="hero-text text-base lg:text-lg text-brand-text/80 mb-8 leading-relaxed italic border-l-2 border-brand-primary pl-4 breathing-element">
                 "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental, cu o vastă experiență în lucrul cu copii și adulți în domeniul evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald și confidențial, unde fiecare persoană să se simtă ascultată și înțeleasă.
                 <br /><br />
                 Sunt dedicată sprijinirii clienților în explorarea emoțiilor, descoperirea de sine și dezvoltarea unor modalități sănătoase de a face față provocărilor vieții, cum ar fi anxietatea, depresia sau tulburările de alimentație. Obiectivul meu este să ofer suport empatic și să contribui la redescoperirea echilibrului și a resurselor interioare."
@@ -531,10 +531,10 @@ const HomePage: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold text-brand-text mb-3">
+              <h3 className="text-xl lg:text-2xl font-bold text-brand-text mb-3">
                 Ce implică evaluarea psihologică la copil
               </h3>
-              <p className="text-brand-text/70 text-sm mb-4 leading-relaxed">
+              <p className="text-brand-text/70 text-base lg:text-lg mb-4 leading-relaxed">
                 Evaluarea psihologică la copil este un proces prin care psihologul explorează dezvoltarea emoțională, cognitivă, comportamentală și socială a copilului. Scopul ei este să înțeleagă cum gândește, cum simte și cum reacționează copilul...
               </p>
               <Link 
@@ -554,10 +554,10 @@ const HomePage: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold text-brand-text mb-3">
+              <h3 className="text-xl lg:text-2xl font-bold text-brand-text mb-3">
                 Tulburarea de alimentație compulsivă
               </h3>
-              <p className="text-brand-text/70 text-sm mb-4 leading-relaxed">
+              <p className="text-brand-text/70 text-base lg:text-lg mb-4 leading-relaxed">
                 Mâncatul compulsiv pe fond emoțional reprezintă o strategie disfuncțională de reglare emoțională, frecvent întâlnită la femeile tinere și adulte, care recurg la hrană pentru a face față stresului...
               </p>
               <Link 
@@ -577,10 +577,10 @@ const HomePage: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <h3 className="text-lg lg:text-xl font-bold text-brand-text mb-3">
+              <h3 className="text-xl lg:text-2xl font-bold text-brand-text mb-3">
                 Igiena somnului – cum ne putem odihni suficient și bine
               </h3>
-              <p className="text-brand-text/70 text-sm mb-4 leading-relaxed">
+              <p className="text-brand-text/70 text-base lg:text-lg mb-4 leading-relaxed">
                 Somnul odihnitor este esențial pentru echilibrul fizic, emoțional și cognitiv. Pentru a adormi ușor și a ne trezi revigorați, este important să respectăm o serie de reguli de igienă a somnului...
               </p>
               <Link 

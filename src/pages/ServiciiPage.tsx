@@ -189,14 +189,14 @@ const ServiciiPage: React.FC = () => {
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <span className="text-sm">{service.duration}</span>
+                            <span className="text-base">{service.duration}</span>
                           </div>
                           
                           <div className="flex items-center gap-2">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
-                            <span className="text-sm">Tarif {service.price}</span>
+                            <span className="text-base">Tarif {service.price}</span>
                           </div>
                         </div>
                       </div>
@@ -208,7 +208,7 @@ const ServiciiPage: React.FC = () => {
                         </div>
                         
                         <div className="mt-3 lg:mt-4">
-                          <button className="inline-flex items-center gap-2 text-brand-text/70 hover:text-brand-accent transition-colors duration-300 font-medium text-sm">
+                          <button className="inline-flex items-center gap-2 text-brand-text/70 hover:text-brand-accent transition-colors duration-300 font-medium text-base">
                             <span>Solicită programare</span>
                             <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

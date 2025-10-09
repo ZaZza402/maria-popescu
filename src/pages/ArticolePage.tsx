@@ -103,10 +103,10 @@ const ArticolePage: React.FC = () => {
                     className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                   />
                 </div>
-                <h2 className="text-xl lg:text-2xl font-serif text-brand-text mb-4">
+                <h2 className="text-2xl lg:text-3xl xl:text-4xl font-serif text-brand-text mb-4">
                   Ce implică evaluarea psihologică la copil
                 </h2>
-                <div className="text-sm lg:text-base text-brand-text/80 leading-relaxed">
+                <div className="text-base lg:text-lg text-brand-text/80 leading-relaxed">
                   <p>
                     Evaluarea psihologică la copil este un proces prin care psihologul explorează dezvoltarea emoțională, cognitivă, comportamentală și socială a copilului.
                   </p>
@@ -117,7 +117,7 @@ const ArticolePage: React.FC = () => {
                     Evaluarea nu este un „test care se trece sau se pică", ci o modalitate de a înțelege unicitatea fiecărui copil.
                   </p>
                   
-                  <h3 className="text-lg font-bold text-brand-text mt-4 mb-3">Când este recomandată evaluarea psihologică?</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-brand-text mt-4 mb-3">Când este recomandată evaluarea psihologică?</h3>
                   
                   <div className="mt-4 space-y-4">
                     <div>
@@ -177,10 +177,10 @@ const ArticolePage: React.FC = () => {
                   className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <h2 className="text-xl lg:text-2xl font-serif text-brand-text mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-serif text-brand-text mb-4">
                 Tulburarea de alimentație compulsivă
               </h2>
-              <div className="text-sm lg:text-base text-brand-text/80 leading-relaxed">
+              <div className="text-base lg:text-lg text-brand-text/80 leading-relaxed">
                   <p className="mb-4">
                     Mâncatul compulsiv pe fond emoțional (emotional eating) reprezintă o strategie disfuncțională de reglare emoțională, frecvent întâlnită la femeile tinere și adulte, care recurg la hrană pentru a face față stresului, anxietății, tristeții sau sentimentelor de vinovăție.
                   </p>
@@ -188,21 +188,21 @@ const ArticolePage: React.FC = () => {
                     În spatele acestui comportament se află adesea mecanisme de apărare și distorsiuni cognitive ce mențin un cerc vicios între emoții, alimentație și imagine corporală.
                   </p>
                   
-                  <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">2. Mecanisme psihologice implicate</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-brand-text mt-6 mb-4">2. Mecanisme psihologice implicate</h3>
                   
-                  <h4 className="text-lg font-semibold text-brand-text mt-4 mb-2">a. Reglarea emoțională prin alimentație</h4>
+                  <h4 className="text-lg lg:text-xl font-semibold text-brand-text mt-4 mb-2">a. Reglarea emoțională prin alimentație</h4>
                   <p className="mb-2">Mâncarea devine un mod de calmare temporară a tensiunii interne.</p>
                   <p className="mb-2">Dopamina și serotonina eliberate prin alimente bogate în carbohidrați și grăsimi induc o stare de confort pe termen scurt.</p>
                   <p className="mb-4">Însă, ulterior apare vinovăția, care intensifică ciclul anxietate–mâncat compulsiv–autocritică.</p>
                   
-                  <h4 className="text-lg font-semibold text-brand-text mt-4 mb-2">b. Anxietatea în situații stresante</h4>
+                  <h4 className="text-lg lg:text-xl font-semibold text-brand-text mt-4 mb-2">b. Anxietatea în situații stresante</h4>
                   <p className="mb-2">Femeile care au un nivel crescut de anxietate pot simți pierderea controlului asupra corpului și alimentației.</p>
                   <p className="mb-2">În TCC, această pierdere de control este legată de credințe disfuncționale precum:</p>
                   <p className="ml-4 mb-1">„Dacă nu sunt slabă, nu merit iubire."</p>
                   <p className="ml-4 mb-1">„Mâncarea e singurul lucru care mă liniștește."</p>
                   <p className="ml-4 mb-4">„Nu pot face față stresului fără să mănânc."</p>
                   
-                  <h4 className="text-lg font-semibold text-brand-text mt-4 mb-2">c. Vinovăția legată de kilogramele în plus</h4>
+                  <h4 className="text-lg lg:text-xl font-semibold text-brand-text mt-4 mb-2">c. Vinovăția legată de kilogramele în plus</h4>
                   <p className="mb-2">Vinovăția funcționează ca un mecanism de auto-pedepsire.</p>
                   <p className="mb-2">În plan psihodinamic, poate reprezenta o formă de control sau o revoltă reprimată („nu pot controla viața mea, dar pot controla corpul meu").</p>
                   <p className="mb-2">În plan cognitiv, vinovăția întreține rușinea, stima de sine scăzută și evitarea socială.</p>
@@ -227,10 +227,10 @@ const ArticolePage: React.FC = () => {
                   className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <h2 className="text-xl lg:text-2xl font-serif text-brand-text mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-serif text-brand-text mb-4">
                 Igiena somnului – cum ne putem odihni suficient și bine
               </h2>
-              <div className="text-sm lg:text-base text-brand-text/80 leading-relaxed">
+              <div className="text-base lg:text-lg text-brand-text/80 leading-relaxed">
                   <p className="mb-6">
                     Somnul odihnitor este esențial pentru echilibrul fizic, emoțional și cognitiv. Pentru a adormi ușor și a ne trezi revigorați, este important să respectăm o serie de reguli de igienă a somnului, adică obiceiuri sănătoase care susțin ritmul natural al corpului.
                   </p>
@@ -241,7 +241,7 @@ const ArticolePage: React.FC = () => {
                   <p className="mb-2">Păstrează dormitorul doar pentru somn și relaxare, nu pentru muncă sau navigare online.</p>
                   <p className="mb-6">Este recomandat să nu ții animale de companie în pat sau dormitor, mai ales dacă somnul îți este fragmentat</p>
                   
-                  <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">🔹 2. Rutina de seară</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-brand-text mt-6 mb-4">🔹 2. Rutina de seară</h3>
                   <p className="mb-2">Creează o rutină constantă: culcă-te și trezește-te aproximativ la aceleași ore, inclusiv în weekend.</p>
                   <p className="mb-2">Evită mesele grele, cofeina, alcoolul și nicotina în a doua parte a zilei.</p>
                   <p className="mb-2">Redu lumina puternică și zgomotele. Poți folosi o lampă caldă sau lumina difuză.</p>
@@ -251,7 +251,7 @@ const ArticolePage: React.FC = () => {
                   <p className="ml-4 mb-1">stretching ușor,</p>
                   <p className="ml-4 mb-6">lectură liniștită.</p>
                   
-                  <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">🔹 3. Gestionarea stresului și a gândurilor dinainte de somn</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-brand-text mt-6 mb-4">🔹 3. Gestionarea stresului și a gândurilor dinainte de somn</h3>
                   <p className="mb-2">Dacă te simți stresat, apelează la exerciții de relaxare:</p>
                   <p className="ml-4 mb-1">respirație diafragmatică,</p>
                   <p className="ml-4 mb-1">relaxare musculară progresivă,</p>

@@ -20,8 +20,8 @@ export default {
         }
       },
       fontFamily: {
-        // Complete Typography System with all project fonts
-        sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Arial', 'sans-serif'],
+        // Optimized Typography System for psychology website
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Arial', 'sans-serif'],
         serif: ['Playfair Display', 'DM Serif Text', 'Georgia', 'Times New Roman', 'serif'],
         signature: ['Brittany Signature', 'Brush Script MT', 'Segoe Script', 'cursive'],
         display: ['Playfair Display', 'DM Serif Text', 'Georgia', 'Times New Roman', 'serif'],
