@@ -1,5 +1,22 @@
 <svg class="si-glyph si-glyph-leaf" width="380" height="271" fill="#000000" version="1.1" viewBox="0 0 7.6 5.42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
+  <style>
+    @font-face {
+      font-family: 'Amsterdam Handwriting';
+      src: url('/src/assets/fonts/AmsterdamhandwritingRegular-6Y1Vo.otf') format('opentype'),
+           url('/src/assets/fonts/AmsterdamHandwriting-ywgW2.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Georgia';
+      src: url('/src/assets/fonts/georgia.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
   <linearGradient id="b">
    <stop stop-color="#999" offset="0"/>
    <stop stop-color="#999" stop-opacity="0" offset="1"/>
