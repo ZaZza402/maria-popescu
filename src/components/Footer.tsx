@@ -16,52 +16,22 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-brand-light to-white border-t border-brand-accent/20 py-12">
+    <footer className="bg-stone-50 border-t border-brand-accent/30 py-12">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid md:grid-cols-4 gap-8">
           
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <div className="flex items-center mb-4" style={{gap: 'var(--footer-brand-gap, 12px)'}}>
+            <div className="flex items-center mb-4">
               <img 
-                src="./assets/leaves-logo.svg" 
+                src="./assets/logo-complete.svg" 
                 alt="Maria Popescu Psychology Logo" 
-                style={{
-                  width: 'var(--footer-logo-size, 32px)',
-                  height: 'var(--footer-logo-size, 32px)'
-                }}
+                className="h-16 w-auto"
               />
-              <div>
-                <h3 
-                  className="text-brand-accent font-semibold" 
-                  style={{
-                    fontFamily: 'Dancing Script, cursive',
-                    fontSize: 'var(--footer-name-size, 1.325rem)',
-                    lineHeight: 'var(--footer-name-line-height, 1.4)'
-                  }}
-                >
-                  Maria Popescu
-                </h3>
-                <p 
-                  className="text-brand-primary uppercase tracking-wide" 
-                  style={{
-                    fontSize: 'var(--footer-subtitle-size, 0.5rem)',
-                    letterSpacing: 'var(--footer-subtitle-spacing, 0.1em)'
-                  }}
-                >
-                  Psiholog Clinician
-                </p>
-              </div>
             </div>
-            <p className="text-brand-text/80 text-sm leading-relaxed mb-4">
+            <p className="text-brand-text/80 text-sm leading-relaxed">
               Suport profesional și empatic pentru dezvoltarea personală și bunăstarea emoțională.
             </p>
-            <div className="flex items-center gap-2 text-brand-accent">
-              <i className="fas fa-phone text-sm"></i>
-              <a href="tel:+40712345678" className="hover:text-brand-primary transition-colors">
-                +40 712 345 678
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -90,11 +60,6 @@ const Footer = () => {
                   Articole
                 </Link>
               </li>
-              <li>
-                <Link to="/contact" className="text-brand-text/80 hover:text-brand-accent transition-colors">
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -117,23 +82,25 @@ const Footer = () => {
             <h4 className="font-semibold text-brand-primary mb-4 text-sm uppercase tracking-wide">
               Contact & Informații
             </h4>
-            <ul className="space-y-2 text-sm">
-              <li className="text-brand-text/80">
-                <i className="fas fa-envelope mr-2 text-brand-accent"></i>
-                <a href="mailto:maria.popescu@psiholog.ro" className="hover:text-brand-accent transition-colors">
-                  maria.popescu@psiholog.ro
-                </a>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <div className="flex items-center gap-2 text-brand-text/80">
+                  <i className="fas fa-phone text-brand-accent"></i>
+                  <a href="tel:+40772246316" className="hover:text-brand-accent transition-colors">
+                    +40 (772) 246 316
+                  </a>
+                </div>
               </li>
-              <li className="text-brand-text/80">
-                <i className="fas fa-clock mr-2 text-brand-accent"></i>
-                Lun-Vin: 09:00-18:00
+              <li>
+                <div className="flex items-center gap-2 text-brand-text/80">
+                  <i className="fab fa-whatsapp text-brand-accent"></i>
+                  <a href="https://wa.me/40772246316" className="hover:text-brand-accent transition-colors">
+                    WhatsApp
+                  </a>
+                </div>
               </li>
-              <li className="text-brand-text/80">
-                <i className="fas fa-clock mr-2 text-brand-accent"></i>
-                Sâm: 09:00-14:00
-              </li>
-              <li className="mt-4">
-                <Link to="/privacy" className="text-brand-text/80 hover:text-brand-accent transition-colors text-xs">
+              <li className="mt-4 pt-2 border-t border-brand-accent/20">
+                <Link to="/privacy" className="text-brand-text/70 hover:text-brand-accent transition-colors text-xs">
                   Politica de Confidențialitate
                 </Link>
               </li>
@@ -142,11 +109,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-brand-accent/20 mt-8 pt-6 text-center">
-          <p className="text-brand-text/60 text-sm">
+        <div className="border-t border-brand-accent/30 mt-8 pt-6 text-center">
+          <p className="text-brand-text/70 text-sm">
             &copy; {new Date().getFullYear()} Maria Popescu - Psiholog Clinician. Toate drepturile rezervate.
           </p>
-          <p className="text-brand-text/50 text-xs mt-2">
+          <p className="text-brand-text/60 text-xs mt-2">
             Designed By{' '}
             <a 
               href="https://www.axiomweb.eu" 

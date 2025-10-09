@@ -9,12 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload most critical fonts -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BASo.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtM.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Primary fonts with proper fallbacks -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Load fonts with display=swap for better CLS -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Signature font with fallback -->
+    <link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- Critical Resource Preloading for LCP -->
     <link rel="preload" href="./assets/female_portrait.jpg" as="image" type="image/jpeg" fetchpriority="high">
@@ -55,14 +58,13 @@
     <meta property="og:image:width" content="400">
     <meta property="og:image:height" content="400">
     <meta property="og:image:alt" content="Maria Popescu Psiholog - Logo Cabinet">
-    <meta property="og:url" content="https://yourusername.github.io/maria-popescu/">
+    <meta property="og:url" content="https://zazza402.github.io/maria-popescu/">
     <meta property="og:site_name" content="Maria Popescu - Psiholog Clinician">
     <meta property="og:locale" content="ro_RO">
     <meta property="og:locale:alternate" content="en_US">
     
     <!-- Additional Open Graph tags for rich previews -->
     <meta property="article:author" content="Maria Popescu">
-    <meta property="fb:app_id" content="your-facebook-app-id">
     <meta property="business:contact_data:locality" content="București">
     <meta property="business:contact_data:country_name" content="România">
     <meta property="place:location:latitude" content="44.4268">
@@ -74,12 +76,12 @@
     <meta name="twitter:image:alt" content="Maria Popescu Psiholog - Logo Cabinet">
     <meta name="twitter:site" content="@mariapopescu">
     <meta name="twitter:creator" content="@mariapopescu">
-    <meta name="twitter:domain" content="yourusername.github.io">
+    <meta name="twitter:domain" content="zazza402.github.io">
     
     <!-- Additional Meta Tags for WhatsApp and other platforms -->
     <meta property="article:author" content="Maria Popescu">
     <meta property="article:section" content="Psihologie">
-    <meta name="theme-color" content="#C2A678">
+    <meta name="theme-color" content="#D8B2AD">
     <meta name="apple-mobile-web-app-title" content="Maria Popescu">
     <meta name="application-name" content="Maria Popescu - Psiholog">
     
@@ -90,7 +92,7 @@
       "@type": "ProfessionalService",
       "name": "Maria Popescu - Psiholog Clinician",
       "description": "Cabinet de psihologie oferind servicii de consiliere psihologică și psihoterapie cognitiv-comportamentală pentru copii și adulți.",
-      "url": "https://yourusername.github.io/maria-popescu/",
+      "url": "https://zazza402.github.io/maria-popescu/",
       "logo": "./assets/leaves-logo.svg",
       "image": "./assets/female_portrait.jpg",
       "address": {

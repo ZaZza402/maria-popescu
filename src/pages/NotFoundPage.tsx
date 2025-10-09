@@ -66,13 +66,13 @@ const NotFoundPage: React.FC = () => {
                 Pagina Principală
               </Link>
               
-              <Link 
-                to="/contact" 
+              <a 
+                href="tel:+40772246316" 
                 className="flex items-center justify-center px-6 py-3 border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white rounded-lg font-semibold transition-colors"
               >
                 <i className="fas fa-phone mr-2"></i>
-                Contactează-mă
-              </Link>
+                Sună Acum
+              </a>
             </div>
 
             {/* Quick Links */}
@@ -118,19 +118,11 @@ const NotFoundPage: React.FC = () => {
             </h4>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a 
-                href="tel:+40712345678" 
+                href="tel:+40772246316" 
                 className="flex items-center text-brand-accent hover:text-brand-primary transition-colors font-medium"
               >
                 <i className="fas fa-phone mr-2"></i>
-                +40 712 345 678
-              </a>
-              <span className="hidden sm:block text-brand-text/40">•</span>
-              <a 
-                href="mailto:maria.popescu@psiholog.ro" 
-                className="flex items-center text-brand-accent hover:text-brand-primary transition-colors font-medium"
-              >
-                <i className="fas fa-envelope mr-2"></i>
-                maria.popescu@psiholog.ro
+                +40 (772) 246 316
               </a>
             </div>
           </div>

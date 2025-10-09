@@ -8,7 +8,7 @@ interface PageTransitionProps {
 const PageTransition: React.FC<PageTransitionProps> = ({ children, className = '' }) => {
   return (
     <div 
-      className={`animate-fade-in-up ${className}`}
+      className={className}
     >
       {children}
     </div>

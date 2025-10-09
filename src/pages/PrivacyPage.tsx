@@ -1,16 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 const PrivacyPage: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="min-h-screen bg-gradient-to-br from-brand-light to-white"
-    >
+    <div className="min-h-screen bg-gradient-to-br from-brand-light to-white">
       <div className="container mx-auto max-w-4xl px-4 py-12">
         
         {/* Header Section */}
@@ -172,14 +165,8 @@ const PrivacyPage: React.FC = () => {
                   </p>
                   <p>
                     <i className="fas fa-phone mr-2 text-brand-accent"></i>
-                    <a href="tel:+40712345678" className="text-brand-accent hover:underline">
-                      +40 712 345 678
-                    </a>
-                  </p>
-                  <p>
-                    <i className="fas fa-envelope mr-2 text-brand-accent"></i>
-                    <a href="mailto:maria.popescu@psiholog.ro" className="text-brand-accent hover:underline">
-                      maria.popescu@psiholog.ro
+                    <a href="tel:+40772246316" className="text-brand-accent hover:underline">
+                      +40 (772) 246 316
                     </a>
                   </p>
                 </div>
@@ -211,7 +198,7 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

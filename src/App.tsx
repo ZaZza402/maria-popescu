@@ -4,12 +4,13 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsappButton from './components/WhatsappButton';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
+
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ServiciiPage = lazy(() => import('./pages/ServiciiPage'));
 const DesprePage = lazy(() => import('./pages/DesprePage'));
-const ContactPage = lazy(() => import('./pages/ContactPage'));
 const ArticolePage = lazy(() => import('./pages/ArticolePage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
@@ -34,7 +35,6 @@ function AnimatedRoutes() {
         <Route path="/despre" element={<DesprePage />} />
         <Route path="/servicii" element={<ServiciiPage />} />
         <Route path="/articole" element={<ArticolePage />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
@@ -46,12 +46,14 @@ function App() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <div className="scroll-progress"></div>
       <div className="min-h-screen bg-brand-bg text-brand-text font-sans">
         <Header />
         <main>
           <AnimatedRoutes />
         </main>
         <WhatsappButton />
+        <ScrollToTopButton />
         <Footer />
       </div>
     </HashRouter>

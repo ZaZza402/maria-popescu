@@ -1,3 +1,27 @@
+/* Primary web fonts - reliable loading */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Signature font with fallback */
+@import url('https://fonts.cdnfonts.com/css/brittany-signature');
+
+/* Local font fallbacks - only for critical fonts */
+@font-face {
+  font-family: 'DM Serif Text';
+  src: url('./assets/fonts/DMSerifText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Serif Text';
+  src: url('./assets/fonts/DMSerifText-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,17 +33,17 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* Enhanced focus styles for accessibility */
 *:focus {
-  outline: 2px solid #C2A678;
+  outline: 2px solid #D8B2AD;
   outline-offset: 2px;
 }
 
 /* Text selection styling */
 ::selection {
-  background: #C2A678;
+  background: #D8B2AD;
   color: white;
 }
 ::-moz-selection {
-  background: #C2A678;
+  background: #D8B2AD;
   color: white;
 }
 
@@ -28,14 +52,14 @@ details > summary::-webkit-details-marker { display: none; }
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F5F0;
+  background: #F5F1F0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C2A678;
+  background: #D8B2AD;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8956a;
+  background: #D8B2AD;
 }
 
 /* Remove all borders and outlines from buttons */
@@ -65,6 +89,66 @@ button:active {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+}
+
+/* Ensure fonts are loaded properly with fallbacks */
+@font-face {
+  font-family: 'Playfair Display';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brittany Signature';
+  font-display: swap;
+}
+
+/* Global Typography Classes */
+.font-maria {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-weight: 600;
+}
+
+.font-popescu {
+  font-family: 'Brittany Signature', 'Brush Script MT', cursive;
+}
+
+.font-body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+/* Ensure immediate font application */
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+/* Color Utility Classes for New Brand Palette */
+.text-dusty-rose {
+  color: #D8B2AD;
+}
+
+.text-earthy-beige {
+  color: #D8B2AD;
+}
+
+.bg-dusty-rose {
+  background-color: #D8B2AD;
+}
+
+.bg-earthy-beige {
+  background-color: #D8B2AD;
+}
+
+.border-dusty-rose {
+  border-color: #D8B2AD;
+}
+
+.border-earthy-beige {
+  border-color: #D8B2AD;
 }
 
 /* Mobile Menu Animations */
@@ -147,8 +231,8 @@ button:active {
   }
 }
 
-/* Smooth transitions for all elements */
-* {
+/* Smooth transitions for all elements (except hero elements during load) */
+*:not(.hero-text):not(.hero-image) {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -167,8 +251,8 @@ button:active {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #C2A678;
-  filter: drop-shadow(0 2px 4px rgba(194, 166, 120, 0.4));
+  background: #D8B2AD;
+  filter: drop-shadow(0 2px 4px rgba(216, 178, 173, 0.4));
 }
 
 /* Logo link focus removal */
@@ -213,4 +297,133 @@ a[href="/"]:focus {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Mobile Menu Backdrop */
+.mobile-menu-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99998;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #D8B2AD 0%, #c4a394 100%);
+  z-index: 1000;
+  width: 0%;
+}
+
+/* GSAP Performance Optimization */
+.gsap-animated {
+  will-change: transform, opacity;
+}
+
+.gsap-animated.complete {
+  will-change: auto;
+}
+
+/* Mobile Menu Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInElegant {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Prevent Content Flash Before GSAP Loads - All Pages */
+.hero-text,
+.hero-image,
+.hero-title,
+.hero-portrait,
+.about-title,
+.about-content,
+.experience-title,
+.experience-card,
+.service-card,
+.services-title,
+.services-card,
+.spec-title,
+.spec-content,
+.article-card,
+.cta-button,
+.paper-plane,
+.gallery-title,
+.breathing-element {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* GSAP will override these styles when ready */
+.gsap-loaded .hero-text,
+.gsap-loaded .hero-image,
+.gsap-loaded .hero-title,
+.gsap-loaded .hero-portrait,
+.gsap-loaded .about-title,
+.gsap-loaded .about-content,
+.gsap-loaded .experience-title,
+.gsap-loaded .experience-card,
+.gsap-loaded .service-card,
+.gsap-loaded .services-title,
+.gsap-loaded .services-card,
+.gsap-loaded .spec-title,
+.gsap-loaded .spec-content,
+.gsap-loaded .article-card,
+.gsap-loaded .cta-button,
+.gsap-loaded .paper-plane,
+.gsap-loaded .gallery-title,
+.gsap-loaded .breathing-element {
+  visibility: visible;
 }
