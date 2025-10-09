@@ -2,8 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* Signature font with fallback */
+/* Signature fonts with fallback */
 @import url('https://fonts.cdnfonts.com/css/brittany-signature');
+
+/* Amsterdam Handwriting font for logo - with local and web fallbacks */
+@font-face {
+  font-family: 'Amsterdam Handwriting';
+  src: url('./assets/fonts/AmsterdamhandwritingRegular-6Y1Vo.otf') format('opentype'),
+       url('./assets/fonts/AmsterdamHandwriting-ywgW2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Local font fallbacks - only for critical fonts */
 @font-face {

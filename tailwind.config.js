@@ -25,7 +25,8 @@ export default {
         serif: ['Playfair Display', 'DM Serif Text', 'Times New Roman', 'Georgia', 'serif'],
         signature: ['Brittany Signature', 'Brush Script MT', 'Segoe Script', 'cursive'],
         display: ['Playfair Display', 'DM Serif Text', 'Times New Roman', 'Georgia', 'serif'],
-        script: ['Brittany Signature', 'Brush Script MT', 'Segoe Script', 'cursive']
+        script: ['Brittany Signature', 'Brush Script MT', 'Segoe Script', 'cursive'],
+        amsterdam: ['Amsterdam Handwriting', 'Brush Script MT', 'Segoe Script', 'cursive']
       },
       boxShadow: {
         soft: '0 10px 30px rgba(31,60,77,0.08)'
