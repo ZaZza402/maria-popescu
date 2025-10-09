@@ -108,37 +108,28 @@ const ArticolePage: React.FC = () => {
                 </h2>
                 <div className="text-sm lg:text-base text-brand-text/80 leading-relaxed">
                   <p>
-                    Evaluarea psihologică la copil este un proces comprehensiv prin care psihologul explorează dezvoltarea emoțională, cognitivă, comportamentală și socială a copilului. Această evaluare se bazează pe observații clinice, teste standardizate și discuții cu părinții pentru a obține o imagine completă asupra funcționării copilului.
+                    Evaluarea psihologică la copil este un proces prin care psihologul explorează dezvoltarea emoțională, cognitivă, comportamentală și socială a copilului.
                   </p>
                   <p>
-                    Scopul principal este să înțelegem cum gândește, cum simte și cum reacționează copilul în diferite contexte - acasă, la școală și în relațiile sociale. Prin această înțelegere profundă, putem oferi recomandări personalizate și strategii de intervenție care să sprijine dezvoltarea optimă a copilului.
+                    Scopul ei este să înțeleagă cum gândește, cum simte și cum reacționează copilul în diferite situații, pentru a oferi sprijin adecvat în funcție de nevoile sale.
                   </p>
                   <p>
-                    Procesul de evaluare include utilizarea de instrumente psihologice validate științific, adaptate vârstei și nivelului de dezvoltare al copilului. Acestea pot include teste de inteligență, scale de evaluare comportamentală, chestionare pentru părinți și profesori, precum și observații directe ale comportamentului copilului în diverse situații.
-                  </p>
-                  <p>
-                    Este important să subliniem că evaluarea nu este un „test care se trece sau se pică", ci o modalitate de a descoperi și celebra unicitatea fiecărui copil, identificând în același timp domeniile în care poate beneficia de suport suplimentar.
+                    Evaluarea nu este un „test care se trece sau se pică", ci o modalitate de a înțelege unicitatea fiecărui copil.
                   </p>
                   
                   <h3 className="text-lg font-bold text-brand-text mt-4 mb-3">Când este recomandată evaluarea psihologică?</h3>
-                  <p>
-                    Recunoașterea timpurie a nevoilor speciale ale copilului poate face diferența în dezvoltarea sa viitoare. Evaluarea poate fi solicitată de părinți, profesori sau medici când observă anumite semne de întrebare în dezvoltarea copilului.
-                  </p>
                   
                   <div className="mt-4 space-y-4">
                     <div>
                       <h4 className="text-base font-semibold text-brand-text mb-2 flex items-center">
                         🧒 În primii ani (2–6 ani)
                       </h4>
-                      <p className="text-brand-text/70 mb-2 text-sm">
-                        Această perioadă este crucială pentru dezvoltarea abilităților de bază:
-                      </p>
                       <ul className="text-sm space-y-1 ml-4">
-                        <li>• <strong>Dezvoltarea limbajului:</strong> Întârziere în vorbire, vocabular limitat sau dificultăți în înțelegerea instrucțiunilor simple</li>
-                        <li>• <strong>Atenția și comportamentul:</strong> Neliniște constantă, dificultăți în focalizarea atenției sau impulsivitate extremă</li>
-                        <li>• <strong>Socializarea:</strong> Evitarea interacțiunii cu alți copii sau dificultăți în împărtășirea jucăriilor</li>
-                        <li>• <strong>Reglarea emoțională:</strong> Crize de furie intense, dificultăți în calmarea sau adaptarea la schimbări</li>
-                        <li>• <strong>Dezvoltarea motoră:</strong> Întârzieri în mersul independent, coordonarea mișcărilor sau abilități fine</li>
+                        <li>Întârziere în vorbire sau în achizițiile cognitive.</li>
+                        <li>Dificultăți de atenție, neliniște, impulsivitate.</li>
+                        <li>Dificultăți în relaționarea cu ceilalți copii.</li>
+                        <li>Reacții intense la frustrare sau opoziție față de reguli.</li>
+                        <li>Suspiciune de întârziere în dezvoltare, autism sau tulburare de limbaj.</li>
                       </ul>
                     </div>
                     
@@ -146,50 +137,26 @@ const ArticolePage: React.FC = () => {
                       <h4 className="text-base font-semibold text-brand-text mb-2 flex items-center">
                         👧 La vârsta școlară (7–12 ani)
                       </h4>
-                      <p className="text-brand-text/70 mb-2 text-sm">
-                        Școala aduce noi provocări și oportunități de dezvoltare:
-                      </p>
                       <ul className="text-sm space-y-1 ml-4">
-                        <li>• <strong>Învățarea academică:</strong> Dificultăți persistente în citit, scris, matematică sau în procesarea informațiilor</li>
-                        <li>• <strong>Concentrarea:</strong> Neatenție cronică, uitate frecvente sau dificultăți în finalizarea sarcinilor</li>
-                        <li>• <strong>Adaptarea școlară:</strong> Anxietate severă legată de școală, refuz de a participa sau scăderi dramatice ale performanței</li>
-                        <li>• <strong>Relațiile sociale:</strong> Isolarea de colegi, conflicte repetate sau dificultăți în respectarea regulilor sociale</li>
-                        <li>• <strong>Organizarea:</strong> Probleme în gestionarea timpului, a sarcinilor sau a materialelor școlare</li>
-                        <li>• <strong>Motivația:</strong> Lipsa interesului pentru activitățile educaționale sau recreative</li>
+                        <li>Probleme de învățare (scris, citit, calcul).</li>
+                        <li>Concentrare scăzută, neatenție sau neliniște constantă.</li>
+                        <li>Scădere bruscă a rezultatelor școlare.</li>
+                        <li>Anxietate față de școală, refuz de a merge la ore.</li>
+                        <li>Dificultăți de adaptare la reguli, conflicte cu colegii sau profesorii.</li>
                       </ul>
                     </div>
                     
                     <div>
                       <h4 className="text-base font-semibold text-brand-text mb-2 flex items-center">
-                        🧑 În adolescență (13–18 ani)
+                        🧑 În adolescență
                       </h4>
-                      <p className="text-brand-text/70 mb-2 text-sm">
-                        Adolescența aduce transformări majore și noi provocări:
-                      </p>
                       <ul className="text-sm space-y-1 ml-4">
-                        <li>• <strong>Starea emoțională:</strong> Depresie persistentă, anxietate extremă sau schimbări dramatice de dispoziție</li>
-                        <li>• <strong>Comportamentele riscante:</strong> Automutilare, consumul de substanțe sau comportamente periculoase repetate</li>
-                        <li>• <strong>Relațiile familiale:</strong> Conflicte severe și constante cu părinții sau retragere totală din viața de familie</li>
-                        <li>• <strong>Identitatea și viitorul:</strong> Confuzie extremă despre sine sau lipsa totală de direcție și motivație</li>
-                        <li>• <strong>Performanța academică:</strong> Scăderea bruscă a notelor sau abandon școlar</li>
-                        <li>• <strong>Relațiile cu vârsta:</strong> Izolarea socială sau implicarea în grupuri cu influență negativă</li>
+                        <li>Modificări de dispoziție, retragere socială, lipsă de motivație.</li>
+                        <li>Conflicte repetate cu părinții sau autoritatea.</li>
+                        <li>Stres crescut, tulburări de somn, alimentație sau imagine corporală.</li>
+                        <li>Dificultăți de identitate, autocontrol sau relaționare.</li>
                       </ul>
                     </div>
-                  </div>
-                  
-                  <div className="mt-4 p-4 bg-stone-50 rounded-lg">
-                    <h3 className="text-base font-bold text-brand-text mb-2">Beneficiile evaluării timpurii</h3>
-                    <p className="text-sm text-brand-text/70 mb-2">
-                      O evaluare psihologică completă oferă multiple avantaje:
-                    </p>
-                    <ul className="text-sm space-y-1 ml-4">
-                      <li>• Identificarea punctelor forte și a domeniilor care necesită suport</li>
-                      <li>• Elaborarea unui plan personalizat de intervenție</li>
-                      <li>• Orientarea către servicii specializate când este necesar</li>
-                      <li>• Sprijinirea părinților cu strategii concrete de abordare</li>
-                      <li>• Facilitarea comunicării cu școala și alte instituții</li>
-                      <li>• Prevenirea agravării dificultăților prin intervenție timpurie</li>
-                    </ul>
                   </div>
                   </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
@@ -221,32 +188,24 @@ const ArticolePage: React.FC = () => {
                     În spatele acestui comportament se află adesea mecanisme de apărare și distorsiuni cognitive ce mențin un cerc vicios între emoții, alimentație și imagine corporală.
                   </p>
                   
-                  <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">Mecanisme psihologice implicate</h3>
+                  <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">2. Mecanisme psihologice implicate</h3>
                   
                   <h4 className="text-lg font-semibold text-brand-text mt-4 mb-2">a. Reglarea emoțională prin alimentație</h4>
-                  <ul className="list-disc list-inside space-y-1 mb-4">
-                    <li>Mâncarea devine un mod de calmare temporară a tensiunii interne.</li>
-                    <li>Dopamina și serotonina eliberate prin alimente bogate în carbohidrați și grăsimi induc o stare de confort pe termen scurt.</li>
-                    <li>Însă, ulterior apare vinovăția, care intensifică ciclul anxietate–mâncat compulsiv–autocritică.</li>
-                  </ul>
+                  <p className="mb-2">Mâncarea devine un mod de calmare temporară a tensiunii interne.</p>
+                  <p className="mb-2">Dopamina și serotonina eliberate prin alimente bogate în carbohidrați și grăsimi induc o stare de confort pe termen scurt.</p>
+                  <p className="mb-4">Însă, ulterior apare vinovăția, care intensifică ciclul anxietate–mâncat compulsiv–autocritică.</p>
                   
                   <h4 className="text-lg font-semibold text-brand-text mt-4 mb-2">b. Anxietatea în situații stresante</h4>
-                  <ul className="list-disc list-inside space-y-1 mb-4">
-                    <li>Femeile care au un nivel crescut de anxietate pot simți pierderea controlului asupra corpului și alimentației.</li>
-                    <li>În TCC, această pierdere de control este legată de credințe disfuncționale precum:</li>
-                    <ul className="list-disc list-inside ml-6 space-y-1">
-                      <li>„Dacă nu sunt slabă, nu merit iubire."</li>
-                      <li>„Mâncarea e singurul lucru care mă liniștește."</li>
-                      <li>„Nu pot face față stresului fără să mănânc."</li>
-                    </ul>
-                  </ul>
+                  <p className="mb-2">Femeile care au un nivel crescut de anxietate pot simți pierderea controlului asupra corpului și alimentației.</p>
+                  <p className="mb-2">În TCC, această pierdere de control este legată de credințe disfuncționale precum:</p>
+                  <p className="ml-4 mb-1">„Dacă nu sunt slabă, nu merit iubire."</p>
+                  <p className="ml-4 mb-1">„Mâncarea e singurul lucru care mă liniștește."</p>
+                  <p className="ml-4 mb-4">„Nu pot face față stresului fără să mănânc."</p>
                   
                   <h4 className="text-lg font-semibold text-brand-text mt-4 mb-2">c. Vinovăția legată de kilogramele în plus</h4>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Vinovăția funcționează ca un mecanism de auto-pedepsire.</li>
-                    <li>În plan psihodinamic, poate reprezenta o formă de control sau o revoltă reprimată („nu pot controla viața mea, dar pot controla corpul meu").</li>
-                    <li>În plan cognitiv, vinovăția întreține rușinea, stima de sine scăzută și evitarea socială.</li>
-                  </ul>
+                  <p className="mb-2">Vinovăția funcționează ca un mecanism de auto-pedepsire.</p>
+                  <p className="mb-2">În plan psihodinamic, poate reprezenta o formă de control sau o revoltă reprimată („nu pot controla viața mea, dar pot controla corpul meu").</p>
+                  <p className="mb-2">În plan cognitiv, vinovăția întreține rușinea, stima de sine scăzută și evitarea socială.</p>
                 </div>
               <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                 <div className="flex items-center text-sm text-brand-text/60">
@@ -276,41 +235,30 @@ const ArticolePage: React.FC = () => {
                     Somnul odihnitor este esențial pentru echilibrul fizic, emoțional și cognitiv. Pentru a adormi ușor și a ne trezi revigorați, este important să respectăm o serie de reguli de igienă a somnului, adică obiceiuri sănătoase care susțin ritmul natural al corpului.
                   </p>
                   
-                  <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">🔹 1. Mediul de somn</h3>
-                  <ul className="list-disc list-inside space-y-1 mb-4">
-                    <li>Dormitorul trebuie să fie răcoros, aerisit și întunecat (temperatura ideală: 18–20°C).</li>
-                    <li>Evită lumina albastră emisă de ecrane (telefon, tabletă, TV) cu cel puțin 30–60 de minute înainte de somn.</li>
-                    <li>Scrolling-ul pe telefon înainte de culcare stimulează creierul, în loc să îl relaxeze.</li>
-                    <li>Păstrează dormitorul doar pentru somn și relaxare, nu pentru muncă sau navigare online.</li>
-                    <li>Este recomandat să nu ții animale de companie în pat sau dormitor, mai ales dacă somnul îți este fragmentat.</li>
-                  </ul>
+                  <p className="mb-2">Dormitorul trebuie să fie răcoros, aerisit și întunecat (temperatura ideală: 18–20°C).</p>
+                  <p className="mb-2">Evită lumina albastră emisă de ecrane (telefon, tabletă, TV) cu cel puțin 30–60 de minute înainte de somn.</p>
+                  <p className="mb-2">Scrolling-ul pe telefon înainte de culcare stimulează creierul, în loc să îl relaxeze.</p>
+                  <p className="mb-2">Păstrează dormitorul doar pentru somn și relaxare, nu pentru muncă sau navigare online.</p>
+                  <p className="mb-6">Este recomandat să nu ții animale de companie în pat sau dormitor, mai ales dacă somnul îți este fragmentat</p>
                   
                   <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">🔹 2. Rutina de seară</h3>
-                  <ul className="list-disc list-inside space-y-1 mb-4">
-                    <li>Creează o rutină constantă: culcă-te și trezește-te aproximativ la aceleași ore, inclusiv în weekend.</li>
-                    <li>Evită mesele grele, cofeina, alcoolul și nicotina în a doua parte a zilei.</li>
-                    <li>Redu lumina puternică și zgomotele. Poți folosi o lampă caldă sau lumina difuză.</li>
-                    <li>Activități relaxante înainte de culcare:</li>
-                    <ul className="list-disc list-inside ml-6 space-y-1">
-                      <li>un duș călduț,</li>
-                      <li>respirație lentă,</li>
-                      <li>stretching ușor,</li>
-                      <li>lectură liniștită.</li>
-                    </ul>
-                  </ul>
+                  <p className="mb-2">Creează o rutină constantă: culcă-te și trezește-te aproximativ la aceleași ore, inclusiv în weekend.</p>
+                  <p className="mb-2">Evită mesele grele, cofeina, alcoolul și nicotina în a doua parte a zilei.</p>
+                  <p className="mb-2">Redu lumina puternică și zgomotele. Poți folosi o lampă caldă sau lumina difuză.</p>
+                  <p className="mb-2">Activități relaxante înainte de culcare:</p>
+                  <p className="ml-4 mb-1">un duș călduț,</p>
+                  <p className="ml-4 mb-1">respirație lentă,</p>
+                  <p className="ml-4 mb-1">stretching ușor,</p>
+                  <p className="ml-4 mb-6">lectură liniștită.</p>
                   
                   <h3 className="text-xl font-bold text-brand-text mt-6 mb-4">🔹 3. Gestionarea stresului și a gândurilor dinainte de somn</h3>
-                  <ul className="list-disc list-inside space-y-1 mb-4">
-                    <li>Dacă te simți stresat, apelează la exerciții de relaxare:</li>
-                    <ul className="list-disc list-inside ml-6 space-y-1">
-                      <li>respirație diafragmatică,</li>
-                      <li>relaxare musculară progresivă,</li>
-                      <li>mindfulness (focalizarea pe senzațiile prezente),</li>
-                      <li>vizualizare ghidată („mă aflu într-un loc sigur și liniștit…").</li>
-                    </ul>
-                    <li>Evită să aduci în pat grijile zilei — dacă apar gânduri stresante, notează-le într-un jurnal și promite-ți să le reiei dimineața.</li>
-                    <li>Dacă nu adormi în 15–20 de minute, ridică-te din pat, mergi într-o altă cameră și fă o activitate liniștită până când simți somnolență.</li>
-                  </ul>
+                  <p className="mb-2">Dacă te simți stresat, apelează la exerciții de relaxare:</p>
+                  <p className="ml-4 mb-1">respirație diafragmatică,</p>
+                  <p className="ml-4 mb-1">relaxare musculară progresivă,</p>
+                  <p className="ml-4 mb-1">mindfulness (focalizarea pe senzațiile prezente),</p>
+                  <p className="ml-4 mb-4">vizualizare ghidată („mă aflu într-un loc sigur și liniștit…").</p>
+                  <p className="mb-2">Evită să aduci în pat grijile zilei — dacă apar gânduri stresante, notează-le într-un jurnal și promite-ți să le reiei dimineața.</p>
+                  <p className="mb-2">Dacă nu adormi în 15–20 de minute, ridică-te din pat, mergi într-o altă cameră și fă o activitate liniștită până când simți somnolență.</p>
                 </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                   <div className="flex items-center text-sm text-brand-text/60">
