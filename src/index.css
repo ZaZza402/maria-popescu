@@ -5,15 +5,7 @@
 /* Signature fonts with fallback */
 @import url('https://fonts.cdnfonts.com/css/brittany-signature');
 
-/* Amsterdam Handwriting font for logo - with local and web fallbacks */
-@font-face {
-  font-family: 'Amsterdam Handwriting';
-  src: url('./assets/fonts/AmsterdamhandwritingRegular-6Y1Vo.otf') format('opentype'),
-       url('./assets/fonts/AmsterdamHandwriting-ywgW2.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* Fonts are loaded dynamically via fontLoader.ts */
 
 /* Georgia font family - Complete set for logo */
 @font-face {
