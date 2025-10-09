@@ -1,12 +1,12 @@
 // Font imports for proper bundling
-import AmsterdamHandwritingOtf from '../assets/fonts/AmsterdamhandwritingRegular-6Y1Vo.otf';
-import AmsterdamHandwritingTtf from '../assets/fonts/AmsterdamHandwriting-ywgW2.ttf';
-import GeorgiaRegular from '../assets/fonts/georgia.ttf';
-import GeorgiaBold from '../assets/fonts/georgiab.ttf';
-import GeorgiaItalic from '../assets/fonts/georgiai.ttf';
-import GeorgiaBoldItalic from '../assets/fonts/georgiaz.ttf';
-import DMSerifTextRegular from '../assets/fonts/DMSerifText-Regular.ttf';
-import DMSerifTextItalic from '../assets/fonts/DMSerifText-Italic.ttf';
+import AmsterdamHandwritingOtf from '../fonts/fonts/AmsterdamhandwritingRegular-6Y1Vo.otf';
+import AmsterdamHandwritingTtf from '../fonts/fonts/AmsterdamHandwriting-ywgW2.ttf';
+import GeorgiaRegular from '../fonts/fonts/georgia.ttf';
+import GeorgiaBold from '../fonts/fonts/georgiab.ttf';
+import GeorgiaItalic from '../fonts/fonts/georgiai.ttf';
+import GeorgiaBoldItalic from '../fonts/fonts/georgiaz.ttf';
+import DMSerifTextRegular from '../fonts/fonts/DMSerifText-Regular.ttf';
+import DMSerifTextItalic from '../fonts/fonts/DMSerifText-Italic.ttf';
 
 // Export font URLs for use in CSS
 export const fonts = {
