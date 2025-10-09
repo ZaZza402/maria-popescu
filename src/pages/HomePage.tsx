@@ -429,6 +429,14 @@ const HomePage: React.FC = () => {
                   alt="Maria Popescu"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                 />
+              </div>
+
+              <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
+                <img 
+                  src="./assets/sleep-struggle.jpg"
+                  alt="Probleme de somn"
+                  className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                />
               </div>              {/* Future images can be easily added here */}
               
             </div>

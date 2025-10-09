@@ -166,31 +166,62 @@ const ServiciiPage: React.FC = () => {
       <section className="services-grid py-16 lg:py-24 bg-stone-100">
         <div className="container mx-auto max-w-6xl px-4">
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="space-y-6">
             {services.map((service, index) => (
-              <div key={index} className="service-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-brand-accent rounded-2xl flex items-center justify-center mr-4 shadow-md">
-                    <i className={`${service.icon} text-white text-xl`}></i>
+              <div key={index} className="service-card group">
+                <div className="bg-white border border-stone-200/50 hover:border-brand-accent/30 transition-all duration-500 hover:shadow-soft rounded-lg overflow-hidden">
+                  <div className="p-8 lg:p-10">
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+                      
+                      {/* Service Content */}
+                      <div className="flex-1">
+                        <h3 className="text-2xl lg:text-2xl font-serif text-brand-text mb-4 leading-tight group-hover:text-brand-accent transition-colors duration-300">
+                          {service.title}
+                        </h3>
+                        
+                        <p className="text-brand-text/70 text-base lg:text-lg leading-relaxed mb-6">
+                          {service.description}
+                        </p>
+                        
+                        {/* Elegant Details */}
+                        <div className="flex items-center gap-6 text-brand-text/60">
+                          <div className="flex items-center gap-2">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span className="text-sm">{service.duration}</span>
+                          </div>
+                          
+                          <div className="flex items-center gap-2">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span className="text-sm">Tarif {service.price}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Elegant Price Display */}
+                      <div className="lg:text-right flex-shrink-0">
+                        <div className="inline-flex items-center px-4 py-2 bg-brand-light/50 border border-brand-accent/20 rounded-lg">
+                          <span className="text-2xl lg:text-3xl font-light text-brand-accent">{service.price}</span>
+                        </div>
+                        
+                        <div className="mt-3 lg:mt-4">
+                          <button className="inline-flex items-center gap-2 text-brand-text/70 hover:text-brand-accent transition-colors duration-300 font-medium text-sm">
+                            <span>Solicită programare</span>
+                            <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      
+                    </div>
                   </div>
-                  <h3 className="text-xl font-serif text-brand-text leading-tight font-bold">
-                    {service.title}
-                  </h3>
-                </div>
-                
-                <p className="text-brand-text/80 mb-6 text-lg leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="border-t border-brand-accent/20 pt-6">
-                  <div className="flex justify-between items-center mb-3">
-                    <span className="text-lg font-medium text-brand-text/80">Durată:</span>
-                    <span className="font-bold text-brand-text text-lg">{service.duration}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-medium text-brand-text/80">Preț:</span>
-                    <span className="text-brand-accent font-bold text-2xl">{service.price}</span>
-                  </div>
+                  
+                  {/* Subtle Accent Line */}
+                  <div className="h-0.5 bg-gradient-to-r from-transparent via-brand-accent/20 to-transparent"></div>
                 </div>
               </div>
             ))}
