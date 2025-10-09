@@ -278,7 +278,7 @@ const Header = () => {
         {/* Menu Content */}
         <div 
           ref={menuContentRef}
-          className="relative h-full overflow-y-auto flex flex-col justify-start items-center text-center px-4 py-16 min-h-screen"
+          className="relative h-full overflow-y-auto flex flex-col justify-center items-center text-center px-4 min-h-screen"
           style={{ 
             transform: 'translateY(-100%)',
             opacity: 0
@@ -296,27 +296,14 @@ const Header = () => {
             </div>
           </button>
 
-          {/* Logo */}
-          <div 
-            ref={addToMenuRefs}
-            className="mb-6"
-            style={{ transform: 'translateY(50px)', opacity: 0 }}
-          >
-            <img 
-              src="./assets/logo-complete.png" 
-              alt="Maria Popescu Psiholog" 
-              className="h-12 mx-auto"
-            />
-          </div>
-
           {/* Navigation Links */}
-          <nav className="space-y-1 max-w-sm w-full">
+          <nav className="space-y-3 max-w-xs w-full">
             <div ref={addToMenuRefs} style={{ transform: 'translateY(50px)', opacity: 0 }}>
               <Link 
                 to="/" 
                 onClick={closeMobileMenu}
-                className={`block py-2.5 px-4 text-lg font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-lg hover:bg-brand-accent/10 ${
-                  isActiveRoute('/') ? 'text-brand-accent bg-brand-accent/10' : ''
+                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                  isActiveRoute('/') ? 'text-brand-accent bg-white/20' : ''
                 }`}
               >
                 Acasă
@@ -327,8 +314,8 @@ const Header = () => {
               <Link 
                 to="/despre" 
                 onClick={closeMobileMenu}
-                className={`block py-2.5 px-4 text-lg font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-lg hover:bg-brand-accent/10 ${
-                  isActiveRoute('/despre') ? 'text-brand-accent bg-brand-accent/10' : ''
+                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                  isActiveRoute('/despre') ? 'text-brand-accent bg-white/20' : ''
                 }`}
               >
                 Despre Mine
@@ -339,8 +326,8 @@ const Header = () => {
               <Link 
                 to="/servicii" 
                 onClick={closeMobileMenu}
-                className={`block py-2.5 px-4 text-lg font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-lg hover:bg-brand-accent/10 ${
-                  isActiveRoute('/servicii') ? 'text-brand-accent bg-brand-accent/10' : ''
+                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                  isActiveRoute('/servicii') ? 'text-brand-accent bg-white/20' : ''
                 }`}
               >
                 Servicii
@@ -351,41 +338,14 @@ const Header = () => {
               <Link 
                 to="/articole" 
                 onClick={closeMobileMenu}
-                className={`block py-2.5 px-4 text-lg font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-lg hover:bg-brand-accent/10 ${
-                  isActiveRoute('/articole') ? 'text-brand-accent bg-brand-accent/10' : ''
+                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                  isActiveRoute('/articole') ? 'text-brand-accent bg-white/20' : ''
                 }`}
               >
                 Articole
               </Link>
             </div>
           </nav>
-
-          {/* Contact Information */}
-          <div 
-            ref={addToMenuRefs}
-            className="mt-4 p-4 max-w-sm w-full mb-8"
-            style={{ transform: 'translateY(50px)', opacity: 0 }}
-          >
-            <p className="text-stone-600 text-sm mb-3">Contactează-mă pentru o consultație</p>
-            <div className="space-y-2">
-              <a 
-                href="tel:+40772246316" 
-                className="flex items-center text-base font-medium text-brand-accent hover:text-stone-800 transition-colors duration-300"
-              >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                0772 246 316
-              </a>
-              <a 
-                href="https://wa.me/40772246316" 
-                className="flex items-center text-base font-medium text-brand-accent hover:text-stone-800 transition-colors duration-300"
-              >
-                <i className="fab fa-whatsapp w-4 h-4 mr-2 text-base"></i>
-                WhatsApp
-              </a>
-            </div>
-          </div>
         </div>
       </div>
       )}
