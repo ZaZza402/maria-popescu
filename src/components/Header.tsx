@@ -269,7 +269,9 @@ const Header = () => {
         {/* Backdrop */}
         <div 
           className="absolute inset-0"
-          style={{ backgroundColor: '#E8A298' }}
+          style={{ 
+            background: 'linear-gradient(135deg, rgba(196, 224, 217, 0.95) 0%, rgba(232, 162, 152, 0.95) 100%)'
+          }}
           onClick={closeMobileMenu}
         />
         
@@ -286,18 +288,18 @@ const Header = () => {
           {/* Close Button */}
           <button 
             onClick={closeMobileMenu}
-            className="absolute top-4 right-4 z-10 p-3 bg-white/90 rounded-full shadow-lg hover:bg-white transition-colors"
+            className="absolute top-4 right-4 z-10 p-3 hover:opacity-80 transition-opacity"
           >
             <div className="w-6 h-6 flex items-center justify-center relative">
-              <span className="block w-6 h-0.5 bg-stone-800 rotate-45 absolute" />
-              <span className="block w-6 h-0.5 bg-stone-800 -rotate-45 absolute" />
+              <span className="block w-6 h-0.5 bg-white rotate-45 absolute" />
+              <span className="block w-6 h-0.5 bg-white -rotate-45 absolute" />
             </div>
           </button>
 
           {/* Logo */}
           <div 
             ref={addToMenuRefs}
-            className="mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-xs w-full"
+            className="mb-6"
             style={{ transform: 'translateY(50px)', opacity: 0 }}
           >
             <img 
@@ -308,7 +310,7 @@ const Header = () => {
           </div>
 
           {/* Navigation Links */}
-          <nav className="space-y-1 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-sm w-full">
+          <nav className="space-y-1 max-w-sm w-full">
             <div ref={addToMenuRefs} style={{ transform: 'translateY(50px)', opacity: 0 }}>
               <Link 
                 to="/" 
@@ -361,7 +363,7 @@ const Header = () => {
           {/* Contact Information */}
           <div 
             ref={addToMenuRefs}
-            className="mt-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl max-w-sm w-full mb-8"
+            className="mt-4 p-4 max-w-sm w-full mb-8"
             style={{ transform: 'translateY(50px)', opacity: 0 }}
           >
             <p className="text-stone-600 text-sm mb-3">Contactează-mă pentru o consultație</p>

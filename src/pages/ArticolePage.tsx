@@ -94,7 +94,7 @@ const ArticolePage: React.FC = () => {
           <div className="space-y-16">
           
             {/* Article 1 - Child Psychology Evaluation */}
-            <article className="article-card bg-white rounded-3xl shadow-lg overflow-hidden">
+            <article id="evaluarea-psihologica" className="article-card bg-white rounded-3xl shadow-lg overflow-hidden">
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                   <img 
@@ -168,7 +168,7 @@ const ArticolePage: React.FC = () => {
                 </div>
               </div>
             </article>          {/* Article 2 - Eating Disorder */}
-          <article className="article-card bg-white rounded-3xl shadow-lg overflow-hidden">
+          <article id="tulburarea-alimentatie" className="article-card bg-white rounded-3xl shadow-lg overflow-hidden">
             <div className="p-6 lg:p-8">
               <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                 <img 
@@ -218,7 +218,7 @@ const ArticolePage: React.FC = () => {
           </article>
 
           {/* Article 3 - Sleep Hygiene */}
-          <article className="article-card bg-white rounded-3xl shadow-lg overflow-hidden">
+          <article id="igiena-somnului" className="article-card bg-white rounded-3xl shadow-lg overflow-hidden">
             <div className="p-6 lg:p-8">
               <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                 <img 

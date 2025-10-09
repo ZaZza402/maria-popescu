@@ -334,7 +334,7 @@ const HomePage: React.FC = () => {
                     to="/servicii" 
                     className="inline-block px-10 py-3 border-2 border-brand-text text-brand-text font-serif text-lg hover:bg-brand-text hover:text-white transition-all duration-300"
                   >
-                    Afla mai multe
+                    Vezi toate
                   </Link>
                 </div>
               </div>
@@ -361,7 +361,7 @@ const HomePage: React.FC = () => {
                 to="/servicii" 
                 className="inline-block px-10 py-3 border-2 border-brand-text text-brand-text font-serif text-lg hover:bg-brand-text hover:text-white transition-all duration-300"
               >
-                Afla mai multe
+                Vezi toate
               </Link>
             </div>
           </div>
@@ -526,7 +526,7 @@ const HomePage: React.FC = () => {
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img 
-                  src="./assets/kids-therapy.webp"
+                  src="./assets/kids-drawing.webp"
                   alt="Evaluarea psihologică la copil"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -538,7 +538,7 @@ const HomePage: React.FC = () => {
                 Evaluarea psihologică la copil este un proces prin care psihologul explorează dezvoltarea emoțională, cognitivă, comportamentală și socială a copilului. Scopul ei este să înțeleagă cum gândește, cum simte și cum reacționează copilul...
               </p>
               <Link 
-                to="/articole" 
+                to="/articole#evaluarea-psihologica" 
                 className="inline-block w-full px-4 py-2 border-2 border-brand-text text-brand-text font-serif text-center hover:bg-brand-text hover:text-white transition-all duration-300 rounded-lg"
               >
                 Citește articolul complet
@@ -561,7 +561,7 @@ const HomePage: React.FC = () => {
                 Mâncatul compulsiv pe fond emoțional reprezintă o strategie disfuncțională de reglare emoțională, frecvent întâlnită la femeile tinere și adulte, care recurg la hrană pentru a face față stresului...
               </p>
               <Link 
-                to="/articole" 
+                to="/articole#tulburarea-alimentatie" 
                 className="inline-block w-full px-4 py-2 border-2 border-brand-text text-brand-text font-serif text-center hover:bg-brand-text hover:text-white transition-all duration-300 rounded-lg"
               >
                 Citește articolul complet
@@ -572,7 +572,7 @@ const HomePage: React.FC = () => {
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img 
-                  src="./assets/therapy-session.webp"
+                  src="./assets/sleep-struggle.jpg"
                   alt="Igiena somnului"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -584,7 +584,7 @@ const HomePage: React.FC = () => {
                 Somnul odihnitor este esențial pentru echilibrul fizic, emoțional și cognitiv. Pentru a adormi ușor și a ne trezi revigorați, este important să respectăm o serie de reguli de igienă a somnului...
               </p>
               <Link 
-                to="/articole" 
+                to="/articole#igiena-somnului" 
                 className="inline-block w-full px-4 py-2 border-2 border-brand-text text-brand-text font-serif text-center hover:bg-brand-text hover:text-white transition-all duration-300 rounded-lg"
               >
                 Citește articolul complet
