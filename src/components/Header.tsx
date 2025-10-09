@@ -137,7 +137,7 @@ const Header = () => {
             style={{ outline: 'none', boxShadow: 'none' }}
           >
             <img 
-              src="./assets/logo-complete.svg" 
+              src="./assets/logo-complete.png" 
               alt="Maria Popescu Psiholog" 
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -210,7 +210,7 @@ const Header = () => {
             style={{ outline: 'none', boxShadow: 'none' }}
           >
             <img 
-              src="./assets/logo-complete.svg" 
+              src="./assets/logo-complete.png" 
               alt="Maria Popescu Psiholog" 
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -301,7 +301,7 @@ const Header = () => {
             style={{ transform: 'translateY(50px)', opacity: 0 }}
           >
             <img 
-              src="./assets/logo-complete.svg" 
+              src="./assets/logo-complete.png" 
               alt="Maria Popescu Psiholog" 
               className="h-12 mx-auto"
             />

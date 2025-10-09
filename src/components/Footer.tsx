@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
               <img 
-                src="./assets/logo-complete.svg" 
+                src="./assets/logo-complete.png" 
                 alt="Maria Popescu Psychology Logo" 
                 className="h-16 w-auto"
               />
