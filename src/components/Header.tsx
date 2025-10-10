@@ -229,21 +229,21 @@ const Header = () => {
                   className={`block w-6 h-0.5 transition-all duration-300 ease-out transform origin-center ${
                     isMobileMenuOpen 
                       ? 'rotate-45 translate-y-2 bg-white' 
-                      : 'bg-brand-text'
+                      : 'bg-brand-primary'
                   }`}
                 />
                 <span 
                   className={`block w-6 h-0.5 transition-all duration-300 ease-out ${
                     isMobileMenuOpen 
                       ? 'opacity-0 scale-x-0 bg-white' 
-                      : 'opacity-100 scale-x-100 bg-brand-text'
+                      : 'opacity-100 scale-x-100 bg-brand-primary'
                   }`}
                 />
                 <span 
                   className={`block w-6 h-0.5 transition-all duration-300 ease-out transform origin-center ${
                     isMobileMenuOpen 
                       ? '-rotate-45 -translate-y-2 bg-white' 
-                      : 'bg-brand-text'
+                      : 'bg-brand-primary'
                   }`}
                 />
               </div>

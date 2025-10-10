@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const ArticolePage: React.FC = () => {
+  const location = useLocation();
+
   useEffect(() => {
     // Add gsap-loaded class to enable visibility after GSAP is ready
     document.body.classList.add('gsap-loaded');
@@ -67,10 +69,29 @@ const ArticolePage: React.FC = () => {
       });
     });
 
+    // Handle hash navigation to specific articles
+    const handleHashNavigation = () => {
+      const hash = location.hash;
+      if (hash) {
+        // Wait for the page to render and animations to start
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }, 800); // Allow time for animations to partially complete
+      }
+    };
+
+    handleHashNavigation();
+
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, []);
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-stone-50">

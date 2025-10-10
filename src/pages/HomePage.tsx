@@ -36,12 +36,10 @@ const HomePage: React.FC = () => {
     gsap.fromTo(".hero-image", 
       { 
         opacity: 0, 
-        x: 30,
-        scale: 0.9
+        scale: 0.8
       }, 
       { 
         opacity: 1, 
-        x: 0,
         scale: 1,
         duration: 1.8,
         ease: "power3.out",
@@ -274,9 +272,9 @@ const HomePage: React.FC = () => {
             </div>
             
             {/* Professional Photo - Right Side on Desktop, Top on Mobile */}
-            <div className="hero-image order-1 lg:order-2 flex justify-center">
-              <div className="relative w-full max-w-lg">
-                <div className="aspect-[3/4] w-full bg-stone-200 rounded-lg overflow-hidden shadow-xl">
+            <div className="hero-image order-1 lg:order-2 flex justify-center -mx-4 lg:mx-0">
+              <div className="relative w-full max-w-none lg:max-w-lg">
+                <div className="aspect-[3/4] w-full bg-stone-200 lg:rounded-lg overflow-hidden shadow-xl">
                   <OptimizedImage
                     src="./assets/female_portrait.jpg" 
                     alt="Maria Popescu - Psiholog Clinician și Psihoterapeut"

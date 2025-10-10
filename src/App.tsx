@@ -29,16 +29,18 @@ function AnimatedRoutes() {
   const location = useLocation();
   
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/despre" element={<DesprePage />} />
-        <Route path="/servicii" element={<ServiciiPage />} />
-        <Route path="/articole" element={<ArticolePage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Suspense>
+    <div className="page-transition-container">
+      <Suspense fallback={<PageLoader />}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<div className="page-content animate-fade-in"><HomePage /></div>} />
+          <Route path="/despre" element={<div className="page-content animate-fade-in"><DesprePage /></div>} />
+          <Route path="/servicii" element={<div className="page-content animate-fade-in"><ServiciiPage /></div>} />
+          <Route path="/articole" element={<div className="page-content animate-fade-in"><ArticolePage /></div>} />
+          <Route path="/privacy" element={<div className="page-content animate-fade-in"><PrivacyPage /></div>} />
+          <Route path="*" element={<div className="page-content animate-fade-in"><NotFoundPage /></div>} />
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 
