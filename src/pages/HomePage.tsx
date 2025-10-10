@@ -134,13 +134,11 @@ const HomePage: React.FC = () => {
         .fromTo(".services-icon", 
           {
             opacity: 0.1, // Start with minimal visibility for immediate overlap
-            scale: 0.1,
-            rotation: -360
+            scale: 0.1
           },
           {
             opacity: 0.5, // Become more visible during overlap period
             scale: 0.5,
-            rotation: -180,
             duration: 1.2,
             ease: "power2.out"
           }, 4.0) // Start exactly when paper plane begins its exit
@@ -149,7 +147,6 @@ const HomePage: React.FC = () => {
           {
             opacity: 1, // Complete fade to full visibility
             scale: 1,
-            rotation: 0,
             duration: 0.8,
             ease: "power3.out"
           }, 5.2) // Continue after overlap period
