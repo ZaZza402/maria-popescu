@@ -1,0 +1,11 @@
+# Vercel ignore file
+node_modules
+.git
+src
+public
+*.md
+*.config.*
+tsconfig.*
+eslint.*
+postcss.*
+tailwind.*

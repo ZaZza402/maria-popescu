@@ -1,0 +1,4 @@
+Deployment timestamp: 2025-10-10T15:30:00Z
+Build: CLEAN_NO_FONTS
+Git commit: Latest with font fixes
+Status: Should have no font 404 errors
