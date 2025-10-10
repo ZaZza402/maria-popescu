@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -46,7 +46,7 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="scroll-progress"></div>
       <div className="min-h-screen bg-brand-bg text-brand-text font-sans">
@@ -58,7 +58,7 @@ function App() {
         <ScrollToTopButton />
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
