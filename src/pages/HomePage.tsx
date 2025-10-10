@@ -130,29 +130,29 @@ const HomePage: React.FC = () => {
           duration: 1.2,
           ease: "power2.in"
         }, 4) // Start after 4 seconds
-        // Phase 4a: Services Icon Initial Fade In (start becoming visible)
+        // Phase 4a: Services Icon Initial Fade In (start immediately with plane exit for visual overlap)
         .fromTo(".services-icon", 
           {
-            opacity: 0,
-            scale: 0,
+            opacity: 0.1, // Start with minimal visibility for immediate overlap
+            scale: 0.1,
             rotation: -360
           },
           {
-            opacity: 0.3, // First become slightly visible
-            scale: 0.3,
-            rotation: -270,
-            duration: 0.6,
+            opacity: 0.5, // Become more visible during overlap period
+            scale: 0.5,
+            rotation: -180,
+            duration: 1.2,
             ease: "power2.out"
-          }, 4.6) // Start when paper plane is halfway out
+          }, 4.0) // Start exactly when paper plane begins its exit
         // Phase 4b: Services Icon Complete Entrance (finish the animation)
         .to(".services-icon", 
           {
             opacity: 1, // Complete fade to full visibility
             scale: 1,
             rotation: 0,
-            duration: 1.0,
+            duration: 0.8,
             ease: "power3.out"
-          }, 5.2) // Continue smoothly
+          }, 5.2) // Continue after overlap period
         // Phase 5: Services Icon Gentle Pulse
         .to(".services-icon", {
           scale: 1.05,
