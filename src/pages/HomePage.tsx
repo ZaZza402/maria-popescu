@@ -226,6 +226,28 @@ const HomePage: React.FC = () => {
       }
     );
 
+    // 8. Contact Section Button Animations - Lift from Buried State
+    ScrollTrigger.create({
+      trigger: ".contact-section",
+      start: "top 70%",
+      end: "bottom 30%",
+      animation: gsap.timeline()
+        .to(".contact-button-phone", {
+          y: 0,
+          opacity: 1,
+          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          duration: 0.8,
+          ease: "back.out(1.2)"
+        })
+        .to(".contact-button-whatsapp", {
+          y: 0,
+          opacity: 1,
+          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          duration: 0.8,
+          ease: "back.out(1.2)"
+        }, 0.3) // Delay second button by 0.3 seconds
+    });
+
     // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -236,7 +258,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Hero Section - Matching Reference Design */}
-      <section className="relative bg-stone-50 py-8 lg:py-16">
+      <section className="relative bg-stone-50 py-2 lg:py-16">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[80vh]">
             {/* Text Content - Left Side on Desktop */}
@@ -604,7 +626,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section py-16 lg:py-24 bg-stone-100">
+      <section id="contact" className="contact-section py-16 lg:py-24 bg-stone-200">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="contact-title text-4xl lg:text-5xl font-serif text-brand-text mb-4">
@@ -618,7 +640,7 @@ const HomePage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="contact-card bg-white p-6 rounded-2xl shadow-lg">
+              <div className="contact-info-card bg-stone-200 p-6 rounded-2xl shadow-inner border border-stone-300/30">
                 <h3 className="text-xl font-serif text-brand-text mb-4">Informații de Contact</h3>
                 
                 <div className="space-y-4">
@@ -647,7 +669,7 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
               
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
+              <div className="contact-programare-card bg-stone-200 p-6 rounded-2xl shadow-inner border border-stone-300/30">
                 <h3 className="text-xl font-serif text-brand-text mb-4">Programare Rapidă</h3>
                 <p className="text-brand-text/70 mb-4">
                   Sună pentru o programare rapidă sau trimite un mesaj WhatsApp.
@@ -655,7 +677,7 @@ const HomePage: React.FC = () => {
                 <div className="flex gap-4">
                   <a 
                     href="tel:+40772246316" 
-                    className="flex-1 bg-brand-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-brand-text transition-colors duration-300 text-center"
+                    className="contact-button-phone flex-1 bg-brand-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-brand-text transition-colors duration-300 text-center transform translate-y-2 shadow-inner opacity-80"
                   >
                     <i className="fas fa-phone mr-2"></i>
                     Sună Acum
@@ -664,7 +686,7 @@ const HomePage: React.FC = () => {
                     href="https://wa.me/40772246316" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-300 text-center"
+                    className="contact-button-whatsapp flex-1 bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-300 text-center transform translate-y-2 shadow-inner opacity-80"
                   >
                     <i className="fab fa-whatsapp mr-2"></i>
                     WhatsApp
