@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
           duration: 1.2,
           ease: "power2.in"
         }, 4) // Start after 4 seconds
-        // Phase 4: Services Icon Swirl In (smooth overlap)
+        // Phase 4a: Services Icon Initial Fade In (start becoming visible)
         .fromTo(".services-icon", 
           {
             opacity: 0,
@@ -138,12 +138,21 @@ const HomePage: React.FC = () => {
             rotation: -360
           },
           {
-            opacity: 1,
+            opacity: 0.3, // First become slightly visible
+            scale: 0.3,
+            rotation: -270,
+            duration: 0.6,
+            ease: "power2.out"
+          }, 4.6) // Start when paper plane is halfway out
+        // Phase 4b: Services Icon Complete Entrance (finish the animation)
+        .to(".services-icon", 
+          {
+            opacity: 1, // Complete fade to full visibility
             scale: 1,
             rotation: 0,
-            duration: 1.6,
+            duration: 1.0,
             ease: "power3.out"
-          }, 4.6) // Start when paper plane is halfway out (0.6s into its 1.2s exit)
+          }, 5.2) // Continue smoothly
         // Phase 5: Services Icon Gentle Pulse
         .to(".services-icon", {
           scale: 1.05,
@@ -151,7 +160,7 @@ const HomePage: React.FC = () => {
           ease: "power2.inOut",
           yoyo: true,
           repeat: -1
-        }, 6.5) // Start after heart fully appears (4.6 + 1.6 = 6.2, plus small delay)
+        }, 6.5) // Start after heart fully appears (5.2 + 1.0 = 6.2, plus small delay)
     });
 
     // 5. Gallery Title Animation
