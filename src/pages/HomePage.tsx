@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
           duration: 1.2,
           ease: "power2.in"
         }, 4) // Start after 4 seconds
-        // Phase 4: Services Icon Swirl In (synchronized)
+        // Phase 4: Services Icon Swirl In (smooth overlap)
         .fromTo(".services-icon", 
           {
             opacity: 0,
@@ -141,9 +141,9 @@ const HomePage: React.FC = () => {
             opacity: 1,
             scale: 1,
             rotation: 0,
-            duration: 1.2,
-            ease: "back.out(1.3)"
-          }, 4.3) // Start slightly after plane starts swirling out
+            duration: 1.6,
+            ease: "power3.out"
+          }, 4.6) // Start when paper plane is halfway out (0.6s into its 1.2s exit)
         // Phase 5: Services Icon Gentle Pulse
         .to(".services-icon", {
           scale: 1.05,
@@ -151,7 +151,7 @@ const HomePage: React.FC = () => {
           ease: "power2.inOut",
           yoyo: true,
           repeat: -1
-        }, 5.8)
+        }, 6.5) // Start after heart fully appears (4.6 + 1.6 = 6.2, plus small delay)
     });
 
     // 5. Gallery Title Animation
