@@ -292,7 +292,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Services Section - Desktop Two-Column Layout */}
-      <section className="services-section py-16 lg:py-24 bg-stone-100">
+      <section className="services-section py-16 lg:py-24 bg-stone-200">
         <div className="container mx-auto max-w-6xl px-4">
           {/* Main Title */}
           <div className="text-center lg:text-left mb-12">
@@ -302,7 +302,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Desktop Two-Column Layout / Mobile Stacked */}
-          <div className="services-card bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
+          <div className="services-card">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               
               {/* Left Column - Services List */}
