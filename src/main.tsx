@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import './utils/fontLoader'
+// fontLoader disabled - using PNG logo and Google Fonts only
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
