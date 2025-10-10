@@ -504,7 +504,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Articles Section */}
-      <section className="py-16 lg:py-24 bg-stone-50">
+      <section className="py-16 lg:py-24 bg-stone-200">
         <div className="container mx-auto max-w-6xl px-4">
           
           {/* Section Title */}
@@ -521,7 +521,7 @@ const HomePage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             
             {/* Article 1 - Child Psychology Evaluation */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img 
                   src="./assets/kids-drawing.webp"
@@ -544,7 +544,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Article 2 - Eating Disorder */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img 
                   src="./assets/self-esteem.webp"
@@ -567,7 +567,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Article 3 - Sleep Hygiene */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img 
                   src="./assets/sleep-struggle.jpg"
