@@ -88,12 +88,13 @@ const HomePage: React.FC = () => {
       element.addEventListener('mouseleave', () => tl.reverse());
     });
 
-    // 4. Paper Plane Animation - Beautiful Flying Motion
+    // 4. Enhanced Services Icon Animation - Paper Plane to Heart Transition
     ScrollTrigger.create({
       trigger: ".paper-plane-container",
       start: "top 80%",
       end: "bottom 20%",
       animation: gsap.timeline()
+        // Phase 1: Paper Plane Entry
         .fromTo(".paper-plane", 
           { 
             opacity: 0, 
@@ -112,14 +113,45 @@ const HomePage: React.FC = () => {
             ease: "power3.out" 
           }
         )
+        // Phase 2: Paper Plane Gentle Float
         .to(".paper-plane", {
           y: -10,
           rotation: 5,
-          duration: 2,
+          duration: 1.5,
           ease: "power2.inOut",
-          repeat: -1,
-          yoyo: true
-        }, 0.5)
+          yoyo: true,
+          repeat: 1
+        }, 0.8)
+        // Phase 3: Paper Plane Swirl Out
+        .to(".paper-plane", {
+          rotation: 360,
+          scale: 0,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power2.in"
+        }, 4) // Start after 4 seconds
+        // Phase 4: Services Icon Swirl In (synchronized)
+        .fromTo(".services-icon", 
+          {
+            opacity: 0,
+            scale: 0,
+            rotation: -360
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            duration: 1.2,
+            ease: "back.out(1.3)"
+          }, 4.3) // Start slightly after plane starts swirling out
+        // Phase 5: Services Icon Gentle Pulse
+        .to(".services-icon", {
+          scale: 1.05,
+          duration: 1.5,
+          ease: "power2.inOut",
+          yoyo: true,
+          repeat: -1
+        }, 5.8)
     });
 
     // 5. Gallery Title Animation
@@ -359,16 +391,26 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Right Column - Animated Paper Plane */}
+              {/* Right Column - Animated Icons */}
               <div className="order-1 lg:order-2">
                 <div className="flex justify-center lg:justify-end items-center">
                   <div className="paper-plane-container relative">
+                    {/* Paper Plane Icon */}
                     <svg 
                       className="paper-plane w-32 h-32 lg:w-48 lg:h-48 text-brand-accent" 
                       fill="currentColor" 
                       viewBox="0 0 24 24"
                     >
                       <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                    
+                    {/* Services Icon (Heart/Care) - Initially Hidden */}
+                    <svg 
+                      className="services-icon absolute inset-0 w-32 h-32 lg:w-48 lg:h-48 text-brand-primary opacity-0" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                   </div>
                 </div>
