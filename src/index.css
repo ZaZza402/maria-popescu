@@ -100,7 +100,7 @@ button:focus {
 /* Add bottom padding to body on mobile to prevent content from being hidden behind mobile nav */
 @media (max-width: 768px) {
   body {
-    padding-bottom: 80px; /* Space for mobile bottom navigation */
+    padding-bottom: 0; /* No extra space below footer */
   }
   /* Align footer contact icons with text on mobile */
   .footer-contact-row { align-items: center; }

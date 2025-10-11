@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -7,6 +7,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const ServiciiPage: React.FC = () => {
+  // Track which service card's modal is open
+  const [openServiceIndex, setOpenServiceIndex] = useState<number | null>(null);
+  const closeModal = useCallback(() => setOpenServiceIndex(null), []);
+
   useEffect(() => {
     // Add gsap-loaded class to enable visibility after GSAP is ready
     document.body.classList.add('gsap-loaded');
@@ -95,6 +99,19 @@ const ServiciiPage: React.FC = () => {
     };
   }, []);
 
+  // Close modal on Escape key when open
+  useEffect(() => {
+    if (openServiceIndex === null) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        setOpenServiceIndex(null);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [openServiceIndex]);
+
   const services = [
     {
       title: "Evaluarea psihologică pentru încadrarea în grad de handicap",
@@ -169,7 +186,7 @@ const ServiciiPage: React.FC = () => {
           <div className="space-y-6">
             {services.map((service, index) => (
               <div key={index} className="service-card group">
-                <div className="bg-white border border-stone-200/50 hover:border-brand-accent/30 transition-all duration-500 hover:shadow-soft rounded-lg overflow-hidden">
+                <div className="relative bg-white border border-stone-200/50 hover:border-brand-accent/30 transition-all duration-500 hover:shadow-soft rounded-lg overflow-hidden">
                   <div className="p-8 lg:p-10">
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                       
@@ -208,7 +225,11 @@ const ServiciiPage: React.FC = () => {
                         </div>
                         
                         <div className="mt-3 lg:mt-4">
-                          <button className="inline-flex items-center gap-2 text-brand-text/70 hover:text-brand-accent transition-colors duration-300 font-medium text-base">
+                          <button
+                            type="button"
+                            onClick={() => setOpenServiceIndex(index)}
+                            className="inline-flex items-center gap-2 text-brand-text/70 hover:text-brand-accent transition-colors duration-300 font-medium text-base"
+                          >
                             <span>Solicită programare</span>
                             <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -222,6 +243,61 @@ const ServiciiPage: React.FC = () => {
                   
                   {/* Subtle Accent Line */}
                   <div className="h-0.5 bg-gradient-to-r from-transparent via-brand-accent/20 to-transparent"></div>
+
+                  {/* Local Contact Modal Overlay */}
+                  {openServiceIndex === index && (
+                    <div
+                      className="absolute inset-0 z-20 bg-black/40 backdrop-blur-[1px] flex items-center justify-center"
+                      onClick={closeModal}
+                      aria-hidden
+                    >
+                      <div
+                        className="bg-white rounded-xl shadow-2xl border border-stone-200/60 p-5 sm:p-6 w-[88%] max-w-sm text-center text-brand-text"
+                        onClick={(e) => e.stopPropagation()}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label={`Alege metoda de contact pentru: ${service.title}`}
+                      >
+                        <h4 className="font-serif text-xl mb-2">Alege metoda de contact</h4>
+                        <p className="text-sm text-brand-text/70 mb-5">Pentru „{service.title}”</p>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <a
+                            href="tel:+40772246316"
+                            className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-200 bg-white px-4 py-3 hover:border-brand-accent/40 hover:shadow-sm transition"
+                            onClick={closeModal}
+                          >
+                            <span className="text-brand-accent" aria-hidden>
+                              <i className="fas fa-phone"></i>
+                            </span>
+                            <span>Telefon</span>
+                          </a>
+
+                          <a
+                            href="https://wa.me/40772246316"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-200 bg-white px-4 py-3 hover:border-brand-accent/40 hover:shadow-sm transition"
+                            onClick={closeModal}
+                          >
+                            <span className="text-green-600" aria-hidden>
+                              <i className="fab fa-whatsapp"></i>
+                            </span>
+                            <span>WhatsApp</span>
+                          </a>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={closeModal}
+                          className="mt-4 text-sm text-brand-text/60 hover:text-brand-accent transition"
+                          aria-label="Închide"
+                        >
+                          Închide
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
