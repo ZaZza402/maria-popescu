@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import OptimizedImage from '../components/OptimizedImage';
 import { gsap } from 'gsap';
@@ -199,33 +199,7 @@ const HomePage: React.FC = () => {
         }
       );
 
-      // Simple click functionality for modal
-      element.addEventListener('click', () => {
-        const img = element.querySelector('img');
-        
-        if (img) {
-          const modal = document.getElementById('gallery-modal');
-          const modalImg = document.getElementById('gallery-modal-image') as HTMLImageElement;
-          
-          if (modal && modalImg) {
-            // Set modal content
-            modalImg.src = img.src;
-            modalImg.alt = img.alt;
-            modalImg.classList.remove('hidden'); // Show the image
-            
-            // Show modal
-            modal.style.display = 'block';
-            modal.classList.remove('opacity-0', 'invisible');
-            document.body.style.overflow = 'hidden';
-            
-            // Simple fade-in animation
-            gsap.fromTo(modalImg, 
-              { opacity: 0 },
-              { opacity: 1, duration: 0.3, ease: "power2.out" }
-            );
-          }
-        }
-      });
+      // Click handled via React onClick per image
     });
 
     // 6. CTA Buttons - Pulse Effect on Scroll
@@ -292,6 +266,19 @@ const HomePage: React.FC = () => {
       document.body.classList.remove('gsap-loaded');
     };
   }, []);
+
+  // Open gallery modal reliably from React click handlers
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const previewRef = useRef<HTMLDivElement | null>(null);
+
+  // Zoom-in animation when the inline overlay appears
+  useEffect(() => {
+    if (selectedImage && overlayRef.current && previewRef.current) {
+      gsap.fromTo(overlayRef.current, { opacity: 0 }, { opacity: 1, duration: 0.2, ease: 'power2.out' });
+      gsap.fromTo(previewRef.current, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.25, ease: 'power3.out' });
+    }
+  }, [selectedImage]);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -456,6 +443,7 @@ const HomePage: React.FC = () => {
                   src="./assets/therapy-session.webp"
                   alt="Terapie pentru adulți"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                  onClick={(e) => setSelectedImage({ src: (e.currentTarget as HTMLImageElement).src, alt: (e.currentTarget as HTMLImageElement).alt })}
                 />
               </div>
 
@@ -464,6 +452,7 @@ const HomePage: React.FC = () => {
                   src="./assets/kids-therapy.webp"
                   alt="Terapie pentru copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                  onClick={(e) => setSelectedImage({ src: (e.currentTarget as HTMLImageElement).src, alt: (e.currentTarget as HTMLImageElement).alt })}
                 />
               </div>
 
@@ -472,6 +461,7 @@ const HomePage: React.FC = () => {
                   src="./assets/kids-playing.webp"
                   alt="Terapia prin joc"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                  onClick={(e) => setSelectedImage({ src: (e.currentTarget as HTMLImageElement).src, alt: (e.currentTarget as HTMLImageElement).alt })}
                 />
               </div>
 
@@ -480,6 +470,7 @@ const HomePage: React.FC = () => {
                   src="./assets/kids-drawing.webp"
                   alt="Art terapie"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                  onClick={(e) => setSelectedImage({ src: (e.currentTarget as HTMLImageElement).src, alt: (e.currentTarget as HTMLImageElement).alt })}
                 />
               </div>
 
@@ -488,6 +479,7 @@ const HomePage: React.FC = () => {
                   src="./assets/self-esteem.webp"
                   alt="Dezvoltarea stimei de sine"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                  onClick={(e) => setSelectedImage({ src: (e.currentTarget as HTMLImageElement).src, alt: (e.currentTarget as HTMLImageElement).alt })}
                 />
               </div>
 
@@ -496,6 +488,7 @@ const HomePage: React.FC = () => {
                   src="./assets/female_portrait.jpg"
                   alt="Maria Popescu"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                  onClick={(e) => setSelectedImage({ src: (e.currentTarget as HTMLImageElement).src, alt: (e.currentTarget as HTMLImageElement).alt })}
                 />
               </div>
 
@@ -504,6 +497,7 @@ const HomePage: React.FC = () => {
                   src="./assets/sleep-struggle.jpg"
                   alt="Probleme de somn"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
+                  onClick={(e) => setSelectedImage({ src: (e.currentTarget as HTMLImageElement).src, alt: (e.currentTarget as HTMLImageElement).alt })}
                 />
               </div>              {/* Future images can be easily added here */}
               
@@ -516,58 +510,34 @@ const HomePage: React.FC = () => {
                 Glisează pentru a vedea mai multe imagini
               </p>
             </div>
+
+            {/* Over-gallery lightbox */}
+            {selectedImage && (
+              <div
+                ref={overlayRef}
+                className="absolute inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+                onClick={() => setSelectedImage(null)}
+              >
+                <div ref={previewRef} className="relative max-w-[92vw] sm:max-w-[80vw] lg:max-w-[60vw] max-h-[80vh] will-change-transform">
+                  <button
+                    aria-label="Închide previzualizarea"
+                    className="absolute -top-3 -right-3 bg-white/80 text-brand-text rounded-full w-8 h-8 flex items-center justify-center shadow"
+                    onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <img
+                    src={selectedImage.src}
+                    alt={selectedImage.alt}
+                    className="max-h-[80vh] max-w-full object-contain rounded-md"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-
-        {/* Simple Image Modal */}
-        <div 
-          id="gallery-modal" 
-          className="fixed inset-0 bg-black/95 z-[9999] opacity-0 invisible transition-all duration-300 flex items-center justify-center min-h-screen"
-          onClick={(e) => {
-            const target = e.target as HTMLElement;
-            if (target.id === 'gallery-modal' || target.classList.contains('modal-close')) {
-              const modal = document.getElementById('gallery-modal');
-              const modalImg = document.getElementById('gallery-modal-image');
-              if (modal && modalImg) {
-                modalImg.classList.add('hidden'); // Hide the image
-                modal.classList.add('opacity-0', 'invisible');
-                setTimeout(() => {
-                  modal.style.display = 'none';
-                }, 300);
-                document.body.style.overflow = 'auto';
-              }
-            }
-          }}
-        >
-          {/* Close Button */}
-          <button 
-            className="modal-close absolute top-4 right-4 w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-200 z-[10001]"
-            onClick={() => {
-              const modal = document.getElementById('gallery-modal');
-              const modalImg = document.getElementById('gallery-modal-image');
-              if (modal && modalImg) {
-                modalImg.classList.add('hidden'); // Hide the image
-                modal.classList.add('opacity-0', 'invisible');
-                setTimeout(() => {
-                  modal.style.display = 'none';
-                }, 300);
-                document.body.style.overflow = 'auto';
-              }
-            }}
-          >
-            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          {/* Image */}
-          <img 
-            id="gallery-modal-image"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-            alt=""
-            className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl hidden"
-            onClick={(e) => e.stopPropagation()}
-          />
         </div>
       </section>
 

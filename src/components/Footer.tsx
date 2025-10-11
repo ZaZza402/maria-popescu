@@ -84,20 +84,20 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <div className="flex items-center gap-2 text-brand-text/80">
-                  <i className="fas fa-phone text-brand-accent w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                  <a href="tel:+40772246316" className="hover:text-brand-accent transition-colors">
-                    +40 (772) 246 316
-                  </a>
-                </div>
+                <a href="tel:+40772246316" className="flex items-center gap-3 whitespace-nowrap text-brand-text/80 hover:text-brand-accent transition-colors">
+                  <span className="flex w-5 h-5 items-center justify-center text-brand-accent" aria-hidden>
+                    <i className="fas fa-phone text-[18px] leading-none"></i>
+                  </span>
+                  <span className="leading-none translate-y-[1px]">+40 (772) 246 316</span>
+                </a>
               </li>
               <li>
-                <div className="flex items-center gap-2 text-brand-text/80">
-                  <i className="fab fa-whatsapp text-brand-accent w-4 h-4 flex items-center justify-center flex-shrink-0"></i>
-                  <a href="https://wa.me/40772246316" className="hover:text-brand-accent transition-colors">
-                    WhatsApp
-                  </a>
-                </div>
+                <a href="https://wa.me/40772246316" className="flex items-center gap-3 whitespace-nowrap text-brand-text/80 hover:text-brand-accent transition-colors">
+                  <span className="flex w-5 h-5 items-center justify-center text-brand-accent" aria-hidden>
+                    <i className="fab fa-whatsapp text-[18px] leading-none"></i>
+                  </span>
+                  <span className="leading-none translate-y-[1px]">WhatsApp</span>
+                </a>
               </li>
               <li className="mt-4 pt-2 border-t border-brand-accent/20">
                 <Link to="/privacy" className="text-brand-text/70 hover:text-brand-accent transition-colors text-xs">
