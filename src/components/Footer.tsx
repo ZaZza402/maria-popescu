@@ -85,7 +85,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <div className="flex items-center gap-2 text-brand-text/80">
-                  <i className="fas fa-phone text-brand-accent"></i>
+                  <i className="fas fa-phone text-brand-accent w-4 text-center flex-shrink-0"></i>
                   <a href="tel:+40772246316" className="hover:text-brand-accent transition-colors">
                     +40 (772) 246 316
                   </a>
@@ -93,7 +93,7 @@ const Footer = () => {
               </li>
               <li>
                 <div className="flex items-center gap-2 text-brand-text/80">
-                  <i className="fab fa-whatsapp text-brand-accent"></i>
+                  <i className="fab fa-whatsapp text-brand-accent w-4 text-center flex-shrink-0"></i>
                   <a href="https://wa.me/40772246316" className="hover:text-brand-accent transition-colors">
                     WhatsApp
                   </a>

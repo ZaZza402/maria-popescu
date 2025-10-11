@@ -519,10 +519,11 @@ const HomePage: React.FC = () => {
           </div>
         </div>
 
-        {/* Simple Image Modal - Mobile Optimized */}
+        {/* Simple Image Modal - Fixed Positioning */}
         <div 
           id="gallery-modal" 
-          className="fixed inset-0 bg-black/95 z-[9999] opacity-0 invisible transition-all duration-300"
+          className="fixed inset-0 bg-black/95 z-[9999] opacity-0 invisible transition-all duration-300 overflow-hidden"
+          style={{ position: 'fixed', top: '0', left: '0', width: '100vw', height: '100vh' }}
           onClick={(e) => {
             const target = e.target as HTMLElement;
             if (target.id === 'gallery-modal' || target.classList.contains('modal-close')) {
@@ -539,9 +540,9 @@ const HomePage: React.FC = () => {
             }
           }}
         >
-          {/* Close Button - Mobile Optimized */}
+          {/* Close Button - Fixed Position */}
           <button 
-            className="modal-close fixed top-4 right-4 w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-200 z-[10000]"
+            className="modal-close absolute top-4 right-4 w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-200 z-[10001]"
             onClick={() => {
               const modal = document.getElementById('gallery-modal');
               const modalImg = document.getElementById('gallery-modal-image');
@@ -560,13 +561,13 @@ const HomePage: React.FC = () => {
             </svg>
           </button>
 
-          {/* Image - Mobile Optimized */}
-          <div className="flex items-center justify-center min-h-screen p-4">
+          {/* Image Container - Centered in viewport */}
+          <div className="absolute inset-0 flex items-center justify-center p-4">
             <img 
               id="gallery-modal-image"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
               alt=""
-              className="max-w-full max-h-full object-contain rounded-lg hidden"
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl hidden"
               onClick={(e) => e.stopPropagation()}
             />
           </div>
