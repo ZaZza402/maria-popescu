@@ -8,7 +8,7 @@ const Header = () => {
   const menuOverlayRef = useRef<HTMLDivElement>(null);
   const menuContentRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
-  const menuItemsRef = useRef<HTMLDivElement[]>([]);
+  const menuItemsRef = useRef<(HTMLDivElement | HTMLButtonElement)[]>([]);
 
   // Helper function to check if a route is active
   const isActiveRoute = (path: string) => {
@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   // Add menu item to refs
-  const addToMenuRefs = (el: HTMLDivElement | null) => {
+  const addToMenuRefs = (el: HTMLDivElement | HTMLButtonElement | null) => {
     if (el && !menuItemsRef.current.includes(el)) {
       menuItemsRef.current.push(el);
     }
@@ -48,14 +48,13 @@ const Header = () => {
         ease: "power2.out",
       });
 
-      // Animate menu content slide in from top
+      // Animate menu content fade in - NO TRANSFORM
       tl.to(
         menuContentRef.current,
         {
-          y: "0%",
           opacity: 1,
-          duration: 0.5,
-          ease: "power3.out",
+          duration: 0.3,
+          ease: "power2.out",
         },
         "-=0.1"
       );
@@ -69,7 +68,7 @@ const Header = () => {
           stagger: 0,
           ease: "none",
         },
-        "-=0.3"
+        "-=0.2"
       );
     });
   };
@@ -86,23 +85,21 @@ const Header = () => {
       },
     });
 
-    // Animate menu items out - smooth linear
+    // Animate menu items out - simple fade, no movement
     tl.to(menuItemsRef.current, {
-      y: -30,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
       stagger: 0,
       ease: "none",
     });
 
-    // Animate menu content slide out - smooth linear
+    // Animate menu content fade out - NO TRANSFORM
     tl.to(
       menuContentRef.current,
       {
-        y: "-100%",
         opacity: 0,
-        duration: 0.8,
-        ease: "none",
+        duration: 0.3,
+        ease: "power2.in",
       },
       "-=0.1"
     );
@@ -320,15 +317,16 @@ const Header = () => {
             ref={menuContentRef}
             className="relative h-full overflow-y-auto flex flex-col justify-center items-center text-center px-4 min-h-screen"
             style={{
-              transform: "translateY(-100%)",
               opacity: 0,
             }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
+              ref={addToMenuRefs}
               onClick={closeMobileMenu}
               className="absolute top-4 right-4 z-10 p-3 hover:opacity-80 transition-opacity"
+              style={{ opacity: 0 }}
             >
               <div className="w-6 h-6 flex items-center justify-center relative">
                 <span className="block w-6 h-0.5 bg-white rotate-45 absolute" />
@@ -338,10 +336,7 @@ const Header = () => {
 
             {/* Navigation Links */}
             <nav className="space-y-3 max-w-xs w-full">
-              <div
-                ref={addToMenuRefs}
-                style={{ opacity: 0 }}
-              >
+              <div ref={addToMenuRefs} style={{ opacity: 0 }}>
                 <Link
                   to="/"
                   onClick={closeMobileMenu}
@@ -353,10 +348,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div
-                ref={addToMenuRefs}
-                style={{ opacity: 0 }}
-              >
+              <div ref={addToMenuRefs} style={{ opacity: 0 }}>
                 <Link
                   to="/despre"
                   onClick={closeMobileMenu}
@@ -370,10 +362,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div
-                ref={addToMenuRefs}
-                style={{ opacity: 0 }}
-              >
+              <div ref={addToMenuRefs} style={{ opacity: 0 }}>
                 <Link
                   to="/servicii"
                   onClick={closeMobileMenu}
@@ -387,10 +376,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div
-                ref={addToMenuRefs}
-                style={{ opacity: 0 }}
-              >
+              <div ref={addToMenuRefs} style={{ opacity: 0 }}>
                 <Link
                   to="/articole"
                   onClick={closeMobileMenu}
@@ -404,10 +390,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div
-                ref={addToMenuRefs}
-                style={{ opacity: 0 }}
-              >
+              <div ref={addToMenuRefs} style={{ opacity: 0 }}>
                 <Link
                   to="/intrebari-frecvente"
                   onClick={closeMobileMenu}
