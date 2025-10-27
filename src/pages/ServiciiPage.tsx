@@ -9,6 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 const ServiciiPage: React.FC = () => {
   // Track which service card's modal is open
   const [openServiceIndex, setOpenServiceIndex] = useState<number | null>(null);
+  const [modalOverlayRef, setModalOverlayRef] = useState<HTMLDivElement | null>(
+    null
+  );
+  const [modalContentRef, setModalContentRef] = useState<HTMLDivElement | null>(
+    null
+  );
+
   const closeModal = useCallback(() => setOpenServiceIndex(null), []);
 
   useEffect(() => {
@@ -117,6 +124,24 @@ const ServiciiPage: React.FC = () => {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [openServiceIndex]);
+
+  // Animate modal overlay and content on open
+  useEffect(() => {
+    if (openServiceIndex === null || !modalOverlayRef || !modalContentRef)
+      return;
+
+    gsap.fromTo(
+      modalOverlayRef,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.25, ease: "power2.out" }
+    );
+
+    gsap.fromTo(
+      modalContentRef,
+      { scale: 0.85, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.4)" }
+    );
+  }, [openServiceIndex, modalOverlayRef, modalContentRef]);
 
   const services = [
     {
@@ -294,11 +319,13 @@ const ServiciiPage: React.FC = () => {
                   {/* Local Contact Modal Overlay */}
                   {openServiceIndex === index && (
                     <div
+                      ref={setModalOverlayRef}
                       className="absolute inset-0 z-20 bg-black/40 backdrop-blur-[1px] flex items-center justify-center"
                       onClick={closeModal}
                       aria-hidden
                     >
                       <div
+                        ref={setModalContentRef}
                         className="bg-white rounded-xl shadow-2xl border border-stone-200/60 p-5 sm:p-6 w-[88%] max-w-sm text-center text-brand-text"
                         onClick={(e) => e.stopPropagation()}
                         role="dialog"

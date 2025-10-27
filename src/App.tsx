@@ -1,50 +1,112 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import WhatsappButton from './components/WhatsappButton';
-import ScrollToTop from './components/ScrollToTop';
-import ScrollToTopButton from './components/ScrollToTopButton';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import WhatsappButton from "./components/WhatsappButton";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
-
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage'));
-const ServiciiPage = lazy(() => import('./pages/ServiciiPage'));
-const DesprePage = lazy(() => import('./pages/DesprePage'));
-const ArticolePage = lazy(() => import('./pages/ArticolePage'));
-const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
-
-// Loading fallback component
-const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-light to-white">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-4 border-brand-accent border-t-transparent mx-auto mb-4"></div>
-      <p className="text-brand-text/80">Se încarcă...</p>
-    </div>
-  </div>
-);
+// Direct imports for instant loading - no lazy loading
+import HomePage from "./pages/HomePage";
+import ServiciiPage from "./pages/ServiciiPage";
+import DesprePage from "./pages/DesprePage";
+import ArticolePage from "./pages/ArticolePage";
+import FAQPage from "./pages/FAQPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function AnimatedRoutes() {
   const location = useLocation();
-  
+
   return (
     <div className="page-transition-container">
-      <Suspense fallback={<PageLoader />}>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<div className="page-content animate-fade-in"><HomePage /></div>} />
-          <Route path="/despre" element={<div className="page-content animate-fade-in"><DesprePage /></div>} />
-          <Route path="/servicii" element={<div className="page-content animate-fade-in"><ServiciiPage /></div>} />
-          <Route path="/articole" element={<div className="page-content animate-fade-in"><ArticolePage /></div>} />
-          <Route path="/privacy" element={<div className="page-content animate-fade-in"><PrivacyPage /></div>} />
-          <Route path="*" element={<div className="page-content animate-fade-in"><NotFoundPage /></div>} />
-        </Routes>
-      </Suspense>
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <div className="page-content animate-fade-in">
+              <HomePage />
+            </div>
+          }
+        />
+        <Route
+          path="/despre"
+          element={
+            <div className="page-content animate-fade-in">
+              <DesprePage />
+            </div>
+          }
+        />
+        <Route
+          path="/servicii"
+          element={
+            <div className="page-content animate-fade-in">
+              <ServiciiPage />
+            </div>
+          }
+        />
+        <Route
+          path="/articole"
+          element={
+            <div className="page-content animate-fade-in">
+              <ArticolePage />
+            </div>
+          }
+        />
+        <Route
+          path="/intrebari-frecvente"
+          element={
+            <div className="page-content animate-fade-in">
+              <FAQPage />
+            </div>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <div className="page-content animate-fade-in">
+              <PrivacyPage />
+            </div>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <div className="page-content animate-fade-in">
+              <NotFoundPage />
+            </div>
+          }
+        />
+      </Routes>
     </div>
   );
 }
 
 function App() {
+  useEffect(() => {
+    // CRITICAL: Tell browser to NOT restore scroll positions
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    // FORCE reset scroll on every navigation - block browser cache
+    const resetScroll = () => {
+      window.scrollTo(0, 0);
+    };
+
+    // Run on every popstate (back/forward) and beforeunload
+    window.addEventListener("popstate", resetScroll);
+    window.addEventListener("beforeunload", resetScroll);
+
+    // Initial reset
+    resetScroll();
+
+    return () => {
+      window.removeEventListener("popstate", resetScroll);
+      window.removeEventListener("beforeunload", resetScroll);
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -62,4 +124,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

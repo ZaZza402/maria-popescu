@@ -1,9 +1,9 @@
 /* Primary web fonts - optimized for psychology website readability */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 /* Signature fonts with fallback */
-@import url('https://fonts.cdnfonts.com/css/brittany-signature');
+@import url("https://fonts.cdnfonts.com/css/brittany-signature");
 
 /* All fonts now loaded via Google Fonts above. Logo is PNG image. 
    Custom fonts removed to fix Vercel 404 issues. */
@@ -12,24 +12,33 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; }
-body, html { overflow-x: hidden; }
-details > summary { list-style: none; }
-details > summary::-webkit-details-marker { display: none; }
+html {
+  scroll-behavior: auto;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
 
 /* Enhanced focus styles for accessibility */
 *:focus {
-  outline: 2px solid #D8B2AD;
+  outline: 2px solid #d8b2ad;
   outline-offset: 2px;
 }
 
 /* Text selection styling */
 ::selection {
-  background: #D8B2AD;
+  background: #d8b2ad;
   color: white;
 }
 ::-moz-selection {
-  background: #D8B2AD;
+  background: #d8b2ad;
   color: white;
 }
 
@@ -39,19 +48,22 @@ details > summary::-webkit-details-marker { display: none; }
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
-  
+
   /* Improved line height for mobile reading */
   p {
     line-height: 1.7;
   }
-  
+
   /* Better letter spacing for smaller screens */
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     letter-spacing: -0.02em;
   }
-  
+
   /* Minimum touch targets for accessibility */
-  button, a {
+  button,
+  a {
     min-height: 44px;
     min-width: 44px;
   }
@@ -59,7 +71,7 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* Enhanced readability for all text */
 body {
-  font-feature-settings: 'kern' 1;
+  font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -70,14 +82,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F5F1F0;
+  background: #f5f1f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D8B2AD;
+  background: #d8b2ad;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D8B2AD;
+  background: #d8b2ad;
 }
 
 /* Remove all borders and outlines from buttons */
@@ -103,8 +115,12 @@ button:focus {
     padding-bottom: 0; /* No extra space below footer */
   }
   /* Align footer contact icons with text on mobile */
-  .footer-contact-row { align-items: center; }
-  .footer-contact-row a { line-height: 1; }
+  .footer-contact-row {
+    align-items: center;
+  }
+  .footer-contact-row a {
+    line-height: 1;
+  }
 }
 button:active {
   border: none !important;
@@ -114,62 +130,62 @@ button:active {
 
 /* Ensure fonts are loaded properly with fallbacks */
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Brittany Signature';
+  font-family: "Brittany Signature";
   font-display: swap;
 }
 
 /* Global Typography Classes */
 .font-maria {
-  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 600;
 }
 
 .font-popescu {
-  font-family: 'Brittany Signature', 'Brush Script MT', cursive;
+  font-family: "Brittany Signature", "Brush Script MT", cursive;
 }
 
 .font-body {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 /* Ensure immediate font application */
 body {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 /* Color Utility Classes for New Brand Palette */
 .text-dusty-rose {
-  color: #D8B2AD;
+  color: #d8b2ad;
 }
 
 .text-earthy-beige {
-  color: #D8B2AD;
+  color: #d8b2ad;
 }
 
 .bg-dusty-rose {
-  background-color: #D8B2AD;
+  background-color: #d8b2ad;
 }
 
 .bg-earthy-beige {
-  background-color: #D8B2AD;
+  background-color: #d8b2ad;
 }
 
 .border-dusty-rose {
-  border-color: #D8B2AD;
+  border-color: #d8b2ad;
 }
 
 .border-earthy-beige {
-  border-color: #D8B2AD;
+  border-color: #d8b2ad;
 }
 
 /* Mobile Menu Animations */
@@ -266,13 +282,13 @@ body {
 /* Enhanced drop shadow for active nav links */
 .nav-link.active span::after,
 .nav-link[aria-current="page"] span::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
   width: 100%;
   height: 2px;
-  background: #D8B2AD;
+  background: #d8b2ad;
   filter: drop-shadow(0 2px 4px rgba(216, 178, 173, 0.4));
 }
 
@@ -301,7 +317,7 @@ a[href="/"]:focus {
 
 /* Calm, therapeutic transitions */
 .therapeutic-transition {
-  transition: all 1200ms cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  transition: all 1200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* Lightweight page transitions to replace Framer Motion */
@@ -338,7 +354,7 @@ a[href="/"]:focus {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #D8B2AD 0%, #c4a394 100%);
+  background: linear-gradient(90deg, #d8b2ad 0%, #c4a394 100%);
   z-index: 1000;
   width: 0%;
 }

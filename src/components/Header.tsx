@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { gsap } from 'gsap';
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { gsap } from "gsap";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,7 +9,6 @@ const Header = () => {
   const menuContentRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
   const menuItemsRef = useRef<HTMLDivElement[]>([]);
-
 
   // Helper function to check if a route is active
   const isActiveRoute = (path: string) => {
@@ -26,45 +25,52 @@ const Header = () => {
   // Open mobile menu with GSAP animation
   const openMobileMenu = () => {
     setIsMobileMenuOpen(true);
-    
+
     // Reset menu items refs
     menuItemsRef.current = [];
-    
+
     // Prevent body scroll
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
-    
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+
     // Animate immediately since initial states are already set in CSS
     requestAnimationFrame(() => {
       if (!menuOverlayRef.current || !menuContentRef.current) return;
-      
+
       // GSAP Animation Timeline
       const tl = gsap.timeline();
-      
+
       // Animate overlay fade in
       tl.to(menuOverlayRef.current, {
         opacity: 1,
         duration: 0.3,
-        ease: 'power2.out'
+        ease: "power2.out",
       });
-      
+
       // Animate menu content slide in from top
-      tl.to(menuContentRef.current, {
-        y: '0%',
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power3.out'
-      }, '-=0.1');
-      
-      // Animate menu items with stagger
-      tl.to(menuItemsRef.current, {
-        y: 0,
-        opacity: 1,
-        duration: 0.4,
-        stagger: 0.1,
-        ease: 'power2.out'
-      }, '-=0.2');
+      tl.to(
+        menuContentRef.current,
+        {
+          y: "0%",
+          opacity: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        },
+        "-=0.1"
+      );
+
+      // Animate menu items - simple fade in, no movement
+      tl.to(
+        menuItemsRef.current,
+        {
+          opacity: 1,
+          duration: 0.3,
+          stagger: 0,
+          ease: "none",
+        },
+        "-=0.3"
+      );
     });
   };
 
@@ -74,38 +80,46 @@ const Header = () => {
       onComplete: () => {
         setIsMobileMenuOpen(false);
         // Restore body scroll
-        document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
-      }
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+      },
     });
-    
-    // Animate menu items out
+
+    // Animate menu items out - smooth linear
     tl.to(menuItemsRef.current, {
       y: -30,
       opacity: 0,
-      duration: 0.2,
-      stagger: 0.05,
-      ease: 'power2.in'
+      duration: 0.6,
+      stagger: 0,
+      ease: "none",
     });
-    
-    // Animate menu content slide out
-    tl.to(menuContentRef.current, {
-      y: '-100%',
-      opacity: 0,
-      duration: 0.4,
-      ease: 'power3.in'
-    }, '-=0.1');
-    
+
+    // Animate menu content slide out - smooth linear
+    tl.to(
+      menuContentRef.current,
+      {
+        y: "-100%",
+        opacity: 0,
+        duration: 0.8,
+        ease: "none",
+      },
+      "-=0.1"
+    );
+
     // Animate overlay fade out
-    tl.to(menuOverlayRef.current, {
-      opacity: 0,
-      duration: 0.3,
-      ease: 'power2.in',
-      onComplete: () => {
-        gsap.set(menuOverlayRef.current, { visibility: 'hidden' });
-      }
-    }, '-=0.2');
+    tl.to(
+      menuOverlayRef.current,
+      {
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.in",
+        onComplete: () => {
+          gsap.set(menuOverlayRef.current, { visibility: "hidden" });
+        },
+      },
+      "-=0.2"
+    );
   };
 
   // Close mobile menu when route changes
@@ -119,9 +133,9 @@ const Header = () => {
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
     };
   }, []);
 
@@ -131,14 +145,14 @@ const Header = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex justify-between items-center">
           {/* Logo Section - Desktop */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="group focus:outline-none"
-            style={{ outline: 'none', boxShadow: 'none' }}
+            style={{ outline: "none", boxShadow: "none" }}
           >
-            <img 
-              src="./assets/logo-complete.png" 
-              alt="Maria Popescu Psiholog" 
+            <img
+              src="./assets/logo-complete.png"
+              alt="Maria Popescu Psiholog"
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
@@ -147,38 +161,57 @@ const Header = () => {
             <Link
               to="/"
               className={`transition-colors hover:text-brand-accent ${
-                isActiveRoute('/') ? 'text-brand-accent font-medium' : 'text-brand-text'
+                isActiveRoute("/")
+                  ? "text-brand-accent font-medium"
+                  : "text-brand-text"
               }`}
-              style={{ outline: 'none', boxShadow: 'none' }}
+              style={{ outline: "none", boxShadow: "none" }}
             >
               Acasă
             </Link>
             <Link
               to="/despre"
               className={`transition-colors hover:text-brand-accent ${
-                isActiveRoute('/despre') ? 'text-brand-accent font-medium' : 'text-brand-text'
+                isActiveRoute("/despre")
+                  ? "text-brand-accent font-medium"
+                  : "text-brand-text"
               }`}
-              style={{ outline: 'none', boxShadow: 'none' }}
+              style={{ outline: "none", boxShadow: "none" }}
             >
               Despre Mine
             </Link>
             <Link
               to="/servicii"
               className={`transition-colors hover:text-brand-accent ${
-                isActiveRoute('/servicii') ? 'text-brand-accent font-medium' : 'text-brand-text'
+                isActiveRoute("/servicii")
+                  ? "text-brand-accent font-medium"
+                  : "text-brand-text"
               }`}
-              style={{ outline: 'none', boxShadow: 'none' }}
+              style={{ outline: "none", boxShadow: "none" }}
             >
               Servicii
             </Link>
             <Link
               to="/articole"
               className={`transition-colors hover:text-brand-accent ${
-                isActiveRoute('/articole') ? 'text-brand-accent font-medium' : 'text-brand-text'
+                isActiveRoute("/articole")
+                  ? "text-brand-accent font-medium"
+                  : "text-brand-text"
               }`}
-              style={{ outline: 'none', boxShadow: 'none' }}
+              style={{ outline: "none", boxShadow: "none" }}
             >
               Articole
+            </Link>
+            <Link
+              to="/intrebari-frecvente"
+              className={`transition-colors hover:text-brand-accent ${
+                isActiveRoute("/intrebari-frecvente")
+                  ? "text-brand-accent font-medium"
+                  : "text-brand-text"
+              }`}
+              style={{ outline: "none", boxShadow: "none" }}
+            >
+              FAQ
             </Link>
           </nav>
 
@@ -189,61 +222,67 @@ const Header = () => {
               <div className="flex items-center justify-center w-10 h-10 bg-brand-accent/10 rounded-full">
                 <i className="fas fa-phone text-sm text-brand-accent"></i>
               </div>
-              <a 
-                href="tel:+40772246316" 
+              <a
+                href="tel:+40772246316"
                 className="text-base font-medium hover:text-brand-accent transition-colors"
-                style={{ outline: 'none', boxShadow: 'none' }}
+                style={{ outline: "none", boxShadow: "none" }}
               >
                 0772 246 316
               </a>
             </div>
           </div>
         </div>
-        
+
         {/* Mobile Layout */}
         <div className="md:hidden flex justify-between items-center relative">
           <div className="flex-1"></div>
-          
-          <Link 
-            to="/" 
+
+          <Link
+            to="/"
             className="group focus:outline-none flex-shrink-0"
-            style={{ outline: 'none', boxShadow: 'none' }}
+            style={{ outline: "none", boxShadow: "none" }}
           >
-            <img 
-              src="./assets/logo-complete.png" 
-              alt="Maria Popescu Psiholog" 
+            <img
+              src="./assets/logo-complete.png"
+              alt="Maria Popescu Psiholog"
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
-          
+
           <div className="flex-1 flex justify-end">
             {/* Modern Hamburger Menu Button */}
-            <button 
+            <button
               ref={hamburgerRef}
-              onClick={() => isMobileMenuOpen ? closeMobileMenu() : openMobileMenu()}
+              onClick={() =>
+                isMobileMenuOpen ? closeMobileMenu() : openMobileMenu()
+              }
               className="relative p-3 focus:outline-none group z-[60]"
-              style={{ outline: 'none !important', boxShadow: 'none !important', border: 'none !important' }}
+              style={{
+                outline: "none !important",
+                boxShadow: "none !important",
+                border: "none !important",
+              }}
             >
               <div className="w-6 h-5 flex flex-col justify-between">
-                <span 
+                <span
                   className={`block w-6 h-0.5 transition-all duration-300 ease-out transform origin-center ${
-                    isMobileMenuOpen 
-                      ? 'rotate-45 translate-y-2 bg-white' 
-                      : 'bg-brand-primary'
+                    isMobileMenuOpen
+                      ? "rotate-45 translate-y-2 bg-white"
+                      : "bg-brand-primary"
                   }`}
                 />
-                <span 
+                <span
                   className={`block w-6 h-0.5 transition-all duration-300 ease-out ${
-                    isMobileMenuOpen 
-                      ? 'opacity-0 scale-x-0 bg-white' 
-                      : 'opacity-100 scale-x-100 bg-brand-primary'
+                    isMobileMenuOpen
+                      ? "opacity-0 scale-x-0 bg-white"
+                      : "opacity-100 scale-x-100 bg-brand-primary"
                   }`}
                 />
-                <span 
+                <span
                   className={`block w-6 h-0.5 transition-all duration-300 ease-out transform origin-center ${
-                    isMobileMenuOpen 
-                      ? '-rotate-45 -translate-y-2 bg-white' 
-                      : 'bg-brand-primary'
+                    isMobileMenuOpen
+                      ? "-rotate-45 -translate-y-2 bg-white"
+                      : "bg-brand-primary"
                   }`}
                 />
               </div>
@@ -251,103 +290,139 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Modern Full-Screen Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           ref={menuOverlayRef}
           className="fixed inset-0 z-[9999] w-screen h-screen"
-          style={{ 
-            position: 'fixed', 
-            top: 0, 
-            left: 0, 
-            right: 0, 
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
             bottom: 0,
-            opacity: 0
+            opacity: 0,
           }}
         >
-        {/* Backdrop */}
-        <div 
-          className="absolute inset-0"
-          style={{ 
-            background: 'linear-gradient(135deg, rgba(196, 224, 217, 0.95) 0%, rgba(232, 162, 152, 0.95) 100%)'
-          }}
-          onClick={closeMobileMenu}
-        />
-        
-        {/* Menu Content */}
-        <div 
-          ref={menuContentRef}
-          className="relative h-full overflow-y-auto flex flex-col justify-center items-center text-center px-4 min-h-screen"
-          style={{ 
-            transform: 'translateY(-100%)',
-            opacity: 0
-          }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* Close Button */}
-          <button 
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(196, 224, 217, 0.95) 0%, rgba(232, 162, 152, 0.95) 100%)",
+            }}
             onClick={closeMobileMenu}
-            className="absolute top-4 right-4 z-10 p-3 hover:opacity-80 transition-opacity"
-          >
-            <div className="w-6 h-6 flex items-center justify-center relative">
-              <span className="block w-6 h-0.5 bg-white rotate-45 absolute" />
-              <span className="block w-6 h-0.5 bg-white -rotate-45 absolute" />
-            </div>
-          </button>
+          />
 
-          {/* Navigation Links */}
-          <nav className="space-y-3 max-w-xs w-full">
-            <div ref={addToMenuRefs} style={{ transform: 'translateY(50px)', opacity: 0 }}>
-              <Link 
-                to="/" 
-                onClick={closeMobileMenu}
-                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
-                  isActiveRoute('/') ? 'text-brand-accent bg-white/20' : ''
-                }`}
+          {/* Menu Content */}
+          <div
+            ref={menuContentRef}
+            className="relative h-full overflow-y-auto flex flex-col justify-center items-center text-center px-4 min-h-screen"
+            style={{
+              transform: "translateY(-100%)",
+              opacity: 0,
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeMobileMenu}
+              className="absolute top-4 right-4 z-10 p-3 hover:opacity-80 transition-opacity"
+            >
+              <div className="w-6 h-6 flex items-center justify-center relative">
+                <span className="block w-6 h-0.5 bg-white rotate-45 absolute" />
+                <span className="block w-6 h-0.5 bg-white -rotate-45 absolute" />
+              </div>
+            </button>
+
+            {/* Navigation Links */}
+            <nav className="space-y-3 max-w-xs w-full">
+              <div
+                ref={addToMenuRefs}
+                style={{ opacity: 0 }}
               >
-                Acasă
-              </Link>
-            </div>
-            
-            <div ref={addToMenuRefs} style={{ transform: 'translateY(50px)', opacity: 0 }}>
-              <Link 
-                to="/despre" 
-                onClick={closeMobileMenu}
-                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
-                  isActiveRoute('/despre') ? 'text-brand-accent bg-white/20' : ''
-                }`}
+                <Link
+                  to="/"
+                  onClick={closeMobileMenu}
+                  className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                    isActiveRoute("/") ? "text-brand-accent bg-white/20" : ""
+                  }`}
+                >
+                  Acasă
+                </Link>
+              </div>
+
+              <div
+                ref={addToMenuRefs}
+                style={{ opacity: 0 }}
               >
-                Despre Mine
-              </Link>
-            </div>
-            
-            <div ref={addToMenuRefs} style={{ transform: 'translateY(50px)', opacity: 0 }}>
-              <Link 
-                to="/servicii" 
-                onClick={closeMobileMenu}
-                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
-                  isActiveRoute('/servicii') ? 'text-brand-accent bg-white/20' : ''
-                }`}
+                <Link
+                  to="/despre"
+                  onClick={closeMobileMenu}
+                  className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                    isActiveRoute("/despre")
+                      ? "text-brand-accent bg-white/20"
+                      : ""
+                  }`}
+                >
+                  Despre Mine
+                </Link>
+              </div>
+
+              <div
+                ref={addToMenuRefs}
+                style={{ opacity: 0 }}
               >
-                Servicii
-              </Link>
-            </div>
-            
-            <div ref={addToMenuRefs} style={{ transform: 'translateY(50px)', opacity: 0 }}>
-              <Link 
-                to="/articole" 
-                onClick={closeMobileMenu}
-                className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
-                  isActiveRoute('/articole') ? 'text-brand-accent bg-white/20' : ''
-                }`}
+                <Link
+                  to="/servicii"
+                  onClick={closeMobileMenu}
+                  className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                    isActiveRoute("/servicii")
+                      ? "text-brand-accent bg-white/20"
+                      : ""
+                  }`}
+                >
+                  Servicii
+                </Link>
+              </div>
+
+              <div
+                ref={addToMenuRefs}
+                style={{ opacity: 0 }}
               >
-                Articole
-              </Link>
-            </div>
-          </nav>
+                <Link
+                  to="/articole"
+                  onClick={closeMobileMenu}
+                  className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                    isActiveRoute("/articole")
+                      ? "text-brand-accent bg-white/20"
+                      : ""
+                  }`}
+                >
+                  Articole
+                </Link>
+              </div>
+
+              <div
+                ref={addToMenuRefs}
+                style={{ opacity: 0 }}
+              >
+                <Link
+                  to="/intrebari-frecvente"
+                  onClick={closeMobileMenu}
+                  className={`block py-4 px-6 text-xl font-light text-stone-800 hover:text-brand-accent transition-all duration-300 rounded-xl hover:bg-white/20 text-center ${
+                    isActiveRoute("/intrebari-frecvente")
+                      ? "text-brand-accent bg-white/20"
+                      : ""
+                  }`}
+                >
+                  Întrebări Frecvente
+                </Link>
+              </div>
+            </nav>
+          </div>
         </div>
-      </div>
       )}
     </header>
   );
