@@ -131,13 +131,16 @@ const DesprePage: React.FC = () => {
       {/* Hero Section with Portrait */}
       <section className="pt-20 pb-12 bg-stone-50">
         <div className="container mx-auto max-w-4xl px-4 text-center">
-          <div className="hero-portrait mb-8">
-            <img
-              src="./assets/maria-popescu-portrait.jpg"
-              alt="Maria Popescu - Psiholog Clinician"
-              className="w-48 h-48 lg:w-56 lg:h-56 rounded-full mx-auto object-cover shadow-2xl border-4 border-white ring-4 ring-brand-accent/20"
-              style={{ objectPosition: "center top" }}
-            />
+          <div className="hero-portrait mb-8 relative">
+            <div className="relative w-64 h-64 lg:w-72 lg:h-72 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white ring-4 ring-brand-accent/20">
+              <img
+                src="./assets/maria-popescu-portrait.jpg"
+                alt="Maria Popescu - Psiholog Clinician"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center 15%", transform: "scale(0.75)" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-stone-50/10 to-transparent pointer-events-none"></div>
+            </div>
           </div>
           <h1 className="hero-title text-4xl lg:text-5xl xl:text-6xl mb-6 leading-tight">
             <span className="hero-title font-serif font-bold text-brand-text block">

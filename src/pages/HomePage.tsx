@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import AbstractHeroAnimation from "../components/AbstractHeroAnimation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -377,11 +376,30 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Abstract Animation - Right Side on Desktop, Top on Mobile */}
+            {/* Visual Element - Right Side on Desktop, Top on Mobile */}
             <div className="hero-image order-1 lg:order-2 flex justify-center -mx-4 lg:mx-0">
               <div className="relative w-full max-w-none lg:max-w-lg">
-                <div className="aspect-[3/4] w-full bg-gradient-to-br from-stone-100 to-stone-200 lg:rounded-lg overflow-hidden shadow-xl">
-                  <AbstractHeroAnimation />
+                <div className="aspect-[3/4] w-full bg-gradient-to-br from-brand-primary/10 via-stone-50 to-brand-accent/10 lg:rounded-lg overflow-hidden shadow-xl flex items-center justify-center p-8 lg:p-12">
+                  <div className="text-center space-y-8 lg:space-y-12">
+                    <div className="space-y-4">
+                      <div className="text-6xl lg:text-7xl">🌿</div>
+                      <h3 className="text-2xl lg:text-3xl font-serif text-brand-text/80">
+                        Spațiu Sigur
+                      </h3>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="text-6xl lg:text-7xl">💭</div>
+                      <h3 className="text-2xl lg:text-3xl font-serif text-brand-text/80">
+                        Ascultare Empatică
+                      </h3>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="text-6xl lg:text-7xl">✨</div>
+                      <h3 className="text-2xl lg:text-3xl font-serif text-brand-text/80">
+                        Dezvoltare Personală
+                      </h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
