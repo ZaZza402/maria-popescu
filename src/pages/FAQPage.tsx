@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FAQPage: React.FC = () => {
   useEffect(() => {
-    document.body.classList.add('gsap-loaded');
+    document.body.classList.add("gsap-loaded");
     gsap.defaults({ ease: "power2.out", duration: 1.2 });
 
     // Hero animation
@@ -36,64 +36,80 @@ const FAQPage: React.FC = () => {
   const faqs = [
     {
       question: "Cât durează o ședință de psihoterapie?",
-      answer: "O ședință standard de psihoterapie durează aproximativ 50 de minute. Pentru evaluările psihologice complexe, cum ar fi evaluarea pentru încadrarea în grad de handicap, durata poate fi de până la 120 de minute. Fiecare ședință este structurată pentru a oferi timpul necesar explorării problemelor și dezvoltării soluțiilor personalizate, într-un cadru sigur și confidențial."
+      answer:
+        "O ședință standard de psihoterapie durează aproximativ 50 de minute. Pentru evaluările psihologice complexe, cum ar fi evaluarea pentru încadrarea în grad de handicap, durata poate fi de până la 120 de minute. Fiecare ședință este structurată pentru a oferi timpul necesar explorării problemelor și dezvoltării soluțiilor personalizate, într-un cadru sigur și confidențial.",
     },
     {
       question: "Cum se desfășoară prima ședință?",
-      answer: "Prima ședință este dedicată cunoașterii și evaluării inițiale. Vom discuta despre motivul pentru care solicitați servicii psihologice, istoricul personal relevant și obiectivele pe care doriți să le atingeți prin terapie. Este un spațiu sigur unde puteți vorbi liber, fără judecată. Voi explica, de asemenea, modul în care se va desfășura procesul terapeutic și vom stabili împreună un plan personalizat."
+      answer:
+        "Prima ședință este dedicată cunoașterii și evaluării inițiale. Vom discuta despre motivul pentru care solicitați servicii psihologice, istoricul personal relevant și obiectivele pe care doriți să le atingeți prin terapie. Este un spațiu sigur unde puteți vorbi liber, fără judecată. Voi explica, de asemenea, modul în care se va desfășura procesul terapeutic și vom stabili împreună un plan personalizat.",
     },
     {
       question: "Sunt ședințele confidențiale?",
-      answer: "Da, absolut. Confidențialitatea este un principiu fundamental în psihoterapie și este protejată de Codul Deontologic al Psihologilor din România și de legislația GDPR. Toate informațiile discutate în cadrul ședințelor sunt strict confidențiale. Excepțiile legale includ doar situațiile de pericol iminent pentru viața clientului sau a altora, conform prevederilor legale."
+      answer:
+        "Da, absolut. Confidențialitatea este un principiu fundamental în psihoterapie și este protejată de Codul Deontologic al Psihologilor din România și de legislația GDPR. Toate informațiile discutate în cadrul ședințelor sunt strict confidențiale. Excepțiile legale includ doar situațiile de pericol iminent pentru viața clientului sau a altora, conform prevederilor legale.",
     },
     {
       question: "Cât timp durează procesul terapeutic?",
-      answer: "Durata terapiei variază în funcție de problematica abordată, obiectivele personale și complexitatea situației. Unele persoane observă îmbunătățiri semnificative după câteva ședințe, în timp ce altele beneficiază de un proces mai îndelungat. În medie, o terapie de scurtă durată poate include 8-12 ședințe, iar o terapie mai complexă poate dura 6-12 luni sau mai mult. Vom evalua împreună progresul și vom ajusta planul terapeutic după necesități."
+      answer:
+        "Durata terapiei variază în funcție de problematica abordată, obiectivele personale și complexitatea situației. Unele persoane observă îmbunătățiri semnificative după câteva ședințe, în timp ce altele beneficiază de un proces mai îndelungat. În medie, o terapie de scurtă durată poate include 8-12 ședințe, iar o terapie mai complexă poate dura 6-12 luni sau mai mult. Vom evalua împreună progresul și vom ajusta planul terapeutic după necesități.",
     },
     {
-      question: "Care este diferența dintre consiliere psihologică și psihoterapie?",
-      answer: "Consilierea psihologică este de obicei mai scurtă și se concentrează pe rezolvarea unor probleme specifice sau pe luarea unor decizii importante. Psihoterapia este un proces mai profund și de mai lungă durată, care abordează pattern-uri emoționale și comportamentale complexe, traumele sau tulburările psihice. Ambele sunt utile, iar alegerea depinde de nevoile și obiectivele dumneavoastră."
+      question:
+        "Care este diferența dintre consiliere psihologică și psihoterapie?",
+      answer:
+        "Consilierea psihologică este de obicei mai scurtă și se concentrează pe rezolvarea unor probleme specifice sau pe luarea unor decizii importante. Psihoterapia este un proces mai profund și de mai lungă durată, care abordează pattern-uri emoționale și comportamentale complexe, traumele sau tulburările psihice. Ambele sunt utile, iar alegerea depinde de nevoile și obiectivele dumneavoastră.",
     },
     {
       question: "Pot beneficia de servicii de psihoterapie și copiii?",
-      answer: "Da, ofer servicii specializate pentru copii, inclusiv evaluare psihologică, consiliere și psihoterapie adaptată vârstei. Lucrez cu copii care se confruntă cu dificultăți emoționale, tulburări de comportament, anxietate, probleme de adaptare școlară sau cerințe educaționale speciale. Implicarea părinților este esențială în procesul terapeutic cu copiii."
+      answer:
+        "Da, ofer servicii specializate pentru copii, inclusiv evaluare psihologică, consiliere și psihoterapie adaptată vârstei. Lucrez cu copii care se confruntă cu dificultăți emoționale, tulburări de comportament, anxietate, probleme de adaptare școlară sau cerințe educaționale speciale. Implicarea părinților este esențială în procesul terapeutic cu copiii.",
     },
     {
       question: "Ce este terapia cognitiv-comportamentală (CBT)?",
-      answer: "Terapia cognitiv-comportamentală este o formă de psihoterapie structurată și orientată spre soluții, bazată pe evidențe științifice. Se concentrează pe identificarea și modificarea gândurilor negative și a comportamentelor disfuncționale care contribuie la problemele emoționale. Este eficientă în tratarea anxietății, depresiei, fobiilor, tulburărilor de panică și multor alte dificultăți psihologice."
+      answer:
+        "Terapia cognitiv-comportamentală este o formă de psihoterapie structurată și orientată spre soluții, bazată pe evidențe științifice. Se concentrează pe identificarea și modificarea gândurilor negative și a comportamentelor disfuncționale care contribuie la problemele emoționale. Este eficientă în tratarea anxietății, depresiei, fobiilor, tulburărilor de panică și multor alte dificultăți psihologice.",
     },
     {
       question: "Ce este terapia ABA și pentru cine este recomandată?",
-      answer: "Terapia ABA (Applied Behavior Analysis - Analiza Comportamentală Aplicată) este o intervenție comportamentală structurată, utilizată în principal pentru copiii cu tulburare de spectru autist și alte cerințe educaționale speciale. Se bazează pe principiile învățării și vizează dezvoltarea abilităților sociale, de comunicare, autonomie personală și reducerea comportamentelor problematice. Este o terapie personalizată, intensivă și bazată pe evidențe."
+      answer:
+        "Terapia ABA (Applied Behavior Analysis - Analiza Comportamentală Aplicată) este o intervenție comportamentală structurată, utilizată în principal pentru copiii cu tulburare de spectru autist și alte cerințe educaționale speciale. Se bazează pe principiile învățării și vizează dezvoltarea abilităților sociale, de comunicare, autonomie personală și reducerea comportamentelor problematice. Este o terapie personalizată, intensivă și bazată pe evidențe.",
     },
     {
       question: "Cum știu dacă am nevoie de psihoterapie?",
-      answer: "Dacă simțiți că dificultățile emoționale sau comportamentale vă afectează viața de zi cu zi, relațiile, activitatea profesională sau bunăstarea generală, psihoterapia poate fi utilă. Semnele includ: anxietate persistentă, tristețe profundă, pierderea interesului pentru activități, dificultăți de somn, conflicte frecvente, traume nerezolvate sau nevoia de a înțelege mai bine propriile emoții și comportamente. Nu trebuie să așteptați o criză pentru a apela la un psiholog."
+      answer:
+        "Dacă simțiți că dificultățile emoționale sau comportamentale vă afectează viața de zi cu zi, relațiile, activitatea profesională sau bunăstarea generală, psihoterapia poate fi utilă. Semnele includ: anxietate persistentă, tristețe profundă, pierderea interesului pentru activități, dificultăți de somn, conflicte frecvente, traume nerezolvate sau nevoia de a înțelege mai bine propriile emoții și comportamente. Nu trebuie să așteptați o criză pentru a apela la un psiholog.",
     },
     {
       question: "Oferiți psihoterapie online sau doar la cabinet?",
-      answer: "În prezent, ședințele se desfășoară la cabinet, într-un mediu sigur, confidențial și profesional, situat pe Strada Cezar Bolliac 21, Sector 3, București. Pentru situații speciale sau clienți din alte localități, pot fi discutate opțiuni alternative. Vă recomand să mă contactați telefonic sau pe WhatsApp pentru a discuta cele mai potrivite opțiuni pentru nevoile dumneavoastră."
+      answer:
+        "În prezent, ședințele se desfășoară la cabinet, într-un mediu sigur, confidențial și profesional, situat pe Strada Cezar Bolliac 21, Sector 3, București. Pentru situații speciale sau clienți din alte localități, pot fi discutate opțiuni alternative. Vă recomand să mă contactați telefonic sau pe WhatsApp pentru a discuta cele mai potrivite opțiuni pentru nevoile dumneavoastră.",
     },
     {
       question: "Ce tarife sunt aplicate pentru serviciile de psihoterapie?",
-      answer: "Tarifele variază în funcție de tipul serviciului: consilierea psihologică costă 150 RON/ședință (50 min), psihoterapia individuală și terapia ABA costă 200 RON/ședință (50 min), psihoterapia de cuplu și familie costă 300 RON/ședință (50 min), iar evaluarea psihologică pentru încadrarea în grad de handicap costă 300 RON (120 min). Tarifele sunt transparente și pot fi discutate la prima întâlnire."
+      answer:
+        "Tarifele variază în funcție de tipul serviciului: consilierea psihologică costă 150 RON/ședință (50 min), psihoterapia individuală și terapia ABA costă 200 RON/ședință (50 min), psihoterapia de cuplu și familie costă 300 RON/ședință (50 min), iar evaluarea psihologică pentru încadrarea în grad de handicap costă 300 RON (120 min). Tarifele sunt transparente și pot fi discutate la prima întâlnire.",
     },
     {
       question: "Pot obține o rambursare de la asigurarea de sănătate?",
-      answer: "Cabinetul nu oferă servicii decontate de Casa de Asigurări. Pentru servicii decontate, te rugăm să consulți lista furnizorilor autorizați. Pentru ședințele efectuate se eliberează factură."
+      answer:
+        "Cabinetul nu oferă servicii decontate de Casa de Asigurări. Pentru servicii decontate, te rugăm să consulți lista furnizorilor autorizați. Pentru ședințele efectuate se eliberează factură.",
     },
     {
       question: "Cum mă pregătesc pentru prima ședință de terapie?",
-      answer: "Nu este nevoie de o pregătire specială. Este util să vă gândiți la motivul pentru care solicitați terapie și la obiectivele pe care doriți să le atingeți. Puteți nota întrebări sau aspecte pe care doriți să le discutați. Cel mai important este să veniți cu deschidere și sinceritate. Prima ședință este o oportunitate de a vă simți confortabil și de a evalua dacă ne potrivim în cadrul procesului terapeutic."
+      answer:
+        "Nu este nevoie de o pregătire specială. Este util să vă gândiți la motivul pentru care solicitați terapie și la obiectivele pe care doriți să le atingeți. Puteți nota întrebări sau aspecte pe care doriți să le discutați. Cel mai important este să veniți cu deschidere și sinceritate. Prima ședință este o oportunitate de a vă simți confortabil și de a evalua dacă ne potrivim în cadrul procesului terapeutic.",
     },
     {
       question: "Ce se întâmplă dacă trebuie să anulez o programare?",
-      answer: "Înțeleg că pot apărea situații neprevăzute. Vă rog să mă anunțați cu cel puțin 24 de ore înainte dacă trebuie să anulați sau să reprogramați o ședință. Acest lucru permite reprogramarea și gestionarea eficientă a timpului. Anulările făcute cu mai puțin de 24 de ore înainte sau absențele nemotivate pot fi taxate integral. Politica de anulare va fi discutată la prima întâlnire."
+      answer:
+        "Înțeleg că pot apărea situații neprevăzute. Vă rog să mă anunțați cu cel puțin 24 de ore înainte dacă trebuie să anulați sau să reprogramați o ședință. Acest lucru permite reprogramarea și gestionarea eficientă a timpului. Anulările făcute cu mai puțin de 24 de ore înainte sau absențele nemotivate pot fi taxate integral. Politica de anulare va fi discutată la prima întâlnire.",
     },
     {
       question: "Lucrați și cu cupluri sau doar cu persoane individuale?",
-      answer: "Da, ofer psihoterapie de cuplu și familie, pe lângă psihoterapia individuală. Terapia de cuplu ajută la îmbunătățirea comunicării, rezolvarea conflictelor, reconstruirea încrederii și consolidarea legăturii emoționale. Terapia de familie abordează dinamicile familiale, conflictele intergeneraționale și sprijină dezvoltarea unei relații armonioase între membrii familiei. Ședințele de cuplu și familie durează 50 de minute și costă 300 RON."
-    }
+      answer:
+        "Da, ofer psihoterapie de cuplu și familie, pe lângă psihoterapia individuală. Terapia de cuplu ajută la îmbunătățirea comunicării, rezolvarea conflictelor, reconstruirea încrederii și consolidarea legăturii emoționale. Terapia de familie abordează dinamicile familiale, conflictele intergeneraționale și sprijină dezvoltarea unei relații armonioase între membrii familiei. Ședințele de cuplu și familie durează 50 de minute și costă 300 RON.",
+    },
   ];
 
   return (
@@ -105,7 +121,8 @@ const FAQPage: React.FC = () => {
             Întrebări Frecvente
           </h1>
           <p className="faq-hero text-lg lg:text-xl text-brand-text/80 max-w-2xl mx-auto leading-relaxed">
-            Răspunsuri detaliate la cele mai comune întrebări despre serviciile de psihoterapie, consiliere și evaluare psihologică
+            Răspunsuri detaliate la cele mai comune întrebări despre serviciile
+            de psihoterapie, consiliere și evaluare psihologică
           </p>
         </div>
       </section>
@@ -135,7 +152,7 @@ const FAQPage: React.FC = () => {
                     />
                   </svg>
                 </summary>
-                <div className="px-6 pb-5 pt-2 text-brand-text/80 leading-relaxed text-base lg:text-lg">
+                <div className="faq-content px-6 pb-5 pt-2 text-brand-text/80 leading-relaxed text-base lg:text-lg overflow-hidden">
                   {faq.answer}
                 </div>
               </details>
@@ -148,7 +165,8 @@ const FAQPage: React.FC = () => {
               Nu ați găsit răspunsul căutat?
             </h3>
             <p className="text-brand-text/70 mb-6 text-lg">
-              Sunt aici să vă ajut. Contactați-mă pentru orice întrebare suplimentară.
+              Sunt aici să vă ajut. Contactați-mă pentru orice întrebare
+              suplimentară.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

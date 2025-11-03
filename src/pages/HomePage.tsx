@@ -811,7 +811,7 @@ const HomePage: React.FC = () => {
                   />
                 </svg>
               </summary>
-              <div className="px-6 pb-5 text-brand-text/80 leading-relaxed">
+              <div className="faq-content px-6 pb-5 text-brand-text/80 leading-relaxed overflow-hidden">
                 O ședință standard de psihoterapie durează aproximativ 50 de
                 minute. Pentru evaluările psihologice complexe, durata poate fi
                 de până la 120 de minute. Fiecare ședință este structurată
@@ -838,7 +838,7 @@ const HomePage: React.FC = () => {
                   />
                 </svg>
               </summary>
-              <div className="px-6 pb-5 text-brand-text/80 leading-relaxed">
+              <div className="faq-content px-6 pb-5 text-brand-text/80 leading-relaxed overflow-hidden">
                 Prima ședință este dedicată cunoașterii și evaluării inițiale.
                 Vom discuta despre motivul pentru care solicitați servicii
                 psihologice, istoricul personal relevant și obiectivele pe care
@@ -865,7 +865,7 @@ const HomePage: React.FC = () => {
                   />
                 </svg>
               </summary>
-              <div className="px-6 pb-5 text-brand-text/80 leading-relaxed">
+              <div className="faq-content px-6 pb-5 text-brand-text/80 leading-relaxed overflow-hidden">
                 Da, absolut. Confidențialitatea este un principiu fundamental în
                 psihoterapie. Toate informațiile discutate în cadrul ședințelor
                 sunt strict confidențiale și protejate conform Codului

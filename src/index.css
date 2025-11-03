@@ -489,3 +489,49 @@ a[href="/"]:focus {
 .animate-fade-in {
   animation: fadeIn 0.4s ease-out forwards;
 }
+
+/* Smooth Accordion Animations for FAQ */
+details summary {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+details > div {
+  animation: slideDown 0.4s ease-out;
+  transform-origin: top;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+}
+
+/* Closing animation */
+details:not([open]) > div {
+  animation: slideUp 0.3s ease-in;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+}
