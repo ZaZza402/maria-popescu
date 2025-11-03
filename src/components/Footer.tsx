@@ -156,12 +156,12 @@ const Footer = () => {
           <p className="text-brand-text/60 text-xs mt-2">
             Designed By{" "}
             <a
-              href="https://www.axiomweb.eu"
+              href="https://www.alecsdesign.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-accent hover:text-brand-primary transition-colors font-medium"
             >
-              Alex M.
+              Alecs
             </a>
           </p>
         </div>

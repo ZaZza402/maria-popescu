@@ -1,0 +1,13 @@
+# robots.txt for Maria Popescu - Psiholog Clinician
+# This file tells search engine crawlers which pages they can access
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+# NOTE: Replace 'YOUR-DOMAIN.com' with your actual domain when deployed
+# Example: Sitemap: https://maria-popescu.ro/sitemap.xml
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+
+# Crawl-delay to be respectful to server resources
+Crawl-delay: 10
