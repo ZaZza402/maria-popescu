@@ -348,48 +348,65 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* Content Container */}
-        <div className="container mx-auto max-w-7xl px-4 relative z-10 py-16 lg:py-20">
-          {/* Mobile: Text only centered layout - Full height with proper spacing */}
-          <div className="lg:hidden text-center flex flex-col justify-center min-h-[85vh] px-2">
-            <div className="hero-text credentials space-y-3 mb-8">
-              <div 
-                className="text-xl text-white font-semibold"
+        <div className="container mx-auto max-w-7xl px-4 relative z-10 py-8 lg:py-20">
+          {/* Mobile: Text only centered layout - Compact spacing */}
+          <div className="lg:hidden text-center flex flex-col justify-center min-h-[75vh] px-3">
+            {/* Credentials with elegant background */}
+            <div className="hero-text credentials space-y-2 mb-6">
+              <div
+                className="text-xl font-bold text-white leading-tight"
                 style={{
-                  textShadow: '0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2), 0 8px 16px rgba(0,0,0,0.15)'
+                  textShadow:
+                    "0 3px 6px rgba(0,0,0,0.6), 0 6px 12px rgba(0,0,0,0.4)",
+                  letterSpacing: '0.3px'
                 }}
               >
                 Psiholog Clinician / Psihoterapeut
               </div>
-              <div 
-                className="text-xl text-white font-semibold"
+              <div
+                className="text-xl font-bold text-white leading-tight"
                 style={{
-                  textShadow: '0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2), 0 8px 16px rgba(0,0,0,0.15)'
+                  textShadow:
+                    "0 3px 6px rgba(0,0,0,0.6), 0 6px 12px rgba(0,0,0,0.4)",
+                  letterSpacing: '0.3px'
                 }}
               >
                 Cognitiv-Comportamental
               </div>
             </div>
 
-            <blockquote 
-              className="hero-text text-base text-white/95 mb-8 leading-relaxed italic max-w-2xl mx-auto"
-              style={{
-                textShadow: '0 2px 6px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3), 0 8px 20px rgba(0,0,0,0.2)'
-              }}
-            >
-              "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
-              cu o vastă experiență în lucrul cu copii și adulți în domeniul
-              evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
-              și confidențial, unde fiecare persoană să se simtă ascultată și
-              înțeleasă."
-            </blockquote>
+            {/* Quote with semi-transparent background card */}
+            <div className="mb-6 max-w-lg mx-auto">
+              <div 
+                className="backdrop-blur-sm bg-black/30 rounded-xl p-5 border border-white/20"
+                style={{
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)'
+                }}
+              >
+                <blockquote
+                  className="text-[15px] text-white leading-relaxed italic"
+                  style={{
+                    textShadow: "0 2px 8px rgba(0,0,0,0.8)",
+                  }}
+                >
+                  "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
+                  cu o vastă experiență în lucrul cu copii și adulți în domeniul
+                  evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
+                  și confidențial, unde fiecare persoană să se simtă ascultată și
+                  înțeleasă."
+                </blockquote>
+              </div>
+            </div>
 
+            {/* CTA Button with enhanced styling */}
             <div className="hero-text flex justify-center items-center">
               <Link
                 to="/despre"
-                className="cta-button inline-block px-10 py-3 border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300"
+                className="cta-button inline-block px-10 py-3 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300 rounded-lg"
                 style={{
-                  textShadow: '0 2px 4px rgba(0,0,0,0.3)',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.2)'
+                  textShadow: "0 2px 6px rgba(0,0,0,0.6)",
+                  boxShadow:
+                    "0 6px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1) inset",
                 }}
               >
                 Află mai multe
@@ -409,19 +426,19 @@ const HomePage: React.FC = () => {
             </div>
 
             <blockquote className="hero-text text-xl text-white/90 mb-10 leading-relaxed italic breathing-element drop-shadow-lg max-w-3xl">
-              "Sunt psiholog clinician și psihoterapeut
-              cognitiv-comportamental, cu o vastă experiență în lucrul cu
-              copii și adulți în domeniul evaluării psihologice. Îmi doresc să
-              creez un spațiu sigur, cald și confidențial, unde fiecare
-              persoană să se simtă ascultată și înțeleasă.
+              "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
+              cu o vastă experiență în lucrul cu copii și adulți în domeniul
+              evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
+              și confidențial, unde fiecare persoană să se simtă ascultată și
+              înțeleasă.
               <br />
               <br />
               Sunt dedicată sprijinirii clienților în explorarea emoțiilor,
-              descoperirea de sine și dezvoltarea unor modalități sănătoase de
-              a face față provocărilor vieții, cum ar fi anxietatea, depresia
-              sau tulburările de alimentație. Obiectivul meu este să ofer
-              suport empatic și să contribui la redescoperirea echilibrului și
-              a resurselor interioare."
+              descoperirea de sine și dezvoltarea unor modalități sănătoase de a
+              face față provocărilor vieții, cum ar fi anxietatea, depresia sau
+              tulburările de alimentație. Obiectivul meu este să ofer suport
+              empatic și să contribui la redescoperirea echilibrului și a
+              resurselor interioare."
             </blockquote>
 
             <div className="hero-text flex items-center justify-center">
