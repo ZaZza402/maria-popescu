@@ -152,8 +152,10 @@ const FAQPage: React.FC = () => {
                     />
                   </svg>
                 </summary>
-                <div className="faq-content px-6 pb-5 pt-2 text-brand-text/80 leading-relaxed text-base lg:text-lg overflow-hidden">
-                  {faq.answer}
+                <div className="faq-content">
+                  <div className="px-6 pb-5 pt-2 text-brand-text/80 leading-relaxed text-base lg:text-lg">
+                    {faq.answer}
+                  </div>
                 </div>
               </details>
             ))}

@@ -811,12 +811,14 @@ const HomePage: React.FC = () => {
                   />
                 </svg>
               </summary>
-              <div className="faq-content px-6 pb-5 text-brand-text/80 leading-relaxed overflow-hidden">
-                O ședință standard de psihoterapie durează aproximativ 50 de
-                minute. Pentru evaluările psihologice complexe, durata poate fi
-                de până la 120 de minute. Fiecare ședință este structurată
-                pentru a oferi timpul necesar explorării problemelor și
-                dezvoltării soluțiilor personalizate.
+              <div className="faq-content">
+                <div className="px-6 pb-5 text-brand-text/80 leading-relaxed">
+                  O ședință standard de psihoterapie durează aproximativ 50 de
+                  minute. Pentru evaluările psihologice complexe, durata poate fi
+                  de până la 120 de minute. Fiecare ședință este structurată
+                  pentru a oferi timpul necesar explorării problemelor și
+                  dezvoltării soluțiilor personalizate.
+                </div>
               </div>
             </details>
 
@@ -838,12 +840,14 @@ const HomePage: React.FC = () => {
                   />
                 </svg>
               </summary>
-              <div className="faq-content px-6 pb-5 text-brand-text/80 leading-relaxed overflow-hidden">
-                Prima ședință este dedicată cunoașterii și evaluării inițiale.
-                Vom discuta despre motivul pentru care solicitați servicii
-                psihologice, istoricul personal relevant și obiectivele pe care
-                doriți să le atingeți prin terapie. Este un spațiu sigur unde
-                puteți vorbi liber, fără judecată.
+              <div className="faq-content">
+                <div className="px-6 pb-5 text-brand-text/80 leading-relaxed">
+                  Prima ședință este dedicată cunoașterii și evaluării inițiale.
+                  Vom discuta despre motivul pentru care solicitați servicii
+                  psihologice, istoricul personal relevant și obiectivele pe care
+                  doriți să le atingeți prin terapie. Este un spațiu sigur unde
+                  puteți vorbi liber, fără judecată.
+                </div>
               </div>
             </details>
 
@@ -865,12 +869,14 @@ const HomePage: React.FC = () => {
                   />
                 </svg>
               </summary>
-              <div className="faq-content px-6 pb-5 text-brand-text/80 leading-relaxed overflow-hidden">
-                Da, absolut. Confidențialitatea este un principiu fundamental în
-                psihoterapie. Toate informațiile discutate în cadrul ședințelor
-                sunt strict confidențiale și protejate conform Codului
-                Deontologic al Psihologilor și legislației GDPR. Excepțiile sunt
-                doar situațiile de pericol iminent conform legii.
+              <div className="faq-content">
+                <div className="px-6 pb-5 text-brand-text/80 leading-relaxed">
+                  Da, absolut. Confidențialitatea este un principiu fundamental în
+                  psihoterapie. Toate informațiile discutate în cadrul ședințelor
+                  sunt strict confidențiale și protejate conform Codului
+                  Deontologic al Psihologilor și legislației GDPR. Excepțiile sunt
+                  doar situațiile de pericol iminent conform legii.
+                </div>
               </div>
             </details>
           </div>
