@@ -80,7 +80,7 @@ const FAQPage: React.FC = () => {
     },
     {
       question: "Pot obține o rambursare de la asigurarea de sănătate?",
-      answer: "Serviciile de psihoterapie particulare nu sunt acoperite de Casa Națională de Asigurări de Sănătate (CNAS) în România. Totuși, unele asigurări private de sănătate pot oferi acoperire parțială sau completă pentru servicii psihologice. Vă recomand să verificați cu furnizorul dumneavoastră de asigurare pentru detalii specifice. La cerere, pot elibera facturi și documente necesare pentru eventuale rambursări."
+      answer: "Cabinetul nu oferă servicii decontate de Casa de Asigurări. Pentru servicii decontate, te rugăm să consulți lista furnizorilor autorizați. Pentru ședințele efectuate se eliberează factură."
     },
     {
       question: "Cum mă pregătesc pentru prima ședință de terapie?",

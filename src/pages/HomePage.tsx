@@ -350,11 +350,11 @@ const HomePage: React.FC = () => {
             </div>
 
             <blockquote className="hero-text text-base text-brand-text/80 mb-8 leading-relaxed italic max-w-2xl mx-auto">
-              "Sunt psiholog clinician și psihoterapeut
-              cognitiv-comportamental, cu o vastă experiență în lucrul cu
-              copii și adulți în domeniul evaluării psihologice. Îmi doresc să
-              creez un spațiu sigur, cald și confidențial, unde fiecare
-              persoană să se simtă ascultată și înțeleasă."
+              "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
+              cu o vastă experiență în lucrul cu copii și adulți în domeniul
+              evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
+              și confidențial, unde fiecare persoană să se simtă ascultată și
+              înțeleasă."
             </blockquote>
 
             <div className="hero-text flex justify-center items-center">
@@ -418,8 +418,8 @@ const HomePage: React.FC = () => {
             {/* Image - Right Side Desktop Only */}
             <div className="hero-image flex justify-center">
               <div className="relative w-full max-w-lg aspect-[3/4] rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src="./assets/therapy-session.webp" 
+                <img
+                  src="./assets/therapy-session.webp"
                   alt="Cabinet de Psihologie - Mediu terapeutic profesional"
                   className="w-full h-full object-cover"
                 />
