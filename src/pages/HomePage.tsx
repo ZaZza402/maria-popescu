@@ -326,153 +326,41 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      {/* Hero Section - Desktop: Two column layout, Mobile: Text only with warm background */}
-      <section className="relative bg-gradient-to-br from-stone-100 via-brand-primary/5 to-brand-accent/5 lg:bg-stone-50 py-12 lg:py-16 overflow-hidden z-10">
-        {/* Animated Icon Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-15 -z-10">
-          {/* Brain icon - pulse animation */}
-          <div className="absolute top-20 left-10 lg:left-10 animate-pulse-slow">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-primary"
-            >
-              <path d="M9.5 2c-1.82 0-3.53.5-5 1.35C2.99 4.9 2 7.14 2 9.5c0 2.95 1.53 5.5 3.82 6.94.35 1.27 1.24 2.38 2.42 3.12.49.3 1.04.44 1.57.44.99 0 1.98-.44 2.65-1.29.33-.42.59-.91.76-1.44.17.53.43 1.02.76 1.44.67.85 1.66 1.29 2.65 1.29.53 0 1.08-.14 1.57-.44 1.18-.74 2.07-1.85 2.42-3.12C21.47 15 23 12.45 23 9.5c0-2.36-.99-4.6-2.5-6.15C19.03 2.5 17.32 2 15.5 2c-1.82 0-3.53.5-5 1.35C9.03 2.5 7.32 2 5.5 2z" />
-            </svg>
-          </div>
-          {/* Hourglass icon - rotate animation */}
-          <div className="absolute top-40 right-5 lg:right-20 animate-spin-slow">
-            <svg
-              width="50"
-              height="50"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-accent"
-            >
-              <path d="M6.5 2h11l-3 3.5L17 9l-2.5 3.5L17 16l-2.5 3.5L17 23H6.5l3-3.5L7 16l2.5-3.5L7 9l2.5-3.5L7 2z" />
-              <path d="M9 2v4m6-4v4M9 18v4m6-4v4" />
-            </svg>
-          </div>
-          {/* Heart icon - pulse */}
-          <div
-            className="absolute bottom-60 left-5 lg:bottom-40 lg:left-20 animate-pulse-slow"
-            style={{ animationDelay: "1s" }}
+      {/* Hero Section - Video background with content overlay */}
+      <section className="relative bg-stone-900 overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover lg:object-cover"
+            style={{
+              filter: 'blur(3px)',
+              transform: 'scale(1.05)', // Slightly scale to hide blur edges
+            }}
           >
-            <svg
-              width="55"
-              height="55"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-primary"
-            >
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-          </div>
-          {/* Leaf icon - float animation - hidden on mobile */}
-          <div className="hidden lg:block absolute top-1/2 right-10 animate-float">
-            <svg
-              width="45"
-              height="45"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-primary"
-            >
-              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-            </svg>
-          </div>
-          {/* Moon/Sleep icon - drift animation - hidden on mobile */}
-          <div className="hidden lg:block absolute bottom-20 right-32 animate-drift">
-            <svg
-              width="50"
-              height="50"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-accent"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          </div>
-          {/* Sun/Energy icon - rotate slow - centered on mobile */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:top-1/3 lg:left-1/4 animate-spin-very-slow">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-accent"
-            >
-              <circle cx="12" cy="12" r="5" />
-              <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-            </svg>
-          </div>
-          {/* Hand/Care icon - pulse - hidden on mobile */}
-          <div
-            className="hidden lg:block absolute bottom-1/3 left-1/3 animate-pulse-slow"
-            style={{ animationDelay: "2s" }}
-          >
-            <svg
-              width="52"
-              height="52"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-primary"
-            >
-              <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0m0 0V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2m0 0V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8" />
-              <path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8v-5c0-1.1.9-2 2-2h.5" />
-            </svg>
-          </div>
-          {/* Smile/Wellness icon - float - hidden on mobile */}
-          <div
-            className="hidden lg:block absolute top-2/3 right-1/4 animate-float"
-            style={{ animationDelay: "1.5s" }}
-          >
-            <svg
-              width="46"
-              height="46"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-brand-accent"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-              <line x1="9" y1="9" x2="9.01" y2="9" />
-              <line x1="15" y1="9" x2="15.01" y2="9" />
-            </svg>
-          </div>
+            <source src="/assets/header_vid.mp4" type="video/mp4" />
+          </video>
+          {/* Dark overlay for content readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70"></div>
         </div>
 
-        <div className="container mx-auto max-w-7xl px-4 relative z-10">
-          {/* Mobile: Text only centered layout */}
-          <div className="lg:hidden text-center py-8">
+        {/* Content Container */}
+        <div className="container mx-auto max-w-7xl px-4 relative z-10 py-16 lg:py-20">
+          {/* Mobile: Text only centered layout - Full height with proper spacing */}
+          <div className="lg:hidden text-center flex flex-col justify-center min-h-[85vh] px-2">
             <div className="hero-text credentials space-y-3 mb-8">
-              <div className="text-xl text-brand-text font-semibold">
+              <div className="text-xl text-white font-semibold drop-shadow-lg">
                 Psiholog Clinician / Psihoterapeut
               </div>
-              <div className="text-xl text-brand-text font-semibold">
+              <div className="text-xl text-white font-semibold drop-shadow-lg">
                 Cognitiv-Comportamental
               </div>
             </div>
 
-            <blockquote className="hero-text text-base text-brand-text/80 mb-8 leading-relaxed italic max-w-2xl mx-auto">
+            <blockquote className="hero-text text-base text-white/90 mb-8 leading-relaxed italic max-w-2xl mx-auto drop-shadow-lg">
               "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
               cu o vastă experiență în lucrul cu copii și adulți în domeniul
               evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
@@ -483,7 +371,7 @@ const HomePage: React.FC = () => {
             <div className="hero-text flex justify-center items-center">
               <Link
                 to="/despre"
-                className="cta-button inline-block px-10 py-3 border-2 border-brand-text text-brand-text font-serif text-lg hover:bg-brand-text hover:text-white transition-all duration-300"
+                className="cta-button inline-block px-10 py-3 border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300 shadow-lg"
               >
                 Află mai multe
               </Link>
@@ -495,15 +383,15 @@ const HomePage: React.FC = () => {
             {/* Text Content - Left Side */}
             <div className="flex flex-col justify-center">
               <div className="hero-text credentials space-y-4 mb-8">
-                <div className="text-2xl xl:text-3xl text-brand-text font-semibold">
+                <div className="text-2xl xl:text-3xl text-white font-semibold drop-shadow-lg">
                   Psiholog Clinician / Psihoterapeut
                 </div>
-                <div className="text-2xl xl:text-3xl text-brand-text font-semibold">
+                <div className="text-2xl xl:text-3xl text-white font-semibold drop-shadow-lg">
                   Cognitiv-Comportamental
                 </div>
               </div>
 
-              <blockquote className="hero-text text-lg text-brand-text/80 mb-8 leading-relaxed italic border-l-2 border-brand-primary pl-4 breathing-element">
+              <blockquote className="hero-text text-lg text-white/90 mb-8 leading-relaxed italic border-l-2 border-white/50 pl-4 breathing-element drop-shadow-lg">
                 "Sunt psiholog clinician și psihoterapeut
                 cognitiv-comportamental, cu o vastă experiență în lucrul cu
                 copii și adulți în domeniul evaluării psihologice. Îmi doresc să
@@ -522,7 +410,7 @@ const HomePage: React.FC = () => {
               <div className="hero-text flex items-center">
                 <Link
                   to="/despre"
-                  className="cta-button inline-block px-10 py-3 border-2 border-brand-text text-brand-text font-serif text-lg hover:bg-brand-text hover:text-white transition-all duration-300"
+                  className="cta-button inline-block px-10 py-3 border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300 shadow-lg"
                 >
                   Află mai multe
                 </Link>
@@ -531,7 +419,7 @@ const HomePage: React.FC = () => {
 
             {/* Image - Right Side Desktop Only */}
             <div className="hero-image flex justify-center">
-              <div className="relative w-full max-w-lg aspect-[3/4] rounded-lg overflow-hidden shadow-xl">
+              <div className="relative w-full max-w-lg aspect-[3/4] rounded-lg overflow-hidden shadow-2xl border border-white/20">
                 <img
                   src="./assets/therapy-session.webp"
                   alt="Cabinet de Psihologie - Mediu terapeutic profesional"
