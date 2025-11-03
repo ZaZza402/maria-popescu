@@ -377,13 +377,13 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Professional Photo - Right Side on Desktop, Top on Mobile */}
+            {/* Therapy Environment Photo - Right Side on Desktop, Top on Mobile */}
             <div className="hero-image order-1 lg:order-2 flex justify-center -mx-4 lg:mx-0">
               <div className="relative w-full max-w-none lg:max-w-lg">
                 <div className="aspect-[3/4] w-full bg-stone-200 lg:rounded-lg overflow-hidden shadow-xl">
                   <OptimizedImage
-                    src="./assets/maria-popescu-sketch-portrait.jpg"
-                    alt="Maria Popescu - Psiholog Clinician și Psihoterapeut"
+                    src="./assets/therapy-session.webp"
+                    alt="Cabinet de Psihologie - Mediu terapeutic calm și profesional"
                     className="w-full h-full object-cover"
                     priority={true}
                     loading="eager"
@@ -562,19 +562,6 @@ const HomePage: React.FC = () => {
                 <img
                   src="./assets/self-esteem.webp"
                   alt="Dezvoltarea stimei de sine"
-                  className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
-                  onClick={(e) =>
-                    setSelectedImage({
-                      src: (e.currentTarget as HTMLImageElement).src,
-                      alt: (e.currentTarget as HTMLImageElement).alt,
-                    })
-                  }
-                />
-              </div>
-              <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
-                <img
-                  src="./assets/maria-popescu-portrait.jpg"
-                  alt="Maria Popescu"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({

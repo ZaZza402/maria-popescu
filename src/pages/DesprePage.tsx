@@ -127,6 +127,7 @@ const DesprePage: React.FC = () => {
               src="./assets/maria-popescu-portrait.jpg" 
               alt="Maria Popescu - Psiholog Clinician" 
               className="w-48 h-48 lg:w-56 lg:h-56 rounded-full mx-auto object-cover shadow-2xl border-4 border-white ring-4 ring-brand-accent/20"
+              style={{ objectPosition: "center 30%" }}
             />
           </div>
           <h1 className="hero-title text-4xl lg:text-5xl xl:text-6xl mb-6 leading-tight">
