@@ -14,22 +14,18 @@ const HomePage: React.FC = () => {
     // Set default ease for psychological comfort
     gsap.defaults({ ease: "power2.out", duration: 1.2 });
 
-    // 1. Hero Section - Gentle Entry Animation
+    // 1. Hero Section - Smooth Fade In Only
     gsap.fromTo(
       ".hero-text",
       {
         opacity: 0,
-        y: 50,
-        scale: 0.95,
       },
       {
         opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1.5,
-        ease: "power3.out",
-        stagger: 0.2,
-        delay: 0.3,
+        duration: 1.8,
+        ease: "power2.inOut",
+        stagger: 0.15,
+        delay: 0.2,
       }
     );
 
@@ -37,14 +33,12 @@ const HomePage: React.FC = () => {
       ".hero-image",
       {
         opacity: 0,
-        scale: 0.8,
       },
       {
         opacity: 1,
-        scale: 1,
-        duration: 1.8,
-        ease: "power3.out",
-        delay: 0.6,
+        duration: 2,
+        ease: "power2.inOut",
+        delay: 0.5,
       }
     );
 
@@ -343,8 +337,10 @@ const HomePage: React.FC = () => {
           >
             <source src="/assets/header_vid.mp4" type="video/mp4" />
           </video>
-          {/* Dark overlay for content readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70"></div>
+          {/* Multi-layer overlay for better design integration */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 via-stone-900/75 to-brand-accent/25"></div>
+          <div className="absolute inset-0 bg-stone-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-stone-900/30"></div>
         </div>
 
         {/* Content Container */}
@@ -358,7 +354,7 @@ const HomePage: React.FC = () => {
                 style={{
                   textShadow:
                     "0 3px 6px rgba(0,0,0,0.6), 0 6px 12px rgba(0,0,0,0.4)",
-                  letterSpacing: '0.3px'
+                  letterSpacing: "0.3px",
                 }}
               >
                 Psiholog Clinician / Psihoterapeut
@@ -368,7 +364,7 @@ const HomePage: React.FC = () => {
                 style={{
                   textShadow:
                     "0 3px 6px rgba(0,0,0,0.6), 0 6px 12px rgba(0,0,0,0.4)",
-                  letterSpacing: '0.3px'
+                  letterSpacing: "0.3px",
                 }}
               >
                 Cognitiv-Comportamental
@@ -377,10 +373,11 @@ const HomePage: React.FC = () => {
 
             {/* Quote with semi-transparent background card */}
             <div className="mb-6 max-w-lg mx-auto">
-              <div 
+              <div
                 className="backdrop-blur-sm bg-black/30 rounded-xl p-5 border border-white/20"
                 style={{
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)'
+                  boxShadow:
+                    "0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)",
                 }}
               >
                 <blockquote
@@ -389,11 +386,11 @@ const HomePage: React.FC = () => {
                     textShadow: "0 2px 8px rgba(0,0,0,0.8)",
                   }}
                 >
-                  "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
-                  cu o vastă experiență în lucrul cu copii și adulți în domeniul
-                  evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
-                  și confidențial, unde fiecare persoană să se simtă ascultată și
-                  înțeleasă."
+                  "Sunt psiholog clinician și psihoterapeut
+                  cognitiv-comportamental, cu o vastă experiență în lucrul cu
+                  copii și adulți în domeniul evaluării psihologice. Îmi doresc
+                  să creez un spațiu sigur, cald și confidențial, unde fiecare
+                  persoană să se simtă ascultată și înțeleasă."
                 </blockquote>
               </div>
             </div>
