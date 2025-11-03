@@ -337,8 +337,8 @@ const HomePage: React.FC = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover lg:object-cover"
             style={{
-              filter: 'blur(3px)',
-              transform: 'scale(1.05)', // Slightly scale to hide blur edges
+              filter: "blur(3px)",
+              transform: "scale(1.05)", // Slightly scale to hide blur edges
             }}
           >
             <source src="/assets/header_vid.mp4" type="video/mp4" />
@@ -352,15 +352,30 @@ const HomePage: React.FC = () => {
           {/* Mobile: Text only centered layout - Full height with proper spacing */}
           <div className="lg:hidden text-center flex flex-col justify-center min-h-[85vh] px-2">
             <div className="hero-text credentials space-y-3 mb-8">
-              <div className="text-xl text-white font-semibold drop-shadow-lg">
+              <div 
+                className="text-xl text-white font-semibold"
+                style={{
+                  textShadow: '0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2), 0 8px 16px rgba(0,0,0,0.15)'
+                }}
+              >
                 Psiholog Clinician / Psihoterapeut
               </div>
-              <div className="text-xl text-white font-semibold drop-shadow-lg">
+              <div 
+                className="text-xl text-white font-semibold"
+                style={{
+                  textShadow: '0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2), 0 8px 16px rgba(0,0,0,0.15)'
+                }}
+              >
                 Cognitiv-Comportamental
               </div>
             </div>
 
-            <blockquote className="hero-text text-base text-white/90 mb-8 leading-relaxed italic max-w-2xl mx-auto drop-shadow-lg">
+            <blockquote 
+              className="hero-text text-base text-white/95 mb-8 leading-relaxed italic max-w-2xl mx-auto"
+              style={{
+                textShadow: '0 2px 6px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3), 0 8px 20px rgba(0,0,0,0.2)'
+              }}
+            >
               "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
               cu o vastă experiență în lucrul cu copii și adulți în domeniul
               evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
@@ -371,61 +386,51 @@ const HomePage: React.FC = () => {
             <div className="hero-text flex justify-center items-center">
               <Link
                 to="/despre"
-                className="cta-button inline-block px-10 py-3 border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300 shadow-lg"
+                className="cta-button inline-block px-10 py-3 border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300"
+                style={{
+                  textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.2)'
+                }}
               >
                 Află mai multe
               </Link>
             </div>
           </div>
 
-          {/* Desktop: Two column layout with image */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[80vh]">
-            {/* Text Content - Left Side */}
-            <div className="flex flex-col justify-center">
-              <div className="hero-text credentials space-y-4 mb-8">
-                <div className="text-2xl xl:text-3xl text-white font-semibold drop-shadow-lg">
-                  Psiholog Clinician / Psihoterapeut
-                </div>
-                <div className="text-2xl xl:text-3xl text-white font-semibold drop-shadow-lg">
-                  Cognitiv-Comportamental
-                </div>
+          {/* Desktop: Centered text layout - video background only */}
+          <div className="hidden lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center min-h-[80vh] max-w-4xl mx-auto">
+            <div className="hero-text credentials space-y-4 mb-8">
+              <div className="text-3xl xl:text-4xl text-white font-semibold drop-shadow-lg">
+                Psiholog Clinician / Psihoterapeut
               </div>
-
-              <blockquote className="hero-text text-lg text-white/90 mb-8 leading-relaxed italic border-l-2 border-white/50 pl-4 breathing-element drop-shadow-lg">
-                "Sunt psiholog clinician și psihoterapeut
-                cognitiv-comportamental, cu o vastă experiență în lucrul cu
-                copii și adulți în domeniul evaluării psihologice. Îmi doresc să
-                creez un spațiu sigur, cald și confidențial, unde fiecare
-                persoană să se simtă ascultată și înțeleasă.
-                <br />
-                <br />
-                Sunt dedicată sprijinirii clienților în explorarea emoțiilor,
-                descoperirea de sine și dezvoltarea unor modalități sănătoase de
-                a face față provocărilor vieții, cum ar fi anxietatea, depresia
-                sau tulburările de alimentație. Obiectivul meu este să ofer
-                suport empatic și să contribui la redescoperirea echilibrului și
-                a resurselor interioare."
-              </blockquote>
-
-              <div className="hero-text flex items-center">
-                <Link
-                  to="/despre"
-                  className="cta-button inline-block px-10 py-3 border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300 shadow-lg"
-                >
-                  Află mai multe
-                </Link>
+              <div className="text-3xl xl:text-4xl text-white font-semibold drop-shadow-lg">
+                Cognitiv-Comportamental
               </div>
             </div>
 
-            {/* Image - Right Side Desktop Only */}
-            <div className="hero-image flex justify-center">
-              <div className="relative w-full max-w-lg aspect-[3/4] rounded-lg overflow-hidden shadow-2xl border border-white/20">
-                <img
-                  src="./assets/therapy-session.webp"
-                  alt="Cabinet de Psihologie - Mediu terapeutic profesional"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <blockquote className="hero-text text-xl text-white/90 mb-10 leading-relaxed italic breathing-element drop-shadow-lg max-w-3xl">
+              "Sunt psiholog clinician și psihoterapeut
+              cognitiv-comportamental, cu o vastă experiență în lucrul cu
+              copii și adulți în domeniul evaluării psihologice. Îmi doresc să
+              creez un spațiu sigur, cald și confidențial, unde fiecare
+              persoană să se simtă ascultată și înțeleasă.
+              <br />
+              <br />
+              Sunt dedicată sprijinirii clienților în explorarea emoțiilor,
+              descoperirea de sine și dezvoltarea unor modalități sănătoase de
+              a face față provocărilor vieții, cum ar fi anxietatea, depresia
+              sau tulburările de alimentație. Obiectivul meu este să ofer
+              suport empatic și să contribui la redescoperirea echilibrului și
+              a resurselor interioare."
+            </blockquote>
+
+            <div className="hero-text flex items-center justify-center">
+              <Link
+                to="/despre"
+                className="cta-button inline-block px-12 py-4 border-2 border-white text-white font-serif text-xl hover:bg-white hover:text-stone-900 transition-all duration-300 shadow-lg"
+              >
+                Află mai multe
+              </Link>
             </div>
           </div>
         </div>
