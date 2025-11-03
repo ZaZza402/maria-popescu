@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import OptimizedImage from "../components/OptimizedImage";
+import AbstractHeroAnimation from "../components/AbstractHeroAnimation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -377,19 +377,11 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Therapy Environment Photo - Right Side on Desktop, Top on Mobile */}
+            {/* Abstract Animation - Right Side on Desktop, Top on Mobile */}
             <div className="hero-image order-1 lg:order-2 flex justify-center -mx-4 lg:mx-0">
               <div className="relative w-full max-w-none lg:max-w-lg">
-                <div className="aspect-[3/4] w-full bg-stone-200 lg:rounded-lg overflow-hidden shadow-xl">
-                  <OptimizedImage
-                    src="./assets/therapy-session.webp"
-                    alt="Cabinet de Psihologie - Mediu terapeutic calm și profesional"
-                    className="w-full h-full object-cover"
-                    priority={true}
-                    loading="eager"
-                    width={400}
-                    height={500}
-                  />
+                <div className="aspect-[3/4] w-full bg-gradient-to-br from-stone-100 to-stone-200 lg:rounded-lg overflow-hidden shadow-xl">
+                  <AbstractHeroAnimation />
                 </div>
               </div>
             </div>

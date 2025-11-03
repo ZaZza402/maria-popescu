@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import OptimizedImage from './OptimizedImage';
+import React, { useState } from "react";
+import OptimizedImage from "./OptimizedImage";
 
 const ElegantCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,20 +7,20 @@ const ElegantCarousel: React.FC = () => {
   // Gallery images - easy to update
   const images = [
     {
-      src: './assets/mp-therapy.jpg',
-      alt: 'Sala de consultații psihologice',
-      title: 'Spațiu Terapeutic'
+      src: "./assets/mp-therapy.jpg",
+      alt: "Sala de consultații psihologice",
+      title: "Spațiu Terapeutic",
     },
     {
-      src: './assets/mp-notes.jpg',
-      alt: 'Materiale și resurse terapeutice',
-      title: 'Mediu Profesional'
+      src: "./assets/mp-notes.jpg",
+      alt: "Materiale și resurse terapeutice",
+      title: "Mediu Profesional",
     },
     {
-      src: './assets/mp-team.jpg',
-      alt: 'Echipa de specialiști',
-      title: 'Resurse Profesionale'
-    }
+      src: "./assets/mp-team.jpg",
+      alt: "Echipa de specialiști",
+      title: "Resurse Profesionale",
+    },
   ];
 
   const goToSlide = (index: number) => {
@@ -36,10 +36,11 @@ const ElegantCarousel: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-brand-accent mx-auto mb-6"></div>
           <p className="text-lg text-brand-text/70 max-w-2xl mx-auto leading-relaxed">
-            Un spațiu cald, sigur și profesional dedicat bunăstării tale emoționale
+            Un spațiu cald, sigur și profesional dedicat bunăstării tale
+            emoționale
           </p>
         </div>
-        
+
         {/* Elegant Gallery Container */}
         <div className="bg-gradient-to-br from-brand-light/30 to-white rounded-3xl p-8 shadow-xl border border-brand-accent/10">
           {/* Main Image Display */}
@@ -55,14 +56,16 @@ const ElegantCarousel: React.FC = () => {
                 height={750}
               />
             </div>
-            
+
             {/* Elegant Progress Bar */}
             {images.length > 1 && (
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-3/4 max-w-xs">
                 <div className="bg-white/20 backdrop-blur-sm rounded-full h-1 overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-brand-accent rounded-full transition-all duration-500 ease-out"
-                    style={{ width: `${((currentSlide + 1) / images.length) * 100}%` }}
+                    style={{
+                      width: `${((currentSlide + 1) / images.length) * 100}%`,
+                    }}
                   />
                 </div>
               </div>
@@ -85,9 +88,9 @@ const ElegantCarousel: React.FC = () => {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`relative overflow-hidden rounded-lg transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'ring-3 ring-brand-accent shadow-lg scale-105' 
-                      : 'hover:scale-105 opacity-70 hover:opacity-100'
+                    index === currentSlide
+                      ? "ring-3 ring-brand-accent shadow-lg scale-105"
+                      : "hover:scale-105 opacity-70 hover:opacity-100"
                   }`}
                   aria-label={`Vizualizează ${image.title}`}
                 >
@@ -116,9 +119,11 @@ const ElegantCarousel: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-8 h-0.5 bg-brand-light rounded-full overflow-hidden">
-                <div 
+                <div
                   className="h-full bg-brand-accent rounded-full transition-all duration-500 ease-out"
-                  style={{ width: `${((currentSlide + 1) / images.length) * 100}%` }}
+                  style={{
+                    width: `${((currentSlide + 1) / images.length) * 100}%`,
+                  }}
                 />
               </div>
               <span className="text-brand-text/40 text-xs">
