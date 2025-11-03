@@ -320,77 +320,64 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      {/* Hero Section - Split screen desktop, video background mobile */}
-      <section className="relative bg-stone-900 lg:bg-stone-50 overflow-hidden">
-        {/* Video Background - Mobile Only */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden lg:hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{
-              filter: "blur(3px)",
-              transform: "scale(1.05)",
-            }}
-          >
-            <source src="/assets/header_vid.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/30 via-brand-accent/20 to-stone-900/50"></div>
-          <div className="absolute inset-0 bg-stone-900/50"></div>
-        </div>
+      {/* Hero Section - Split screen both desktop and mobile */}
+      <section className="relative bg-stone-50 overflow-hidden">
 
         {/* Content Container */}
-        <div className="relative z-10 py-8 lg:py-0">
-          {/* Mobile: Clean Text on Video */}
-          <div className="lg:hidden text-center flex flex-col justify-center min-h-[75vh] px-4">
-            {/* Credentials */}
-            <div className="hero-text credentials space-y-2 mb-8">
-              <div 
-                className="text-2xl font-bold text-white leading-tight"
-                style={{
-                  textShadow: '0 4px 12px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6)'
-                }}
-              >
-                Psiholog Clinician / Psihoterapeut
+        <div className="relative z-10 lg:py-0">
+          {/* Mobile: Split Screen Vertical - Content Top, Video Bottom */}
+          <div className="lg:hidden flex flex-col min-h-screen">
+            {/* Top: Content on Solid Background */}
+            <div className="bg-stone-50 px-6 py-12 flex flex-col justify-center min-h-[55vh]">
+              {/* Credentials */}
+              <div className="hero-text credentials space-y-2 mb-6">
+                <h1 className="text-2xl font-bold text-brand-text leading-tight">
+                  Psiholog Clinician / Psihoterapeut
+                </h1>
+                <h2 className="text-2xl font-bold text-brand-text leading-tight">
+                  Cognitiv-Comportamental
+                </h2>
               </div>
-              <div 
-                className="text-2xl font-bold text-white leading-tight"
-                style={{
-                  textShadow: '0 4px 12px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6)'
-                }}
-              >
-                Cognitiv-Comportamental
+
+              {/* Divider */}
+              <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-6"></div>
+
+              {/* Quote */}
+              <blockquote className="hero-text text-base text-brand-text/80 mb-8 leading-relaxed italic">
+                "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
+                cu o vastă experiență în lucrul cu copii și adulți în domeniul
+                evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
+                și confidențial, unde fiecare persoană să se simtă ascultată și
+                înțeleasă."
+              </blockquote>
+
+              {/* CTA Button */}
+              <div className="hero-text">
+                <Link
+                  to="/despre"
+                  className="cta-button inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
+                >
+                  Află mai multe
+                </Link>
               </div>
             </div>
 
-            {/* Quote */}
-            <blockquote 
-              className="hero-text text-base text-white mb-8 leading-relaxed italic max-w-md mx-auto"
-              style={{
-                textShadow: '0 4px 12px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6)'
-              }}
-            >
-              "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
-              cu o vastă experiență în lucrul cu copii și adulți în domeniul
-              evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
-              și confidențial, unde fiecare persoană să se simtă ascultată și
-              înțeleasă."
-            </blockquote>
-
-            {/* CTA Button */}
-            <div className="hero-text flex justify-center">
-              <Link
-                to="/despre"
-                className="cta-button inline-block px-10 py-3 border-2 border-white text-white font-serif text-lg hover:bg-white hover:text-stone-900 transition-all duration-300"
+            {/* Bottom: Video Section */}
+            <div className="relative min-h-[45vh] overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
                 style={{
-                  textShadow: '0 2px 4px rgba(0,0,0,0.6)',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
+                  filter: "blur(2px)",
                 }}
               >
-                Află mai multe
-              </Link>
+                <source src="/assets/header_vid.mp4" type="video/mp4" />
+              </video>
+              {/* Gradient overlay blending up into content */}
+              <div className="absolute inset-0 bg-gradient-to-b from-stone-50 via-transparent to-transparent"></div>
             </div>
           </div>
 
