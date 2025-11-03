@@ -124,7 +124,7 @@ const DesprePage: React.FC = () => {
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <div className="hero-portrait mb-8">
             <img 
-              src="./assets/female_portrait.jpg" 
+              src="./assets/maria-popescu-portrait.jpg" 
               alt="Maria Popescu - Psiholog Clinician" 
               className="w-48 h-48 lg:w-56 lg:h-56 rounded-full mx-auto object-cover shadow-2xl border-4 border-white ring-4 ring-brand-accent/20"
             />

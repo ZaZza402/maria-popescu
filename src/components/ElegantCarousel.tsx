@@ -7,7 +7,7 @@ const ElegantCarousel: React.FC = () => {
   // Gallery images - easy to update
   const images = [
     {
-      src: './assets/female_portrait.jpg',
+      src: './assets/maria-popescu-portrait.jpg',
       alt: 'Maria Popescu - Psiholog Clinician',
       title: 'Cabinet de Psihologie'
     },

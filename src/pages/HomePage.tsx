@@ -382,7 +382,7 @@ const HomePage: React.FC = () => {
               <div className="relative w-full max-w-none lg:max-w-lg">
                 <div className="aspect-[3/4] w-full bg-stone-200 lg:rounded-lg overflow-hidden shadow-xl">
                   <OptimizedImage
-                    src="./assets/female_portrait.jpg"
+                    src="./assets/maria-popescu-sketch-portrait.jpg"
                     alt="Maria Popescu - Psiholog Clinician și Psihoterapeut"
                     className="w-full h-full object-cover"
                     priority={true}
@@ -573,7 +573,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/female_portrait.jpg"
+                  src="./assets/maria-popescu-portrait.jpg"
                   alt="Maria Popescu"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
