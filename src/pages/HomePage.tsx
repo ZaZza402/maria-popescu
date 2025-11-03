@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import HeroIllustration from "../components/HeroIllustration";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -327,13 +326,52 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      {/* Hero Section - Matching Reference Design */}
-      <section className="relative bg-stone-50 py-2 lg:py-16">
+      {/* Hero Section - Desktop: Two column layout, Mobile: Text only with warm background */}
+      <section className="relative bg-gradient-to-br from-stone-100 via-brand-primary/5 to-brand-accent/5 lg:bg-stone-50 py-12 lg:py-16">
         <div className="container mx-auto max-w-7xl px-4">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[80vh]">
-            {/* Text Content - Left Side on Desktop */}
-            <div className="order-2 lg:order-1 flex flex-col justify-center">
-              <h1 className="hero-text text-5xl lg:text-7xl xl:text-8xl mb-6 leading-tight">
+          {/* Mobile: Text only centered layout */}
+          <div className="lg:hidden text-center py-8">
+            <h1 className="hero-text text-5xl mb-6 leading-tight">
+              <span className="hero-text text-brand-text font-serif font-bold block">
+                Maria
+              </span>
+              <span className="hero-text text-brand-text font-serif font-bold block">
+                Popescu
+              </span>
+            </h1>
+
+            <div className="hero-text credentials space-y-3 mb-8">
+              <div className="text-lg text-brand-text font-medium">
+                Psiholog Clinician / Psihoterapeut
+              </div>
+              <div className="text-lg text-brand-text font-medium">
+                Cognitiv-Comportamental
+              </div>
+            </div>
+
+            <blockquote className="hero-text text-base text-brand-text/80 mb-8 leading-relaxed italic max-w-2xl mx-auto">
+              "Sunt psiholog clinician și psihoterapeut
+              cognitiv-comportamental, cu o vastă experiență în lucrul cu
+              copii și adulți în domeniul evaluării psihologice. Îmi doresc să
+              creez un spațiu sigur, cald și confidențial, unde fiecare
+              persoană să se simtă ascultată și înțeleasă."
+            </blockquote>
+
+            <div className="hero-text flex justify-center items-center">
+              <Link
+                to="/despre"
+                className="cta-button inline-block px-10 py-3 border-2 border-brand-text text-brand-text font-serif text-lg hover:bg-brand-text hover:text-white transition-all duration-300"
+              >
+                Află mai multe
+              </Link>
+            </div>
+          </div>
+
+          {/* Desktop: Two column layout with image */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[80vh]">
+            {/* Text Content - Left Side */}
+            <div className="flex flex-col justify-center">
+              <h1 className="hero-text text-7xl xl:text-8xl mb-6 leading-tight">
                 <span className="hero-text text-brand-text font-serif font-bold block">
                   Maria
                 </span>
@@ -343,15 +381,15 @@ const HomePage: React.FC = () => {
               </h1>
 
               <div className="hero-text credentials space-y-4 mb-8">
-                <div className="text-lg lg:text-xl text-brand-text font-medium">
+                <div className="text-xl text-brand-text font-medium">
                   Psiholog Clinician / Psihoterapeut
                 </div>
-                <div className="text-lg lg:text-xl text-brand-text font-medium">
+                <div className="text-xl text-brand-text font-medium">
                   Cognitiv-Comportamental
                 </div>
               </div>
 
-              <blockquote className="hero-text text-base lg:text-lg text-brand-text/80 mb-8 leading-relaxed italic border-l-2 border-brand-primary pl-4 breathing-element">
+              <blockquote className="hero-text text-lg text-brand-text/80 mb-8 leading-relaxed italic border-l-2 border-brand-primary pl-4 breathing-element">
                 "Sunt psiholog clinician și psihoterapeut
                 cognitiv-comportamental, cu o vastă experiență în lucrul cu
                 copii și adulți în domeniul evaluării psihologice. Îmi doresc să
@@ -377,10 +415,14 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Illustration - Right Side on Desktop, Top on Mobile */}
-            <div className="hero-image order-1 lg:order-2 flex justify-center -mx-4 lg:mx-0">
-              <div className="relative w-full max-w-none lg:max-w-lg aspect-[3/4]">
-                <HeroIllustration />
+            {/* Image - Right Side Desktop Only */}
+            <div className="hero-image flex justify-center">
+              <div className="relative w-full max-w-lg aspect-[3/4] rounded-lg overflow-hidden shadow-xl">
+                <img 
+                  src="./assets/therapy-session.webp" 
+                  alt="Cabinet de Psihologie - Mediu terapeutic profesional"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
