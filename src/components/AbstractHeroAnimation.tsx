@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const AbstractHeroAnimation = () => {
   return (
@@ -7,8 +7,8 @@ const AbstractHeroAnimation = () => {
       <motion.div
         className="absolute w-64 h-64 rounded-full opacity-20"
         style={{
-          background: 'linear-gradient(135deg, #C4E0D9 0%, #E8A298 100%)',
-          filter: 'blur(40px)',
+          background: "linear-gradient(135deg, #C4E0D9 0%, #E8A298 100%)",
+          filter: "blur(40px)",
         }}
         animate={{
           x: [0, 30, 0],
@@ -18,17 +18,17 @@ const AbstractHeroAnimation = () => {
         transition={{
           duration: 8,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
       />
 
       <motion.div
         className="absolute w-48 h-48 rounded-full opacity-25"
         style={{
-          background: 'linear-gradient(225deg, #E8A298 0%, #C4E0D9 100%)',
-          filter: 'blur(30px)',
-          left: '20%',
-          top: '30%',
+          background: "linear-gradient(225deg, #E8A298 0%, #C4E0D9 100%)",
+          filter: "blur(30px)",
+          left: "20%",
+          top: "30%",
         }}
         animate={{
           x: [0, -20, 0],
@@ -38,17 +38,18 @@ const AbstractHeroAnimation = () => {
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
       />
 
       <motion.div
         className="absolute w-56 h-56 rounded-full opacity-15"
         style={{
-          background: 'linear-gradient(45deg, #C4E0D9 0%, rgba(196, 224, 217, 0.5) 100%)',
-          filter: 'blur(50px)',
-          right: '15%',
-          bottom: '20%',
+          background:
+            "linear-gradient(45deg, #C4E0D9 0%, rgba(196, 224, 217, 0.5) 100%)",
+          filter: "blur(50px)",
+          right: "15%",
+          bottom: "20%",
         }}
         animate={{
           x: [0, 40, 0],
@@ -58,7 +59,7 @@ const AbstractHeroAnimation = () => {
         transition={{
           duration: 12,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
       />
 
@@ -66,12 +67,12 @@ const AbstractHeroAnimation = () => {
       <motion.div
         className="absolute border-2 border-brand-primary/20 rounded-full"
         style={{
-          width: '300px',
-          height: '300px',
-          top: '50%',
-          left: '50%',
-          marginLeft: '-150px',
-          marginTop: '-150px',
+          width: "300px",
+          height: "300px",
+          top: "50%",
+          left: "50%",
+          marginLeft: "-150px",
+          marginTop: "-150px",
         }}
         animate={{
           rotate: 360,
@@ -81,12 +82,12 @@ const AbstractHeroAnimation = () => {
           rotate: {
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',
+            ease: "linear",
           },
           scale: {
             duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           },
         }}
       />
@@ -94,12 +95,12 @@ const AbstractHeroAnimation = () => {
       <motion.div
         className="absolute border-2 border-brand-accent/20 rounded-full"
         style={{
-          width: '200px',
-          height: '200px',
-          top: '50%',
-          left: '50%',
-          marginLeft: '-100px',
-          marginTop: '-100px',
+          width: "200px",
+          height: "200px",
+          top: "50%",
+          left: "50%",
+          marginLeft: "-100px",
+          marginTop: "-100px",
         }}
         animate={{
           rotate: -360,
@@ -109,12 +110,12 @@ const AbstractHeroAnimation = () => {
           rotate: {
             duration: 15,
             repeat: Infinity,
-            ease: 'linear',
+            ease: "linear",
           },
           scale: {
             duration: 5,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           },
         }}
       />
@@ -123,10 +124,10 @@ const AbstractHeroAnimation = () => {
       <motion.div
         className="absolute bg-brand-primary/10"
         style={{
-          width: '2px',
-          height: '120px',
-          top: '20%',
-          right: '30%',
+          width: "2px",
+          height: "120px",
+          top: "20%",
+          right: "30%",
         }}
         animate={{
           scaleY: [1, 1.2, 1],
@@ -135,17 +136,17 @@ const AbstractHeroAnimation = () => {
         transition={{
           duration: 3,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
       />
 
       <motion.div
         className="absolute bg-brand-accent/10"
         style={{
-          width: '100px',
-          height: '2px',
-          bottom: '30%',
-          left: '25%',
+          width: "100px",
+          height: "2px",
+          bottom: "30%",
+          left: "25%",
         }}
         animate={{
           scaleX: [1, 1.3, 1],
@@ -154,7 +155,7 @@ const AbstractHeroAnimation = () => {
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
       />
 
@@ -174,7 +175,7 @@ const AbstractHeroAnimation = () => {
           transition={{
             duration: 3 + i * 0.5,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
             delay: i * 0.3,
           }}
         />

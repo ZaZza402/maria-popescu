@@ -137,9 +137,9 @@ const DesprePage: React.FC = () => {
                 src="./assets/maria-popescu-portrait.jpg"
                 alt="Maria Popescu - Psiholog Clinician"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: "center 15%", transform: "scale(0.75)" }}
+                style={{ objectPosition: "center 20%" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-stone-50/10 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-stone-50/20 to-transparent pointer-events-none"></div>
             </div>
           </div>
           <h1 className="hero-title text-4xl lg:text-5xl xl:text-6xl mb-6 leading-tight">
