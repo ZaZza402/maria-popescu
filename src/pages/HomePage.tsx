@@ -29,6 +29,22 @@ const HomePage: React.FC = () => {
       }
     );
 
+    // Hero Divider - Appears after text with width animation
+    gsap.fromTo(
+      ".hero-divider",
+      {
+        opacity: 0,
+        scaleX: 0,
+      },
+      {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.8,
+        ease: "power2.out",
+        delay: 2.5, // After text animations complete (0.2 + 1.8 + 0.5)
+      }
+    );
+
     gsap.fromTo(
       ".hero-image",
       {
@@ -322,7 +338,6 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-stone-50">
       {/* Hero Section - Split screen both desktop and mobile */}
       <section className="relative bg-stone-50 overflow-hidden">
-
         {/* Content Container */}
         <div className="relative z-10 lg:py-0">
           {/* Mobile: Split Screen Vertical - Content Top, Video Bottom */}
@@ -340,15 +355,15 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Divider */}
-              <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-6"></div>
+              <div className="hero-divider w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-6"></div>
 
               {/* Quote */}
               <blockquote className="hero-text text-base text-brand-text/80 mb-8 leading-relaxed italic">
-                "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
-                cu o vastă experiență în lucrul cu copii și adulți în domeniul
-                evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
-                și confidențial, unde fiecare persoană să se simtă ascultată și
-                înțeleasă."
+                "Sunt psiholog clinician și psihoterapeut
+                cognitiv-comportamental, cu o vastă experiență în lucrul cu
+                copii și adulți în domeniul evaluării psihologice. Îmi doresc să
+                creez un spațiu sigur, cald și confidențial, unde fiecare
+                persoană să se simtă ascultată și înțeleasă."
               </blockquote>
 
               {/* CTA Button */}
@@ -396,15 +411,15 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Divider */}
-              <div className="w-16 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-8"></div>
+              <div className="hero-divider w-16 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-8"></div>
 
               {/* Quote */}
               <blockquote className="hero-text text-lg xl:text-xl text-brand-text/80 mb-10 leading-relaxed italic">
-                "Sunt psiholog clinician și psihoterapeut cognitiv-comportamental,
-                cu o vastă experiență în lucrul cu copii și adulți în domeniul
-                evaluării psihologice. Îmi doresc să creez un spațiu sigur, cald
-                și confidențial, unde fiecare persoană să se simtă ascultată și
-                înțeleasă."
+                "Sunt psiholog clinician și psihoterapeut
+                cognitiv-comportamental, cu o vastă experiență în lucrul cu
+                copii și adulți în domeniul evaluării psihologice. Îmi doresc să
+                creez un spațiu sigur, cald și confidențial, unde fiecare
+                persoană să se simtă ascultată și înțeleasă."
               </blockquote>
 
               {/* CTA Button */}

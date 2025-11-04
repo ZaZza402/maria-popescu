@@ -500,6 +500,7 @@ a[href="/"]:focus {
 /* Prevent Content Flash Before GSAP Loads - All Pages */
 .hero-text,
 .hero-image,
+.hero-divider,
 .hero-title,
 .hero-portrait,
 .about-title,
@@ -523,6 +524,7 @@ a[href="/"]:focus {
 /* GSAP will override these styles when ready */
 .gsap-loaded .hero-text,
 .gsap-loaded .hero-image,
+.gsap-loaded .hero-divider,
 .gsap-loaded .hero-title,
 .gsap-loaded .hero-portrait,
 .gsap-loaded .about-title,
