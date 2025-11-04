@@ -77,83 +77,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom animations for hero icon background */
-@keyframes pulse-slow {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.5;
-  }
-}
-
-@keyframes spin-slow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin-very-slow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes drift {
-  0%,
-  100% {
-    transform: translateX(0px) translateY(0px);
-  }
-  25% {
-    transform: translateX(10px) translateY(-10px);
-  }
-  50% {
-    transform: translateX(-10px) translateY(-5px);
-  }
-  75% {
-    transform: translateX(5px) translateY(10px);
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 8s ease-in-out infinite;
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-spin-very-slow {
-  animation: spin-very-slow 30s linear infinite;
-}
-
-.animate-float {
-  animation: float 12s ease-in-out infinite;
-}
-
-.animate-drift {
-  animation: drift 15s ease-in-out infinite;
-}
-
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
   width: 8px;
@@ -498,9 +421,7 @@ a[href="/"]:focus {
 }
 
 /* Prevent Content Flash Before GSAP Loads - All Pages */
-.hero-text,
-.hero-image,
-.hero-divider,
+.hero-content-wrapper,
 .hero-title,
 .hero-portrait,
 .about-title,
@@ -515,16 +436,13 @@ a[href="/"]:focus {
 .article-card,
 .cta-button,
 .paper-plane,
-.gallery-title,
-.breathing-element {
+.gallery-title {
   opacity: 0;
   visibility: hidden;
 }
 
 /* GSAP will override these styles when ready */
-.gsap-loaded .hero-text,
-.gsap-loaded .hero-image,
-.gsap-loaded .hero-divider,
+.gsap-loaded .hero-content-wrapper,
 .gsap-loaded .hero-title,
 .gsap-loaded .hero-portrait,
 .gsap-loaded .about-title,
@@ -539,8 +457,7 @@ a[href="/"]:focus {
 .gsap-loaded .article-card,
 .gsap-loaded .cta-button,
 .gsap-loaded .paper-plane,
-.gsap-loaded .gallery-title,
-.gsap-loaded .breathing-element {
+.gsap-loaded .gallery-title {
   visibility: visible;
 }
 

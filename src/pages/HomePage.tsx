@@ -14,47 +14,18 @@ const HomePage: React.FC = () => {
     // Set default ease for psychological comfort
     gsap.defaults({ ease: "power2.out", duration: 1.2 });
 
-    // 1. Hero Section - Smooth Fade In Only
+    // 1. Hero Section - Simple smooth fade-in for entire content
+    // Wait for page to be ready, then fade everything in together
     gsap.fromTo(
-      ".hero-text",
+      ".hero-content-wrapper",
       {
         opacity: 0,
       },
       {
         opacity: 1,
-        duration: 1.8,
-        ease: "power2.inOut",
-        stagger: 0.15,
-        delay: 0.2,
-      }
-    );
-
-    // Hero Divider - Appears after text with width animation
-    gsap.fromTo(
-      ".hero-divider",
-      {
-        opacity: 0,
-        scaleX: 0,
-      },
-      {
-        opacity: 1,
-        scaleX: 1,
-        duration: 0.8,
+        duration: 1.2,
         ease: "power2.out",
-        delay: 2.5, // After text animations complete (0.2 + 1.8 + 0.5)
-      }
-    );
-
-    gsap.fromTo(
-      ".hero-image",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 2,
-        ease: "power2.inOut",
-        delay: 0.5,
+        delay: 0.3, // Small delay to ensure page is ready
       }
     );
 
@@ -258,25 +229,7 @@ const HomePage: React.FC = () => {
       });
     });
 
-    // 7. Quote Breathing Animation - Once on Scroll
-    gsap.fromTo(
-      ".breathing-element",
-      { scale: 1 },
-      {
-        scale: 1.02,
-        duration: 2,
-        ease: "power2.inOut",
-        yoyo: true,
-        repeat: 1, // Play once forward and once back
-        scrollTrigger: {
-          trigger: ".breathing-element",
-          start: "top 80%",
-          toggleActions: "play none none none", // Only play once
-        },
-      }
-    );
-
-    // 8. Contact Section Button Animations - Lift from Buried State
+    // 7. Contact Section Button Animations - Lift from Buried State
     ScrollTrigger.create({
       trigger: ".contact-section",
       start: "top 70%",
@@ -344,36 +297,38 @@ const HomePage: React.FC = () => {
           <div className="lg:hidden flex flex-col min-h-screen">
             {/* Top: Content on Solid Background */}
             <div className="bg-stone-50 px-6 py-12 flex flex-col justify-center min-h-[55vh]">
-              {/* Credentials */}
-              <div className="hero-text credentials space-y-2 mb-6">
-                <h1 className="text-2xl font-bold text-brand-text leading-tight">
-                  Psiholog Clinician / Psihoterapeut
-                </h1>
-                <h2 className="text-2xl font-bold text-brand-text leading-tight">
-                  Cognitiv-Comportamental
-                </h2>
-              </div>
+              <div className="hero-content-wrapper">
+                {/* Credentials */}
+                <div className="credentials space-y-2 mb-6">
+                  <h1 className="text-2xl font-bold text-brand-text leading-tight">
+                    Psiholog Clinician / Psihoterapeut
+                  </h1>
+                  <h2 className="text-2xl font-bold text-brand-text leading-tight">
+                    Cognitiv-Comportamental
+                  </h2>
+                </div>
 
-              {/* Divider */}
-              <div className="hero-divider w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-6"></div>
+                {/* Divider */}
+                <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-6"></div>
 
-              {/* Quote */}
-              <blockquote className="hero-text text-base text-brand-text/80 mb-8 leading-relaxed italic">
-                "Sunt psiholog clinician și psihoterapeut
-                cognitiv-comportamental, cu o vastă experiență în lucrul cu
-                copii și adulți în domeniul evaluării psihologice. Îmi doresc să
-                creez un spațiu sigur, cald și confidențial, unde fiecare
-                persoană să se simtă ascultată și înțeleasă."
-              </blockquote>
+                {/* Quote */}
+                <blockquote className="text-base text-brand-text/80 mb-8 leading-relaxed italic">
+                  "Sunt psiholog clinician și psihoterapeut
+                  cognitiv-comportamental, cu o vastă experiență în lucrul cu
+                  copii și adulți în domeniul evaluării psihologice. Îmi doresc
+                  să creez un spațiu sigur, cald și confidențial, unde fiecare
+                  persoană să se simtă ascultată și înțeleasă."
+                </blockquote>
 
-              {/* CTA Button */}
-              <div className="hero-text">
-                <Link
-                  to="/despre"
-                  className="cta-button inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
-                >
-                  Află mai multe
-                </Link>
+                {/* CTA Button */}
+                <div>
+                  <Link
+                    to="/despre"
+                    className="inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
+                  >
+                    Află mai multe
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -400,36 +355,38 @@ const HomePage: React.FC = () => {
           <div className="hidden lg:grid lg:grid-cols-2 min-h-[85vh]">
             {/* Left: Content on Solid Background */}
             <div className="bg-stone-50 flex flex-col justify-center px-12 xl:px-16 relative z-20">
-              {/* Credentials */}
-              <div className="hero-text credentials space-y-3 mb-8">
-                <h1 className="text-4xl xl:text-5xl text-brand-text font-bold leading-tight">
-                  Psiholog Clinician / Psihoterapeut
-                </h1>
-                <h2 className="text-4xl xl:text-5xl text-brand-text font-bold leading-tight">
-                  Cognitiv-Comportamental
-                </h2>
-              </div>
+              <div className="hero-content-wrapper">
+                {/* Credentials */}
+                <div className="credentials space-y-3 mb-8">
+                  <h1 className="text-4xl xl:text-5xl text-brand-text font-bold leading-tight">
+                    Psiholog Clinician / Psihoterapeut
+                  </h1>
+                  <h2 className="text-4xl xl:text-5xl text-brand-text font-bold leading-tight">
+                    Cognitiv-Comportamental
+                  </h2>
+                </div>
 
-              {/* Divider */}
-              <div className="hero-divider w-16 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-8"></div>
+                {/* Divider */}
+                <div className="w-16 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-8"></div>
 
-              {/* Quote */}
-              <blockquote className="hero-text text-lg xl:text-xl text-brand-text/80 mb-10 leading-relaxed italic">
-                "Sunt psiholog clinician și psihoterapeut
-                cognitiv-comportamental, cu o vastă experiență în lucrul cu
-                copii și adulți în domeniul evaluării psihologice. Îmi doresc să
-                creez un spațiu sigur, cald și confidențial, unde fiecare
-                persoană să se simtă ascultată și înțeleasă."
-              </blockquote>
+                {/* Quote */}
+                <blockquote className="text-lg xl:text-xl text-brand-text/80 mb-10 leading-relaxed italic">
+                  "Sunt psiholog clinician și psihoterapeut
+                  cognitiv-comportamental, cu o vastă experiență în lucrul cu
+                  copii și adulți în domeniul evaluării psihologice. Îmi doresc
+                  să creez un spațiu sigur, cald și confidențial, unde fiecare
+                  persoană să se simtă ascultată și înțeleasă."
+                </blockquote>
 
-              {/* CTA Button */}
-              <div className="hero-text">
-                <Link
-                  to="/despre"
-                  className="cta-button inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
-                >
-                  Află mai multe
-                </Link>
+                {/* CTA Button */}
+                <div>
+                  <Link
+                    to="/despre"
+                    className="inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
+                  >
+                    Află mai multe
+                  </Link>
+                </div>
               </div>
             </div>
 

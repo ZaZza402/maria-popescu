@@ -75,6 +75,8 @@ const Header = () => {
 
   // Close mobile menu with GSAP animation
   const closeMobileMenu = () => {
+    if (!menuOverlayRef.current || !menuContentRef.current) return;
+
     const tl = gsap.timeline({
       onComplete: () => {
         setIsMobileMenuOpen(false);
@@ -112,7 +114,9 @@ const Header = () => {
         duration: 0.3,
         ease: "power2.in",
         onComplete: () => {
-          gsap.set(menuOverlayRef.current, { visibility: "hidden" });
+          if (menuOverlayRef.current) {
+            gsap.set(menuOverlayRef.current, { visibility: "hidden" });
+          }
         },
       },
       "-=0.2"
