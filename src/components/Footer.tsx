@@ -161,7 +161,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-brand-accent hover:text-brand-primary transition-colors font-medium"
             >
-              Alecs
+              alecsdesign.xyz
             </a>
           </p>
         </div>
