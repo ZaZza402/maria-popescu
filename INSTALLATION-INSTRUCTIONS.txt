@@ -1,0 +1,203 @@
+MARIA POPESCU WEBSITE - INSTALLATION INSTRUCTIONS
+==================================================
+
+Website: www.popescumaria.ro
+Developer: alecsdesign.xyz
+Date: November 12, 2025
+
+Prerequisites:
+--------------
+- Node.js 18 or higher (download from nodejs.org)
+- npm 9 or higher (included with Node.js)
+- Code editor (VS Code recommended)
+
+Installation Steps:
+-------------------
+
+1. Extract this archive to your preferred location
+   Example: C:\Projects\maria-popescu-website\
+
+2. Open terminal/command prompt in the extracted folder
+   - Windows: Right-click folder → "Open in Terminal"
+   - Mac: Right-click folder → "New Terminal at Folder"
+
+3. Install dependencies:
+   
+   npm install
+   
+   This will download all required packages (~200 MB)
+   Takes 2-5 minutes depending on internet speed
+
+4. Start development server:
+   
+   npm run dev
+   
+   Server will run at: http://localhost:5173
+   Open this URL in your browser to see the website
+
+5. Build for production (when ready to deploy):
+   
+   npm run build
+   
+   Output will be in /dist directory
+   Upload contents of /dist to web hosting
+
+Common Commands:
+----------------
+
+npm run dev      - Start development server
+npm run build    - Build for production
+npm run preview  - Preview production build
+npm run lint     - Check code quality
+
+Project Structure:
+------------------
+
+src/
+  components/    - Reusable UI components (Header, Footer, etc.)
+  pages/         - Page components (Home, About, Services, etc.)
+  App.tsx        - Main application with routing
+  main.tsx       - Entry point
+
+public/
+  assets/        - Images, videos, and media files
+  sitemap.xml    - SEO sitemap
+  robots.txt     - Search engine instructions
+
+Configuration Files:
+--------------------
+
+package.json       - Dependencies and scripts
+vite.config.ts     - Build tool configuration
+tailwind.config.js - Styling framework configuration
+tsconfig.json      - TypeScript configuration
+
+Documentation:
+--------------
+
+README.md                       - Quick start guide and overview
+TECHNICAL-HANDOVER.md           - Complete technical documentation
+DOCUMENT-CLIENT-ROMANIAN.md     - Client document (Romanian)
+SEO-SETUP.md                    - Google Search Console guide
+
+How to Make Common Updates:
+----------------------------
+
+1. Change phone number:
+   - Edit: src/components/Footer.tsx
+   - Edit: src/components/Header.tsx
+   - Edit: src/components/WhatsappButton.tsx
+   - Edit: index.html (line 151 - structured data)
+   - Run: npm run build
+   - Deploy new /dist folder
+
+2. Add new article:
+   - Add image to: public/assets/
+   - Edit: src/pages/ArticolePage.tsx
+   - Add article object to articles array
+   - Run: npm run build
+   - Deploy new /dist folder
+
+3. Update service information:
+   - Edit: src/pages/HomePage.tsx (service cards)
+   - Edit: src/pages/ServiciiPage.tsx (full descriptions)
+   - Run: npm run build
+   - Deploy new /dist folder
+
+4. Change images:
+   - Add new image to: public/assets/
+   - Update image path in relevant component
+   - Run: npm run build
+   - Deploy new /dist folder
+
+Important Notes:
+----------------
+
+- Always run "npm run build" after making changes
+- Test changes locally with "npm run dev" before deploying
+- Back up the project before making major changes
+- Contact alecsdesign.xyz for complex modifications
+
+Troubleshooting:
+----------------
+
+Problem: "npm: command not found"
+Solution: Install Node.js from nodejs.org
+
+Problem: "Port 5173 already in use"
+Solution: Close other terminals or use: npm run dev -- --port 3000
+
+Problem: Changes not visible after editing
+Solution: 
+  1. Save the file
+  2. Check terminal for errors
+  3. Refresh browser (Ctrl+F5 or Cmd+Shift+R)
+
+Problem: Build errors
+Solution:
+  1. Delete node_modules folder
+  2. Delete package-lock.json
+  3. Run: npm install
+  4. Run: npm run build
+
+Deployment:
+-----------
+
+After running "npm run build", deploy the /dist folder:
+1. Upload all files from /dist to your web hosting
+2. Configure server to redirect all routes to index.html
+3. Enable HTTPS/SSL certificate
+4. Test website thoroughly
+
+Current Setup:
+--------------
+Domain: www.popescumaria.ro
+Hosting: Managed by developer (alecsdesign.xyz)
+SSL: Active
+Status: Live and operational
+
+Contact Information:
+--------------------
+
+Developer:
+  Name: alecsdesign.xyz
+  Website: https://www.alecsdesign.xyz
+
+Client:
+  Name: Maria Popescu - Psiholog Clinician
+  Phone: +40 772 246 316
+  Website: https://www.popescumaria.ro/
+
+Support:
+--------
+
+For technical issues or questions:
+- Review TECHNICAL-HANDOVER.md for detailed information
+- Check README.md for quick reference
+- Contact alecsdesign.xyz for assistance
+
+Maintenance:
+------------
+
+Included in annual maintenance package (100 EUR/year):
+- Content updates (text, images)
+- New articles (up to 6/year)
+- Technical support
+- Security updates
+- Monthly backups
+
+Not included:
+- Major design changes
+- New features (booking system, etc.)
+- Social media marketing
+- Content creation (writing articles, taking photos)
+
+License:
+--------
+
+This project is proprietary and developed for Maria Popescu.
+All rights reserved.
+
+Last Updated: November 12, 2025
+Version: 1.0.0
+Status: Production Ready
