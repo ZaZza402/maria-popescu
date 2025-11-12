@@ -5,9 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-# NOTE: Replace 'YOUR-DOMAIN.com' with your actual domain when deployed
-# Example: Sitemap: https://maria-popescu.ro/sitemap.xml
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://www.popescumaria.ro/sitemap.xml
 
 # Crawl-delay to be respectful to server resources
 Crawl-delay: 10
