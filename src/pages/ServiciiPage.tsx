@@ -208,7 +208,7 @@ const ServiciiPage: React.FC = () => {
       <PageSchema
         breadcrumbs={[
           { name: "Acasă", url: "https://www.popescumaria.ro/" },
-          { name: "Servicii", url: "https://www.popescumaria.ro/servicii" }
+          { name: "Servicii", url: "https://www.popescumaria.ro/servicii" },
         ]}
         type="CollectionPage"
         title="Servicii de Specialitate - Terapie Psihologică"

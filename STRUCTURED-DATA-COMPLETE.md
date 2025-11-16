@@ -14,30 +14,33 @@ Successfully implemented advanced structured data (Schema.org JSON-LD) across al
 Created three reusable React components for structured data:
 
 #### A. PageSchema Component
+
 - Adds breadcrumb navigation schema to every page
 - Adds WebPage/AboutPage/CollectionPage/FAQPage type schemas
 - Dynamically updates based on URL and page type
 - Auto-cleanup on component unmount
 
 #### B. FAQSchema Component
+
 - Generates FAQ structured data from question/answer pairs
 - Formats data for Google FAQ rich results
 - Makes FAQ questions appear as expandable sections in search results
 
 #### C. ArticleSchema Component
+
 - Ready for future article schema implementation
 - Includes author, publisher, dates, and images
 - Will enable rich article cards in search results
 
 ### 2. **Breadcrumb Schemas Added to All Pages**
 
-| Page | Breadcrumb Path | Schema Type |
-|------|----------------|-------------|
-| **Despre** | Acasă → Despre | AboutPage |
-| **Servicii** | Acasă → Servicii | CollectionPage |
-| **Articole** | Acasă → Articole | CollectionPage |
-| **FAQ** | Acasă → Întrebări Frecvente | FAQPage |
-| **Privacy** | Acasă → Politica de Confidențialitate | WebPage |
+| Page         | Breadcrumb Path                       | Schema Type    |
+| ------------ | ------------------------------------- | -------------- |
+| **Despre**   | Acasă → Despre                        | AboutPage      |
+| **Servicii** | Acasă → Servicii                      | CollectionPage |
+| **Articole** | Acasă → Articole                      | CollectionPage |
+| **FAQ**      | Acasă → Întrebări Frecvente           | FAQPage        |
+| **Privacy**  | Acasă → Politica de Confidențialitate | WebPage        |
 
 ### 3. **FAQ Schema Implementation**
 
@@ -62,12 +65,14 @@ Added comprehensive FAQ structured data to **FAQPage** with all 15 questions:
 ## Expected SEO Benefits
 
 ### Breadcrumb Schema Benefits
+
 - ✅ Breadcrumb navigation appears in Google search results
 - ✅ Helps users understand page hierarchy before clicking
 - ✅ Increases perceived site authority and trust
 - ✅ Improves CTR by 5-10% on average
 
 ### FAQ Schema Benefits
+
 - ✅ FAQ questions appear as expandable dropdown in Google search
 - ✅ Takes up more visual space in search results (pushes competitors down)
 - ✅ Users can see answers without clicking (but often click anyway)
@@ -75,6 +80,7 @@ Added comprehensive FAQ structured data to **FAQPage** with all 15 questions:
 - ✅ Potential to appear in Google's "People Also Ask" section
 
 ### Combined Benefits
+
 - **Better search result appearance**: More visual elements = more clicks
 - **Higher perceived authority**: Structured data signals professional website
 - **Featured snippet potential**: FAQ schema increases chances for position 0
@@ -84,12 +90,14 @@ Added comprehensive FAQ structured data to **FAQPage** with all 15 questions:
 ## Technical Implementation Details
 
 ### Schema Format
+
 - **Standard:** Schema.org JSON-LD
 - **Validation:** Passes Google Rich Results Test
 - **Implementation:** React components with dynamic data
 - **Placement:** Injected into `<head>` via useEffect hooks
 
 ### Example Breadcrumb Schema
+
 ```json
 {
   "@context": "https://schema.org",
@@ -112,6 +120,7 @@ Added comprehensive FAQ structured data to **FAQPage** with all 15 questions:
 ```
 
 ### Example FAQ Schema Structure
+
 ```json
 {
   "@context": "https://schema.org",
@@ -142,11 +151,12 @@ Added comprehensive FAQ structured data to **FAQPage** with all 15 questions:
 ## Testing & Validation
 
 ### Recommended Tools
+
 1. **Google Rich Results Test**: https://search.google.com/test/rich-results
    - Test each page URL individually
    - Verify breadcrumb and FAQ markup appears
-   
 2. **Schema.org Validator**: https://validator.schema.org/
+
    - Validate JSON-LD structure
    - Check for warnings or errors
 
@@ -156,6 +166,7 @@ Added comprehensive FAQ structured data to **FAQPage** with all 15 questions:
    - Track CTR improvements over 2-4 weeks
 
 ### Test URLs
+
 - https://www.popescumaria.ro/
 - https://www.popescumaria.ro/despre
 - https://www.popescumaria.ro/servicii
@@ -173,14 +184,17 @@ Added comprehensive FAQ structured data to **FAQPage** with all 15 questions:
 ## Next Steps (Optional Future Improvements)
 
 1. **Article Schema** - Add individual article schemas to blog posts on ArticolePage
+
    - Will enable rich article cards with images and dates
    - Currently prepared but not implemented (no individual article pages yet)
 
 2. **Video Schema** - If client adds video content
+
    - Video thumbnails in search results
    - Increased engagement for video content
 
 3. **Review Schema** - If client collects testimonials
+
    - Star ratings in search results
    - Significant CTR boost (20-30%)
    - Requires authentic third-party reviews

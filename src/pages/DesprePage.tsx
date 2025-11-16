@@ -132,7 +132,7 @@ const DesprePage: React.FC = () => {
       <PageSchema
         breadcrumbs={[
           { name: "Acasă", url: "https://www.popescumaria.ro/" },
-          { name: "Despre", url: "https://www.popescumaria.ro/despre" }
+          { name: "Despre", url: "https://www.popescumaria.ro/despre" },
         ]}
         type="AboutPage"
         title="Despre Maria Popescu - Psiholog Clinician"

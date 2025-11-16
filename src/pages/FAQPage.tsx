@@ -118,7 +118,10 @@ const FAQPage: React.FC = () => {
       <PageSchema
         breadcrumbs={[
           { name: "Acasă", url: "https://www.popescumaria.ro/" },
-          { name: "Întrebări Frecvente", url: "https://www.popescumaria.ro/intrebari-frecvente" }
+          {
+            name: "Întrebări Frecvente",
+            url: "https://www.popescumaria.ro/intrebari-frecvente",
+          },
         ]}
         type="FAQPage"
         title="Întrebări Frecvente - Servicii de Psihoterapie"

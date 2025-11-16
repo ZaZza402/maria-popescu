@@ -54,6 +54,7 @@
 ```
 
 **Google shows:**
+
 ```
 www.popescumaria.ro › despre
 Despre Mine - Maria Popescu Psiholog
@@ -69,7 +70,8 @@ Despre Mine - Maria Popescu Psiholog
 
 **Implementation:** Add to FAQPage.tsx structured data for each question
 
-**Google shows:** 
+**Google shows:**
+
 ```
 Întrebări Frecvente - Maria Popescu
 ▼ Ce servicii oferă cabinet...
@@ -86,6 +88,7 @@ Despre Mine - Maria Popescu Psiholog
 **Impact:** Crucial for "psiholog bucuresti" searches
 
 **Add to existing JSON-LD:**
+
 ```json
 {
   "@type": "LocalBusiness",
@@ -123,6 +126,7 @@ Despre Mine - Maria Popescu Psiholog
 **Better:** Add inline links in content
 
 **Examples:**
+
 - Homepage articles → Link to full articles page
 - Services overview → Link to individual service details
 - FAQ → Link to relevant service pages
@@ -150,6 +154,7 @@ Despre Mine - Maria Popescu Psiholog
 **Google confirmed:** Page speed is a ranking factor
 
 **Quick wins:**
+
 - ✅ Already using Vercel (fast)
 - ✅ Already using WebP images
 - ⚠️ **Can improve:** Lazy load images below fold
@@ -164,6 +169,7 @@ Despre Mine - Maria Popescu Psiholog
 **Benefit:** Regular updates = higher ranking
 
 **Strategy (without changing main content):**
+
 - Add 1 new article per month to /articole
 - Update FAQ section quarterly (add 1-2 new questions)
 - Update "lastmod" in sitemap when adding articles
@@ -178,6 +184,7 @@ Despre Mine - Maria Popescu Psiholog
 **Benefit:** Rich snippets in Google News, article cards
 
 **Add to each article:**
+
 ```json
 {
   "@type": "Article",
@@ -205,6 +212,7 @@ Despre Mine - Maria Popescu Psiholog
 **Impact:** Huge for local SEO
 
 **Steps:**
+
 1. Create Google Business Profile (free)
 2. Verify ownership
 3. Add website URL
@@ -221,6 +229,7 @@ Despre Mine - Maria Popescu Psiholog
 **Benefit:** Trust signal, slight ranking boost
 
 **Add to vercel.json:**
+
 ```json
 "headers": [
   {
@@ -252,17 +261,20 @@ Despre Mine - Maria Popescu Psiholog
 ## 📊 Priority Ranking (By Impact)
 
 ### **HIGH IMPACT** (Do First):
+
 1. ✅ **Google Business Profile** - Massive local SEO boost
 2. ✅ **FAQ Schema** - Big CTR increase
 3. ✅ **LocalBusiness Schema Enhancement** - Better local results
 4. ✅ **Breadcrumb Schema** - Better CTR
 
 ### **MEDIUM IMPACT**:
+
 5. ✅ **Article Schema** - Better article visibility
 6. ✅ **Internal Linking** - Better crawlability
 7. ✅ **Performance Optimization** - Faster = better
 
 ### **ONGOING**:
+
 8. ✅ **Monthly Article** - Freshness signal (1-2 hours/month)
 9. ✅ **Quarterly FAQ Updates** - Keep content fresh
 
@@ -271,23 +283,27 @@ Despre Mine - Maria Popescu Psiholog
 ## 🎯 Implementation Plan
 
 ### **Phase 1: Structured Data (2-3 hours)**
+
 - Add breadcrumb schema to all pages
 - Add FAQ schema to FAQ page
 - Enhance LocalBusiness schema
 - Add Article schema to blog posts
 
 ### **Phase 2: Google Business (30 minutes)**
+
 - Create Google Business Profile
 - Add all business info
 - Upload photos
 - Link to website
 
 ### **Phase 3: Performance (1 hour)**
+
 - Optimize image loading
 - Add preload hints
 - Update security headers
 
 ### **Phase 4: Ongoing (1-2 hours/month)**
+
 - Add 1 new article monthly
 - Update FAQ quarterly
 - Monitor Google Search Console
@@ -298,21 +314,25 @@ Despre Mine - Maria Popescu Psiholog
 ## 📈 Expected Results
 
 **After Phase 1 (Structured Data):**
+
 - +15-25% CTR increase
 - Better search result appearance
 - Featured snippets possible
 
 **After Phase 2 (Google Business):**
+
 - Appear in local "Map Pack" (top 3)
 - Google Maps visibility
 - "Near me" search results
 
 **After Phase 3 (Performance):**
+
 - +5-10% ranking boost
 - Better mobile rankings
 - Faster page speed score
 
 **After Phase 4 (Ongoing Content):**
+
 - Consistent ranking growth
 - More long-tail keyword rankings
 - Authority building
@@ -335,18 +355,21 @@ I can help you implement any of these. Just say which one you want to start with
 ## 💡 Additional Long-term Strategies
 
 ### **Content (No design changes):**
+
 - Start a newsletter (collect emails)
 - Add testimonials section (when you get them)
 - Case studies (anonymized, with consent)
 - Video content (YouTube SEO)
 
 ### **Technical:**
+
 - Set up Google Analytics 4
 - Set up Google Search Console (if not already)
 - Monitor Core Web Vitals
 - Track keyword rankings
 
 ### **Off-site SEO:**
+
 - Get listed in psychology directories
 - Partner with medical clinics (backlinks)
 - Guest posts on health blogs
@@ -359,11 +382,13 @@ I can help you implement any of these. Just say which one you want to start with
 **Top 3 Quick Wins (Can implement today):**
 
 1. **Create Google Business Profile** (30 min)
+
    - Instant local visibility
    - Shows on Google Maps
    - Free tool
 
 2. **Add FAQ Schema** (1 hour)
+
    - Questions appear in search
    - Takes up more space
    - Big CTR boost
@@ -383,6 +408,7 @@ I can help you implement any of these. Just say which one you want to start with
 Let me know which improvements you want to implement and I'll add them to the code immediately!
 
 **Priority recommendation:**
+
 1. FAQ Schema (biggest visual impact)
 2. LocalBusiness Schema (local SEO)
 3. Breadcrumb Schema (better CTR)
