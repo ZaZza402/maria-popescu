@@ -15,6 +15,7 @@ This document outlines exactly what files should be included in the Google Drive
 ## Files to INCLUDE in Archive
 
 ### 📁 Documentation (4 files)
+
 ```
 ✅ README.md
 ✅ TECHNICAL-HANDOVER.md
@@ -23,6 +24,7 @@ This document outlines exactly what files should be included in the Google Drive
 ```
 
 ### 📁 Source Code
+
 ```
 ✅ src/ (entire folder)
    ├── components/
@@ -34,6 +36,7 @@ This document outlines exactly what files should be included in the Google Drive
 ```
 
 ### 📁 Public Assets
+
 ```
 ✅ public/ (entire folder)
    ├── assets/ (all images and videos)
@@ -42,6 +45,7 @@ This document outlines exactly what files should be included in the Google Drive
 ```
 
 ### 📁 Configuration Files
+
 ```
 ✅ index.html
 ✅ package.json
@@ -61,17 +65,20 @@ This document outlines exactly what files should be included in the Google Drive
 ## Files to EXCLUDE from Archive
 
 ### ❌ Build Artifacts
+
 ```
 ❌ dist/ (can be regenerated with npm run build)
 ❌ node_modules/ (can be regenerated with npm install)
 ```
 
 ### ❌ Git Repository
+
 ```
 ❌ .git/ (version control - not needed for client)
 ```
 
 ### ❌ IDE/Editor Files
+
 ```
 ❌ .vscode/ (optional, can include if helpful)
 ```
@@ -143,6 +150,7 @@ maria-popescu-website/
 ### Option 1: Manual ZIP Creation
 
 1. **Create main folder:**
+
    ```
    maria-popescu-website/
    ```
@@ -150,11 +158,13 @@ maria-popescu-website/
 2. **Copy files/folders listed in "INCLUDE" section above**
 
 3. **Verify excluded files are NOT present:**
+
    - No `node_modules/`
    - No `.git/`
    - No `dist/`
 
 4. **Create ZIP file:**
+
    - Right-click folder → Send to → Compressed (zipped) folder
    - Name: `maria-popescu-website.zip`
 
@@ -225,12 +235,12 @@ Installation Steps:
 
 4. Start development server:
    npm run dev
-   
+
    Server will run at: http://localhost:5173
 
 5. Build for production:
    npm run build
-   
+
    Output will be in /dist directory
 
 Documentation:
@@ -259,6 +269,7 @@ Phone: +40 772 246 316
 Before delivering to client:
 
 ### ✅ Content Check:
+
 - [ ] All 4 documentation files included
 - [ ] All source code (src/) included
 - [ ] All public assets (public/) included
@@ -266,24 +277,28 @@ Before delivering to client:
 - [ ] Installation instructions included
 
 ### ✅ Exclusion Check:
+
 - [ ] NO node_modules/ folder
 - [ ] NO .git/ folder
 - [ ] NO dist/ folder
 - [ ] NO temporary/cache files
 
 ### ✅ Documentation Check:
+
 - [ ] README.md updated with current info
 - [ ] TECHNICAL-HANDOVER.md complete
 - [ ] DOCUMENT-CLIENT-ROMANIAN.md accurate (prices, dates)
 - [ ] SEO-SETUP.md includes domain www.popescumaria.ro
 
 ### ✅ Quality Check:
+
 - [ ] All file paths are correct
 - [ ] No sensitive information (API keys, passwords)
 - [ ] Contact info is current (+40 772 246 316)
 - [ ] Website domain is www.popescumaria.ro throughout
 
 ### ✅ Delivery:
+
 - [ ] ZIP file created and tested (can extract)
 - [ ] Upload to Google Drive
 - [ ] Share link with client
@@ -296,6 +311,7 @@ Before delivering to client:
 **Total archive size:** ~10-15 MB
 
 Breakdown:
+
 - Documentation: ~500 KB
 - Source code (src/): ~100 KB
 - Public assets: ~8-10 MB (video is largest)
@@ -307,6 +323,7 @@ Breakdown:
 ## Google Drive Delivery
 
 ### Upload Steps:
+
 1. Create folder in Google Drive: "Maria Popescu Website"
 2. Upload `maria-popescu-website.zip`
 3. Upload individual documentation files (optional, for easy viewing):
