@@ -34,6 +34,7 @@ The `vercel.json` file in the project root handles everything:
 ```
 
 **What this does:**
+
 - ✅ Redirects all routes to `index.html` (fixes 404 errors)
 - ✅ React Router handles client-side routing
 - ✅ Forces HTTPS automatically (Vercel default)
@@ -60,7 +61,9 @@ The `vercel.json` file in the project root handles everything:
 ## Testing After Deployment
 
 ### 1. Test direct URL access:
+
 Visit these URLs directly in browser (not by clicking links):
+
 - ✅ https://www.popescumaria.ro/despre
 - ✅ https://www.popescumaria.ro/servicii
 - ✅ https://www.popescumaria.ro/articole
@@ -70,11 +73,13 @@ Visit these URLs directly in browser (not by clicking links):
 All should load correctly without 404 errors.
 
 ### 2. Test browser refresh:
+
 - Navigate to any page on the website
 - Press F5 (refresh)
 - Page should reload correctly (not 404)
 
 ### 3. Check Google Search Console:
+
 - After fixing, submit sitemap again
 - Request re-indexing of pages that showed 404
 - Monitor coverage report for improvements
@@ -92,6 +97,7 @@ Go to your Vercel dashboard → Project → Settings → General → check if `v
 **2. Verify deployment:**
 
 In Vercel dashboard:
+
 - Go to Deployments tab
 - Check latest deployment status
 - Look for any build errors
@@ -99,6 +105,7 @@ In Vercel dashboard:
 **3. Check domain configuration:**
 
 In Vercel dashboard → Domains:
+
 - Verify `www.popescumaria.ro` is properly connected
 - Check DNS records are correct
 - SSL should show as "Active"
@@ -106,6 +113,7 @@ In Vercel dashboard → Domains:
 **4. Force re-deploy:**
 
 If configuration changes aren't taking effect:
+
 - Go to Vercel dashboard
 - Click latest deployment
 - Click "⋯" menu → "Redeploy"
@@ -113,6 +121,7 @@ If configuration changes aren't taking effect:
 **5. Clear cache:**
 
 Sometimes Vercel's edge cache needs clearing:
+
 - In Vercel dashboard → Settings
 - Look for "Clear Cache" option
 - Or wait 5-10 minutes for automatic cache refresh
@@ -122,6 +131,7 @@ Sometimes Vercel's edge cache needs clearing:
 ## Vercel Dashboard Access
 
 Make sure you have access to:
+
 - **Vercel Dashboard:** https://vercel.com/dashboard
 - **Project:** maria-popescu (or similar name)
 - **Connected GitHub repo:** ZaZza402/maria-popescu
@@ -133,6 +143,7 @@ Make sure you have access to:
 ### Issue: Changes not appearing after git push
 
 **Solution:**
+
 1. Check Vercel dashboard - is it building?
 2. Look at deployment logs for errors
 3. Verify build succeeds (green checkmark)
@@ -141,6 +152,7 @@ Make sure you have access to:
 ### Issue: 404 on specific routes
 
 **Solution:**
+
 1. Verify `vercel.json` exists in project root
 2. Push `vercel.json` to GitHub if missing
 3. Redeploy from Vercel dashboard
@@ -148,6 +160,7 @@ Make sure you have access to:
 ### Issue: Old version still showing
 
 **Solution:**
+
 1. Hard refresh browser: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
 2. Check deployment timestamp in Vercel
 3. Verify correct deployment is assigned to domain
@@ -159,6 +172,7 @@ Make sure you have access to:
 If you're seeing 404 errors right now:
 
 1. **Ensure vercel.json is committed:**
+
    ```bash
    git add vercel.json
    git commit -m "Add Vercel routing configuration"
@@ -168,6 +182,7 @@ If you're seeing 404 errors right now:
 2. **Wait for Vercel to deploy** (2-3 minutes)
 
 3. **Test these URLs directly:**
+
    - https://www.popescumaria.ro/despre
    - https://www.popescumaria.ro/servicii
    - https://www.popescumaria.ro/articole
@@ -197,6 +212,7 @@ After each deployment, verify:
 **After fix:** Google can access all pages → pages get indexed → appear in search results
 
 **Action after fixing:**
+
 1. Go to Google Search Console
 2. Request re-indexing for affected pages:
    - /despre
