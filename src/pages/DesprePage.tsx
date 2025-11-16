@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { PageSchema } from "../components/PageSchema";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -128,6 +129,15 @@ const DesprePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <PageSchema
+        breadcrumbs={[
+          { name: "Acasă", url: "https://www.popescumaria.ro/" },
+          { name: "Despre", url: "https://www.popescumaria.ro/despre" }
+        ]}
+        type="AboutPage"
+        title="Despre Maria Popescu - Psiholog Clinician"
+        description="Psiholog clinician cu peste 15 ani de experiență în terapie individuală, de cuplu și familie. Abordare empatică și personalizată pentru fiecare client."
+      />
       {/* Hero Section with Portrait */}
       <section className="pt-20 pb-12 bg-stone-50">
         <div className="container mx-auto max-w-4xl px-4 text-center">

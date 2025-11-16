@@ -176,49 +176,105 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "LocalBusiness",
         "name": "Maria Popescu - Psiholog Clinician",
-        "description": "Cabinet de psihologie oferind servicii de consiliere psihologică și psihoterapie cognitiv-comportamentală pentru copii și adulți.",
+        "description": "Cabinet de psihologie oferind servicii de consiliere psihologică și psihoterapie cognitiv-comportamentală pentru copii și adulți în București.",
         "url": "https://www.popescumaria.ro/",
         "logo": "https://www.popescumaria.ro/assets/logo-complete.png",
-        "image": "https://www.popescumaria.ro/assets/maria-popescu-portrait.jpg",
+        "image": [
+          "https://www.popescumaria.ro/assets/maria-popescu-portrait.jpg",
+          "https://www.popescumaria.ro/assets/logo-complete.png"
+        ],
+        "telephone": "+40-772-246-316",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "București",
-          "addressCountry": "România"
+          "addressCountry": "RO"
         },
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": "44.4268",
           "longitude": "26.1025"
         },
-        "provider": {
-          "@type": "Person",
-          "name": "Maria Popescu",
-          "jobTitle": "Psiholog Clinician",
-          "alumniOf": "Universitatea de Psihologie",
-          "description": "Psiholog clinician și psihoterapeut cognitiv-comportamental cu experiență de peste 10 ani în domeniu."
-        },
-        "serviceType": [
-          "Consiliere psihologică",
-          "Psihoterapie cognitiv-comportamentală",
-          "Terapie de cuplu",
-          "Terapie de familie",
-          "Consiliere pentru copii"
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
         ],
-        "areaServed": {
-          "@type": "Place",
-          "name": "București, România"
-        },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+40-772-246-316",
           "contactType": "customer service",
-          "availableLanguage": ["Romanian", "English"],
+          "availableLanguage": ["ro", "en"],
           "areaServed": "RO"
         },
-        "priceRange": "$$",
-        "openingHours": "Mo-Fr 09:00-18:00"
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "44.4268",
+            "longitude": "26.1025"
+          },
+          "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicii Psihologice",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Psihoterapie individuală",
+                "description": "Terapie cognitiv-comportamentală pentru adulți"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Consiliere psihologică",
+                "description": "Consiliere pentru copii și adulți"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Terapie ABA",
+                "description": "Applied Behavior Analysis pentru copii"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Psihoterapie de cuplu",
+                "description": "Terapie pentru relații și cupluri"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+    
+    <!-- Breadcrumb Schema for Homepage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Acasă",
+            "item": "https://www.popescumaria.ro/"
+          }
+        ]
       }
     </script>
 

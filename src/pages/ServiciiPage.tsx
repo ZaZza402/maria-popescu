@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { PageSchema } from "../components/PageSchema";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -204,6 +205,15 @@ const ServiciiPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <PageSchema
+        breadcrumbs={[
+          { name: "Acasă", url: "https://www.popescumaria.ro/" },
+          { name: "Servicii", url: "https://www.popescumaria.ro/servicii" }
+        ]}
+        type="CollectionPage"
+        title="Servicii de Specialitate - Terapie Psihologică"
+        description="Servicii psihologice complete: terapie individuală, terapie de cuplu, consiliere familie, evaluare psihologică. Abordare empatică și personalizată."
+      />
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-stone-50">
         <div className="container mx-auto max-w-6xl px-4 text-center">

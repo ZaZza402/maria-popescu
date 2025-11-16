@@ -1,9 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PageSchema } from '../components/PageSchema';
 
 const PrivacyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-light to-white">
+      <PageSchema
+        breadcrumbs={[
+          { name: "Acasă", url: "https://www.popescumaria.ro/" },
+          { name: "Politica de Confidențialitate", url: "https://www.popescumaria.ro/privacy" }
+        ]}
+        type="WebPage"
+        title="Politica de Confidențialitate"
+        description="Politica de confidențialitate și protecție a datelor personale conform GDPR. Informații despre colectarea, utilizarea și protecția datelor clienților."
+      />
       <div className="container mx-auto max-w-4xl px-4 py-12">
         
         {/* Header Section */}

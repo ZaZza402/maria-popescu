@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { PageSchema, FAQSchema } from "../components/PageSchema";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,6 +115,16 @@ const FAQPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <PageSchema
+        breadcrumbs={[
+          { name: "Acasă", url: "https://www.popescumaria.ro/" },
+          { name: "Întrebări Frecvente", url: "https://www.popescumaria.ro/intrebari-frecvente" }
+        ]}
+        type="FAQPage"
+        title="Întrebări Frecvente - Servicii de Psihoterapie"
+        description="Răspunsuri la întrebări despre psihoterapie, consiliere psihologică, tarife, confidențialitate și servicii pentru copii și adulți."
+      />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-gradient-to-br from-brand-light to-stone-50">
         <div className="container mx-auto max-w-4xl px-4 text-center">
