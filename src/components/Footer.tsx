@@ -153,15 +153,21 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Maria Popescu - Psiholog
             Clinician. Toate drepturile rezervate.
           </p>
-          <p className="text-brand-text/60 text-xs mt-2">
-            Designed By{" "}
+          <p className="text-brand-text/60 text-xs mt-2 flex justify-center items-center gap-1.5 whitespace-nowrap">
+            <span>Designed by</span>
             <a
-              href="https://www.alecsdesign.xyz"
+              href="https://www.alemstudio.it"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-accent hover:text-brand-primary transition-colors font-medium"
+              className="inline-flex h-[13px] w-[68px] flex-none items-center justify-center hover:opacity-80 transition-opacity"
             >
-              alecsdesign.xyz
+              <span className="inline-flex h-[13px] w-[68px] items-center justify-center rounded-sm bg-brand-text">
+                <img
+                  src="/assets/dev-logo.svg"
+                  alt="Alem Studio"
+                  className="block h-auto w-[66px]"
+                />
+              </span>
             </a>
           </p>
         </div>

@@ -146,6 +146,30 @@ const ServiciiPage: React.FC = () => {
 
   const services = [
     {
+      title: "Psihoterapie individuală",
+      description:
+        "Terapie personalizată pentru adulți, abordând diverse problematici psihologice prin tehnici cognitiv-comportamentale.",
+      price: "250 RON",
+      duration: "50 min",
+      icon: "fas fa-user",
+    },
+    {
+      title: "Psihoterapie pentru cerințe educaționale speciale",
+      description:
+        "Terapie specializată pentru adulți și copii cu cerințe educaționale speciale, adaptată nevoilor individuale.",
+      price: "200 RON",
+      duration: "50 min",
+      icon: "fas fa-puzzle-piece",
+    },
+    {
+      title: "Psihoterapie de cuplu și familie",
+      description:
+        "Terapie specializată pentru cupluri și familii, îmbunătățirea comunicării și rezolvarea conflictelor.",
+      price: "300 RON",
+      duration: "50 min",
+      icon: "fas fa-heart",
+    },
+    {
       title: "Evaluarea psihologică pentru încadrarea în grad de handicap",
       description:
         "Evaluare psihologică completă, realizată conform standardelor legale în vigoare.",
@@ -170,36 +194,12 @@ const ServiciiPage: React.FC = () => {
       icon: "fas fa-comments",
     },
     {
-      title: "Psihoterapie individuală",
-      description:
-        "Terapie personalizată pentru adulți, abordând diverse problematici psihologice prin tehnici cognitiv-comportamentale.",
-      price: "200 RON",
-      duration: "50 min",
-      icon: "fas fa-user",
-    },
-    {
-      title: "Psihoterapie pentru cerințe educaționale speciale",
-      description:
-        "Terapie specializată pentru adulți și copii cu cerințe educaționale speciale, adaptată nevoilor individuale.",
-      price: "200 RON",
-      duration: "50 min",
-      icon: "fas fa-puzzle-piece",
-    },
-    {
       title: "Terapie cognitiv comportamentală aplicată (ABA)",
       description:
         "Intervenții comportamentale structurate pentru dezvoltarea abilităților sociale și de comunicare.",
       price: "150 RON",
       duration: "50 min",
       icon: "fas fa-brain",
-    },
-    {
-      title: "Psihoterapie de cuplu și familie",
-      description:
-        "Terapie specializată pentru cupluri și familii, îmbunătățirea comunicării și rezolvarea conflictelor.",
-      price: "300 RON",
-      duration: "50 min",
-      icon: "fas fa-heart",
     },
   ];
 

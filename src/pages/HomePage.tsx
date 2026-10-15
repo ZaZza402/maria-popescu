@@ -301,11 +301,8 @@ const HomePage: React.FC = () => {
                 {/* Credentials */}
                 <div className="credentials space-y-2 mb-6">
                   <h1 className="text-2xl font-bold text-brand-text leading-tight">
-                    Psiholog Clinician / Psihoterapeut
+                    Psihoterapeut Cognitiv-Comportamental
                   </h1>
-                  <h2 className="text-2xl font-bold text-brand-text leading-tight">
-                    Cognitiv-Comportamental
-                  </h2>
                 </div>
 
                 {/* Divider */}
@@ -359,11 +356,8 @@ const HomePage: React.FC = () => {
                 {/* Credentials */}
                 <div className="credentials space-y-3 mb-8">
                   <h1 className="text-4xl xl:text-5xl text-brand-text font-bold leading-tight">
-                    Psiholog Clinician / Psihoterapeut
+                    Psihoterapeut Cognitiv-Comportamental
                   </h1>
-                  <h2 className="text-4xl xl:text-5xl text-brand-text font-bold leading-tight">
-                    Cognitiv-Comportamental
-                  </h2>
                 </div>
 
                 {/* Divider */}
@@ -919,7 +913,7 @@ const HomePage: React.FC = () => {
                     <div>
                       <p className="font-medium text-brand-text">Adresă</p>
                       <p className="text-brand-text/70">
-                        Str. Cezar Bolliac, nr. 21
+                        Strada Mizil 2C
                         <br />
                         Sector 3, București
                       </p>
@@ -963,14 +957,14 @@ const HomePage: React.FC = () => {
               </h3>
               <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.1234567890123!2d26.1234567890123!3d44.4234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff5e5a5a5a5a%3A0x5a5a5a5a5a5a5a5a!2sStrada%20Cezar%20Bolliac%2021%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro&q=Strada+Cezar+Bolliac+21,+Sector+3,+Bucure%C8%99ti"
+                  src="https://www.google.com/maps?q=Strada%20Mizil%202C%2C%20Sector%203%2C%20Bucure%C8%99ti&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Locația Cabinetului - Str. Cezar Bolliac 21, Sector 3, București"
+                  title="Locația Cabinetului - Strada Mizil 2C, Sector 3, București"
                 ></iframe>
               </div>
               <p className="text-sm text-brand-text/60 mt-2">

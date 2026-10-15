@@ -84,12 +84,12 @@ const FAQPage: React.FC = () => {
     {
       question: "Oferiți psihoterapie online sau doar la cabinet?",
       answer:
-        "În prezent, ședințele se desfășoară la cabinet, într-un mediu sigur, confidențial și profesional, situat pe Strada Cezar Bolliac 21, Sector 3, București. Pentru situații speciale sau clienți din alte localități, pot fi discutate opțiuni alternative. Vă recomand să mă contactați telefonic sau pe WhatsApp pentru a discuta cele mai potrivite opțiuni pentru nevoile dumneavoastră.",
+        "În prezent, ședințele se desfășoară la cabinet, într-un mediu sigur, confidențial și profesional, situat pe Strada Mizil 2C, Sector 3, București. Pentru situații speciale sau clienți din alte localități, pot fi discutate opțiuni alternative. Vă recomand să mă contactați telefonic sau pe WhatsApp pentru a discuta cele mai potrivite opțiuni pentru nevoile dumneavoastră.",
     },
     {
       question: "Ce tarife sunt aplicate pentru serviciile de psihoterapie?",
       answer:
-        "Tarifele variază în funcție de tipul serviciului: consilierea psihologică costă 150 RON/ședință (50 min), psihoterapia individuală și terapia ABA costă 200 RON/ședință (50 min), psihoterapia de cuplu și familie costă 300 RON/ședință (50 min), iar evaluarea psihologică pentru încadrarea în grad de handicap costă 300 RON (120 min). Tarifele sunt transparente și pot fi discutate la prima întâlnire.",
+        "Tarifele variază în funcție de tipul serviciului: consilierea psihologică costă 150 RON/ședință (50 min), psihoterapia individuală costă 250 RON/ședință (50 min), terapia ABA costă 150 RON/ședință (50 min), psihoterapia de cuplu și familie costă 300 RON/ședință (50 min), iar evaluarea psihologică pentru încadrarea în grad de handicap costă 300 RON (120 min). Tarifele sunt transparente și pot fi discutate la prima întâlnire.",
     },
     {
       question: "Pot obține o rambursare de la asigurarea de sănătate?",
