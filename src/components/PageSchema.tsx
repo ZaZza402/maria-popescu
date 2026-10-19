@@ -26,31 +26,31 @@ export function PageSchema({
     const breadcrumbSchema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": breadcrumbs.map((item, index) => ({
+      itemListElement: breadcrumbs.map((item, index) => ({
         "@type": "ListItem",
-        "position": index + 1,
-        "name": item.name,
-        "item": item.url,
+        position: index + 1,
+        name: item.name,
+        item: item.url,
       })),
     };
 
     // Only add webpage schema if not FAQ page (FAQ schema handled separately)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const schemas: any[] = [breadcrumbSchema];
-    
+
     if (type !== "FAQPage") {
       schemas.push({
         "@context": "https://schema.org",
         "@type": type,
-        "name": title || document.title,
-        "description": description || "",
-        "url": `https://www.popescumaria.ro${location.pathname}`,
+        name: title || document.title,
+        description: description || "",
+        url: `https://www.popescumaria.ro${location.pathname}`,
       });
     }
 
     // Add schemas to head
     const scriptIds: string[] = [];
-    
+
     schemas.forEach((schema, index) => {
       const script = document.createElement("script");
       script.type = "application/ld+json";
@@ -62,7 +62,7 @@ export function PageSchema({
 
     // Cleanup on unmount
     return () => {
-      scriptIds.forEach(id => {
+      scriptIds.forEach((id) => {
         const oldScript = document.getElementById(id);
         if (oldScript) document.head.removeChild(oldScript);
       });
@@ -87,12 +87,12 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": faqs.map((faq) => ({
+      mainEntity: faqs.map((faq) => ({
         "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
+        name: faq.question,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": faq.answer,
+          text: faq.answer,
         },
       })),
     };

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import OpeningHours from "./OpeningHours";
 
 /*
  * Footer Brand Section CSS Variables for Size Control:
@@ -134,6 +135,9 @@ const Footer = () => {
                     WhatsApp
                   </span>
                 </a>
+              </li>
+              <li>
+                <OpeningHours />
               </li>
               <li className="mt-4 pt-2 border-t border-brand-accent/20">
                 <Link
