@@ -29,7 +29,8 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <img
                 src="/assets/logo-complete.png"
-                alt="Logo Cabinet Individual de Psihologie Maria Popescu"
+                                loading="lazy"
+                                alt="Logo Cabinet Individual de Psihologie Maria Popescu"
                 className="h-16 w-auto"
               />
             </div>

@@ -6,11 +6,10 @@ import WhatsappButton from "../components/WhatsappButton";
 import ScrollToTop from "../components/ScrollToTop";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import AppEffects from "../components/AppEffects";
+import WebMcp from "../components/WebMcp";
 import { buildMetadata, SITE_URL } from "../lib/seo";
 import { localBusinessSchema } from "../lib/schema";
 
-const FONTS_URL =
-  "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap";
 const FONT_AWESOME_URL =
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css";
 
@@ -73,16 +72,19 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
+          rel="preload"
+          href="/assets/fonts/Inter-normal-latin.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
-        <link href={FONTS_URL} rel="stylesheet" />
         <link
-          href="https://fonts.cdnfonts.com/css/brittany-signature"
-          rel="stylesheet"
+          rel="preload"
+          href="/assets/fonts/Inter-normal-latin-ext.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
@@ -103,6 +105,7 @@ export default function RootLayout({
       </head>
       <body>
         <AppEffects />
+        <WebMcp />
         <ScrollToTop />
         <div className="scroll-progress"></div>
         <div className="min-h-screen bg-brand-bg text-brand-text font-sans">
