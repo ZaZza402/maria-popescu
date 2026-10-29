@@ -152,7 +152,7 @@ const Header = () => {
             style={{ outline: "none", boxShadow: "none" }}
           >
             <img
-              src="./assets/logo-complete.png"
+              src="/assets/logo-complete.png"
               alt="Maria Popescu Psiholog"
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -244,7 +244,7 @@ const Header = () => {
             style={{ outline: "none", boxShadow: "none" }}
           >
             <img
-              src="./assets/logo-complete.png"
+              src="/assets/logo-complete.png"
               alt="Maria Popescu Psiholog"
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />

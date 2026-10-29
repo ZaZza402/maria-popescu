@@ -15,21 +15,6 @@ const HomePage: React.FC = () => {
     // Set default ease for psychological comfort
     gsap.defaults({ ease: "power2.out", duration: 1.2 });
 
-    // 1. Hero Section - Simple smooth fade-in for entire content
-    // Wait for page to be ready, then fade everything in together
-    gsap.fromTo(
-      ".hero-content-wrapper",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1.2,
-        ease: "power2.out",
-        delay: 0.3, // Small delay to ensure page is ready
-      }
-    );
-
     // 2. Services Section - Calm Reveal
     ScrollTrigger.create({
       trigger: ".services-section",
@@ -524,7 +509,8 @@ const HomePage: React.FC = () => {
             <div className="gallery-scroll flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-stone-200 scrollbar-thumb-brand-primary">
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/therapy-session.webp"
+                  src="/assets/therapy-session.webp"
+                  loading="lazy"
                   alt="Psihoterapie pentru adulți în cabinet, București Sector 3"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -537,7 +523,8 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/kids-therapy.webp"
+                  src="/assets/kids-therapy.webp"
+                  loading="lazy"
                   alt="Psihoterapie și consiliere pentru copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -550,7 +537,8 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/kids-playing.webp"
+                  src="/assets/kids-playing.webp"
+                  loading="lazy"
                   alt="Terapia prin joc pentru copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -563,8 +551,9 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/kids-drawing.webp"
-                  alt="Art terapie: desen și exprimare emoțională la copii"
+                  src="/assets/kids-drawing.webp"
+                                    loading="lazy"
+                                    alt="Art terapie: desen și exprimare emoțională la copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -576,8 +565,9 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/self-esteem.webp"
-                  alt="Dezvoltarea stimei de sine prin psihoterapie"
+                  src="/assets/self-esteem.webp"
+                                    loading="lazy"
+                                    alt="Dezvoltarea stimei de sine prin psihoterapie"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -589,8 +579,9 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/sleep-struggle.jpg"
-                  alt="Probleme de somn: consiliere și terapie"
+                  src="/assets/sleep-struggle.jpg"
+                                    loading="lazy"
+                                    alt="Probleme de somn: consiliere și terapie"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -676,8 +667,9 @@ const HomePage: React.FC = () => {
             <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
-                  src="./assets/kids-drawing.webp"
-                  alt="Evaluarea psihologică la copil"
+                  src="/assets/kids-drawing.webp"
+                                    loading="lazy"
+                                    alt="Evaluarea psihologică la copil"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -702,8 +694,9 @@ const HomePage: React.FC = () => {
             <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
-                  src="./assets/self-esteem.webp"
-                  alt="Tulburarea de alimentație compulsivă"
+                  src="/assets/self-esteem.webp"
+                                    loading="lazy"
+                                    alt="Tulburarea de alimentație compulsivă"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -728,8 +721,9 @@ const HomePage: React.FC = () => {
             <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
-                  src="./assets/sleep-struggle.jpg"
-                  alt="Igiena somnului"
+                  src="/assets/sleep-struggle.jpg"
+                                    loading="lazy"
+                                    alt="Igiena somnului"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
 import ScrollToTop from "./components/ScrollToTop";
+import WebMcp from "./components/WebMcp";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 // Direct imports for instant loading - no lazy loading
@@ -110,6 +111,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <WebMcp />
       <div className="scroll-progress"></div>
       <div className="min-h-screen bg-brand-bg text-brand-text font-sans">
         <Header />

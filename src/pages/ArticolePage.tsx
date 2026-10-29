@@ -140,7 +140,7 @@ const ArticolePage: React.FC = () => {
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                   <img
-                    src="./assets/kids-drawing.webp"
+                    src="/assets/kids-drawing.webp"
                     alt="Evaluarea psihologică la copil"
                     className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                   />
@@ -250,7 +250,7 @@ const ArticolePage: React.FC = () => {
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                   <img
-                    src="./assets/self-esteem.webp"
+                    src="/assets/self-esteem.webp"
                     alt="Tulburarea de alimentație compulsivă"
                     className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                   />
@@ -345,7 +345,7 @@ const ArticolePage: React.FC = () => {
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                   <img
-                    src="./assets/sleep-struggle.jpg"
+                    src="/assets/sleep-struggle.jpg"
                     alt="Igiena somnului"
                     className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                   />
