@@ -520,7 +520,7 @@ const HomePage: React.FC = () => {
             <div className="gallery-scroll flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-stone-200 scrollbar-thumb-brand-primary">
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/therapy-session.webp"
+                  src="/assets/therapy-session.webp"
                   alt="Psihoterapie pentru adulți în cabinet, București Sector 3"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -533,7 +533,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/kids-therapy.webp"
+                  src="/assets/kids-therapy.webp"
                   alt="Psihoterapie și consiliere pentru copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -546,7 +546,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/kids-playing.webp"
+                  src="/assets/kids-playing.webp"
                   alt="Terapia prin joc pentru copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -559,7 +559,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/kids-drawing.webp"
+                  src="/assets/kids-drawing.webp"
                   alt="Art terapie: desen și exprimare emoțională la copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -572,7 +572,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/self-esteem.webp"
+                  src="/assets/self-esteem.webp"
                   alt="Dezvoltarea stimei de sine prin psihoterapie"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -585,7 +585,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
-                  src="./assets/sleep-struggle.jpg"
+                  src="/assets/sleep-struggle.jpg"
                   alt="Probleme de somn: consiliere și terapie"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
@@ -672,7 +672,7 @@ const HomePage: React.FC = () => {
             <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
-                  src="./assets/kids-drawing.webp"
+                  src="/assets/kids-drawing.webp"
                   alt="Evaluarea psihologică la copil"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -698,7 +698,7 @@ const HomePage: React.FC = () => {
             <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
-                  src="./assets/self-esteem.webp"
+                  src="/assets/self-esteem.webp"
                   alt="Tulburarea de alimentație compulsivă"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -724,7 +724,7 @@ const HomePage: React.FC = () => {
             <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
-                  src="./assets/sleep-struggle.jpg"
+                  src="/assets/sleep-struggle.jpg"
                   alt="Igiena somnului"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
