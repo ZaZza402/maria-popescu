@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
 
 // Register ScrollTrigger plugin
@@ -211,8 +212,13 @@ const ServiciiPage: React.FC = () => {
           { name: "Servicii", url: "https://www.popescumaria.ro/servicii" },
         ]}
         type="CollectionPage"
-        title="Servicii de Specialitate - Terapie Psihologică"
-        description="Servicii psihologice complete: terapie individuală, terapie de cuplu, consiliere familie, evaluare psihologică. Abordare empatică și personalizată."
+        title="Servicii și Tarife Psihoterapie București Sector 3"
+        description="Psihoterapie individuală, de cuplu și familie, consiliere, terapie ABA și evaluări psihologice. Tarife de la 150 RON, ședințe de 50 min în Sector 3, București."
+      />
+      <Seo
+        path="/servicii"
+        title="Servicii și Tarife Psihoterapie București Sector 3"
+        description="Psihoterapie individuală, de cuplu și familie, consiliere, terapie ABA și evaluări psihologice. Tarife de la 150 RON, ședințe de 50 min în Sector 3, București."
       />
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-stone-50">

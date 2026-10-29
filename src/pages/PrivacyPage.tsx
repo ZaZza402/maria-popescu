@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
 
 const PrivacyPage: React.FC = () => {
@@ -16,6 +17,12 @@ const PrivacyPage: React.FC = () => {
         type="WebPage"
         title="Politica de Confidențialitate"
         description="Politica de confidențialitate și protecție a datelor personale conform GDPR. Informații despre colectarea, utilizarea și protecția datelor clienților."
+      />
+      <Seo
+        path="/privacy"
+        title="Politica de Confidențialitate | Maria Popescu Psiholog"
+        description="Politica de confidențialitate și protecție a datelor personale conform GDPR la Cabinet Individual de Psihologie Maria Popescu."
+        noindex
       />
       <div className="container mx-auto max-w-4xl px-4 py-12">
         {/* Header Section */}

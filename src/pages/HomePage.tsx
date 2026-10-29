@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Seo } from "../components/Seo";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -289,6 +290,11 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <Seo
+        path="/"
+        title="Psiholog București Sector 3 | Psihoterapie CBT – Maria Popescu"
+        description="Cabinet Individual de Psihologie Maria Popescu, Strada Mizil 2C, Sector 3. Psihoterapie CBT, consiliere, terapie ABA și evaluări pentru copii și adulți."
+      />
       {/* Hero Section - Split screen both desktop and mobile */}
       <section className="relative bg-stone-50 overflow-hidden">
         {/* Content Container */}
@@ -300,9 +306,9 @@ const HomePage: React.FC = () => {
               <div className="hero-content-wrapper">
                 {/* Credentials */}
                 <div className="credentials space-y-2 mb-6">
-                  <h1 className="text-2xl font-bold text-brand-text leading-tight">
+                  <div className="text-2xl font-bold text-brand-text leading-tight">
                     Psihoterapeut Cognitiv-Comportamental
-                  </h1>
+                  </div>
                 </div>
 
                 {/* Divider */}
@@ -336,6 +342,7 @@ const HomePage: React.FC = () => {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                   filter: "blur(2px)",
@@ -391,6 +398,7 @@ const HomePage: React.FC = () => {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                   filter: "blur(2px)",
@@ -517,7 +525,7 @@ const HomePage: React.FC = () => {
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
                   src="./assets/therapy-session.webp"
-                  alt="Terapie pentru adulți"
+                  alt="Psihoterapie pentru adulți în cabinet, București Sector 3"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -530,7 +538,7 @@ const HomePage: React.FC = () => {
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
                   src="./assets/kids-therapy.webp"
-                  alt="Terapie pentru copii"
+                  alt="Psihoterapie și consiliere pentru copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -543,7 +551,7 @@ const HomePage: React.FC = () => {
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
                   src="./assets/kids-playing.webp"
-                  alt="Terapia prin joc"
+                  alt="Terapia prin joc pentru copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -556,7 +564,7 @@ const HomePage: React.FC = () => {
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
                   src="./assets/kids-drawing.webp"
-                  alt="Art terapie"
+                  alt="Art terapie: desen și exprimare emoțională la copii"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -569,7 +577,7 @@ const HomePage: React.FC = () => {
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
                   src="./assets/self-esteem.webp"
-                  alt="Dezvoltarea stimei de sine"
+                  alt="Dezvoltarea stimei de sine prin psihoterapie"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({
@@ -582,7 +590,7 @@ const HomePage: React.FC = () => {
               <div className="gallery-item flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 aspect-[2/3] overflow-hidden rounded-xl cursor-pointer group">
                 <img
                   src="./assets/sleep-struggle.jpg"
-                  alt="Probleme de somn"
+                  alt="Probleme de somn: consiliere și terapie"
                   className="gallery-image w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110"
                   onClick={(e) =>
                     setSelectedImage({

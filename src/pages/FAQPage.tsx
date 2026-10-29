@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Seo } from "../components/Seo";
 import { PageSchema, FAQSchema } from "../components/PageSchema";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -124,8 +125,13 @@ const FAQPage: React.FC = () => {
           },
         ]}
         type="FAQPage"
-        title="Întrebări Frecvente - Servicii de Psihoterapie"
-        description="Răspunsuri la întrebări despre psihoterapie, consiliere psihologică, tarife, confidențialitate și servicii pentru copii și adulți."
+        title="Întrebări Frecvente – Psihoterapie și Consiliere Psihologică"
+        description="Răspunsuri despre psihoterapie, consiliere psihologică, tarife și confidențialitate, pentru copii și adulți. Cabinet în Sector 3, București."
+      />
+      <Seo
+        path="/intrebari-frecvente"
+        title="Întrebări Frecvente – Psihoterapie și Consiliere Psihologică"
+        description="Răspunsuri despre psihoterapie, consiliere psihologică, tarife și confidențialitate, pentru copii și adulți. Cabinet în Sector 3, București."
       />
       <FAQSchema faqs={faqs} />
       {/* Hero Section */}
