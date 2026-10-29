@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
 
 // Register ScrollTrigger plugin
@@ -105,8 +106,13 @@ const ArticolePage: React.FC = () => {
           { name: "Articole", url: "https://www.popescumaria.ro/articole" },
         ]}
         type="CollectionPage"
-        title="Articole de Specialitate - Sănătate Mentală"
-        description="Articole despre sănătate mentală, dezvoltare personală, tehnici de terapie și strategii pentru gestionarea stresului și anxietății."
+        title="Articole de Psihologie: Evaluare Copii, Somn, Alimentație"
+        description="Articole scrise de psiholog Maria Popescu despre evaluarea psihologică a copilului, tulburarea de alimentație compulsivă și igiena somnului."
+      />
+      <Seo
+        path="/articole"
+        title="Articole de Psihologie: Evaluare Copii, Somn, Alimentație"
+        description="Articole scrise de psiholog Maria Popescu despre evaluarea psihologică a copilului, tulburarea de alimentație compulsivă și igiena somnului."
       />
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-stone-50">
@@ -231,8 +237,6 @@ const ArticolePage: React.FC = () => {
                 </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                   <div className="flex items-center text-sm text-brand-text/60">
-                    <span>📅 5 octombrie 2025</span>
-                    <span className="mx-2">•</span>
                     <span>👤 Maria Popescu</span>
                   </div>
                 </div>
@@ -328,8 +332,6 @@ const ArticolePage: React.FC = () => {
                 </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                   <div className="flex items-center text-sm text-brand-text/60">
-                    <span>📅 3 octombrie 2025</span>
-                    <span className="mx-2">•</span>
                     <span>👤 Maria Popescu</span>
                   </div>
                 </div>
@@ -432,8 +434,6 @@ const ArticolePage: React.FC = () => {
                 </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                   <div className="flex items-center text-sm text-brand-text/60">
-                    <span>📅 1 octombrie 2025</span>
-                    <span className="mx-2">•</span>
                     <span>👤 Maria Popescu</span>
                   </div>
                 </div>

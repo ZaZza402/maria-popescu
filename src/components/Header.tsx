@@ -254,6 +254,8 @@ const Header = () => {
             {/* Modern Hamburger Menu Button */}
             <button
               ref={hamburgerRef}
+              aria-label={isMobileMenuOpen ? "Închide meniul" : "Deschide meniul"}
+              aria-expanded={isMobileMenuOpen}
               onClick={() =>
                 isMobileMenuOpen ? closeMobileMenu() : openMobileMenu()
               }
@@ -329,6 +331,7 @@ const Header = () => {
             <button
               ref={addToMenuRefs}
               onClick={closeMobileMenu}
+              aria-label="Închide meniul"
               className="absolute top-4 right-4 z-10 p-3 hover:opacity-80 transition-opacity"
               style={{ opacity: 0 }}
             >
