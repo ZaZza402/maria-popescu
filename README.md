@@ -1,7 +1,7 @@
 # Maria Popescu - Psiholog Clinician Website
 
 **Production Website:** https://www.popescumaria.ro/  
-**Project Type:** React + TypeScript + Vite SPA  
+**Project Type:** Next.js (App Router) + React + TypeScript, statically pre-rendered  
 **Developer:** alecsdesign.xyz  
 **Date:** November 2025
 
@@ -29,7 +29,7 @@ Professional psychology practice website for Maria Popescu, a clinical psycholog
 
 - **React 18.3.1** - UI library
 - **TypeScript 5.6.2** - Type safety
-- **Vite 7.1.9** - Build tool
+- **Next.js 16** - Framework and build tool (`npm run dev`, `npm run build`)
 - **React Router 7.9.3** - Client-side routing
 
 ### Styling:
@@ -123,7 +123,7 @@ npm run lint     # Run ESLint
 ├── package.json          # Dependencies
 ├── tsconfig.json         # TypeScript config
 ├── tailwind.config.js    # Tailwind config
-└── vite.config.ts        # Vite config
+└── next.config.mjs       # Next.js config (headers, redirects)
 ```
 
 ---

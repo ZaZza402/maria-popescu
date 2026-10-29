@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
-import { Seo } from "../components/Seo";
+import Link from "../components/Link";
 import { PageSchema } from "../components/PageSchema";
+import { useNow } from "../lib/useNow";
 
 const PrivacyPage: React.FC = () => {
+  const now = useNow();
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-light to-white">
       <PageSchema
@@ -17,12 +20,6 @@ const PrivacyPage: React.FC = () => {
         type="WebPage"
         title="Politica de Confidențialitate"
         description="Politica de confidențialitate și protecție a datelor personale conform GDPR. Informații despre colectarea, utilizarea și protecția datelor clienților."
-      />
-      <Seo
-        path="/privacy"
-        title="Politica de Confidențialitate | Maria Popescu Psiholog"
-        description="Politica de confidențialitate și protecție a datelor personale conform GDPR la Cabinet Individual de Psihologie Maria Popescu."
-        noindex
       />
       <div className="container mx-auto max-w-4xl px-4 py-12">
         {/* Header Section */}
@@ -40,10 +37,10 @@ const PrivacyPage: React.FC = () => {
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-8 lg:p-12 shadow-lg border-2 border-brand-accent/20">
           {/* Last Updated */}
           <div className="mb-8 pb-6 border-b border-brand-accent/20">
-            <p className="text-sm text-brand-text/60">
+            <p className="text-sm text-brand-text/60" suppressHydrationWarning>
               <i className="fas fa-calendar-alt mr-2 text-brand-accent"></i>
               Ultima actualizare:{" "}
-              {new Date().toLocaleDateString("ro-RO", {
+              {now.toLocaleDateString("ro-RO", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",

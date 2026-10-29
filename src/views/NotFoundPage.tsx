@@ -1,7 +1,8 @@
+"use client";
+
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "../components/Link";
 import { gsap } from "gsap";
-import { Seo } from "../components/Seo";
 
 const NotFoundPage: React.FC = () => {
   useEffect(() => {
@@ -18,12 +19,6 @@ const NotFoundPage: React.FC = () => {
       className="page-content min-h-screen bg-gradient-to-br from-brand-light to-white flex items-center"
       style={{ opacity: 0 }}
     >
-      <Seo
-        path="/404"
-        title="Pagina nu a fost găsită | Maria Popescu Psiholog"
-        description="Pagina căutată nu există. Reveniți la pagina principală a cabinetului de psihologie Maria Popescu."
-        noindex
-      />
       <div className="container mx-auto max-w-4xl px-4 py-12 text-center">
         {/* Error Content */}
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-12 shadow-lg border-2 border-brand-accent/20 max-w-2xl mx-auto">

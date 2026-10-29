@@ -1,10 +1,13 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "./Link";
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const menuOverlayRef = useRef<HTMLDivElement>(null);
   const menuContentRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
@@ -12,7 +15,7 @@ const Header = () => {
 
   // Helper function to check if a route is active
   const isActiveRoute = (path: string) => {
-    return location.pathname === path;
+    return pathname === path;
   };
 
   // Add menu item to refs
@@ -129,7 +132,7 @@ const Header = () => {
       closeMobileMenu();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
+  }, [pathname]);
 
   // Cleanup on unmount
   useEffect(() => {

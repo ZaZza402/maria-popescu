@@ -1,8 +1,9 @@
+"use client";
+
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "../components/Link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
 
 // Register ScrollTrigger plugin
@@ -136,11 +137,6 @@ const DesprePage: React.FC = () => {
           { name: "Despre", url: "https://www.popescumaria.ro/despre" },
         ]}
         type="AboutPage"
-        title="Despre Maria Popescu – Psiholog Clinician și Psihoterapeut CBT"
-        description="Psiholog clinician și psihoterapeut cognitiv-comportamental în București. Află despre abordarea empatică și personalizată de la cabinetul din Sector 3."
-      />
-      <Seo
-        path="/despre"
         title="Despre Maria Popescu – Psiholog Clinician și Psihoterapeut CBT"
         description="Psiholog clinician și psihoterapeut cognitiv-comportamental în București. Află despre abordarea empatică și personalizată de la cabinetul din Sector 3."
       />

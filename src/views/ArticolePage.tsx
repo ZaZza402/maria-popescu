@@ -1,16 +1,15 @@
+"use client";
+
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "../components/Link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const ArticolePage: React.FC = () => {
-  const location = useLocation();
-
   useEffect(() => {
     // Add gsap-loaded class to enable visibility after GSAP is ready
     document.body.classList.add("gsap-loaded");
@@ -76,7 +75,7 @@ const ArticolePage: React.FC = () => {
 
     // Handle hash navigation to specific articles
     const handleHashNavigation = () => {
-      const hash = location.hash;
+      const hash = window.location.hash;
       if (hash) {
         // Wait for the page to render and animations to start
         setTimeout(() => {
@@ -96,7 +95,7 @@ const ArticolePage: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [location.hash]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -106,11 +105,6 @@ const ArticolePage: React.FC = () => {
           { name: "Articole", url: "https://www.popescumaria.ro/articole" },
         ]}
         type="CollectionPage"
-        title="Articole de Psihologie: Evaluare Copii, Somn, Alimentație"
-        description="Articole scrise de psiholog Maria Popescu despre evaluarea psihologică a copilului, tulburarea de alimentație compulsivă și igiena somnului."
-      />
-      <Seo
-        path="/articole"
         title="Articole de Psihologie: Evaluare Copii, Somn, Alimentație"
         description="Articole scrise de psiholog Maria Popescu despre evaluarea psihologică a copilului, tulburarea de alimentație compulsivă și igiena somnului."
       />

@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "./Link";
 import OpeningHours from "./OpeningHours";
+import { useNow } from "../lib/useNow";
 
 /*
  * Footer Brand Section CSS Variables for Size Control:
@@ -16,6 +19,7 @@ import OpeningHours from "./OpeningHours";
  */
 
 const Footer = () => {
+  const now = useNow();
   return (
     <footer className="bg-stone-50 border-t border-brand-accent/30 py-12">
       <div className="container mx-auto max-w-6xl px-4">
@@ -153,8 +157,8 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-brand-accent/30 mt-8 pt-6 text-center">
-          <p className="text-brand-text/70 text-sm">
-            &copy; {new Date().getFullYear()} Maria Popescu - Psiholog
+          <p className="text-brand-text/70 text-sm" suppressHydrationWarning>
+            &copy; {now.getFullYear()} Maria Popescu - Psiholog
             Clinician. Toate drepturile rezervate.
           </p>
           <p className="text-brand-text/60 text-xs mt-2 flex justify-center items-center gap-1.5 whitespace-nowrap">

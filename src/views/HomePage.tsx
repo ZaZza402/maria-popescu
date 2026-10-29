@@ -1,8 +1,9 @@
+"use client";
+
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import Link from "../components/Link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Seo } from "../components/Seo";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -290,11 +291,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <Seo
-        path="/"
-        title="Psiholog București Sector 3 | Psihoterapie CBT – Maria Popescu"
-        description="Cabinet Individual de Psihologie Maria Popescu, Strada Mizil 2C, Sector 3. Psihoterapie CBT, consiliere, terapie ABA și evaluări pentru copii și adulți."
-      />
       {/* Hero Section - Split screen both desktop and mobile */}
       <section className="relative bg-stone-50 overflow-hidden">
         {/* Content Container */}
