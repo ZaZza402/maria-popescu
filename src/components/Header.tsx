@@ -1,13 +1,10 @@
-"use client";
-
 import { useState, useEffect, useRef } from "react";
-import Link from "./Link";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const location = useLocation();
   const menuOverlayRef = useRef<HTMLDivElement>(null);
   const menuContentRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
@@ -15,7 +12,7 @@ const Header = () => {
 
   // Helper function to check if a route is active
   const isActiveRoute = (path: string) => {
-    return pathname === path;
+    return location.pathname === path;
   };
 
   // Add menu item to refs
@@ -132,7 +129,7 @@ const Header = () => {
       closeMobileMenu();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname]);
+  }, [location]);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -155,7 +152,7 @@ const Header = () => {
             style={{ outline: "none", boxShadow: "none" }}
           >
             <img
-              src="/assets/logo-complete.png"
+              src="./assets/logo-complete.png"
               alt="Maria Popescu Psiholog"
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -247,7 +244,7 @@ const Header = () => {
             style={{ outline: "none", boxShadow: "none" }}
           >
             <img
-              src="/assets/logo-complete.png"
+              src="./assets/logo-complete.png"
               alt="Maria Popescu Psiholog"
               className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -257,8 +254,6 @@ const Header = () => {
             {/* Modern Hamburger Menu Button */}
             <button
               ref={hamburgerRef}
-              aria-label={isMobileMenuOpen ? "Închide meniul" : "Deschide meniul"}
-              aria-expanded={isMobileMenuOpen}
               onClick={() =>
                 isMobileMenuOpen ? closeMobileMenu() : openMobileMenu()
               }
@@ -334,7 +329,6 @@ const Header = () => {
             <button
               ref={addToMenuRefs}
               onClick={closeMobileMenu}
-              aria-label="Închide meniul"
               className="absolute top-4 right-4 z-10 p-3 hover:opacity-80 transition-opacity"
               style={{ opacity: 0 }}
             >

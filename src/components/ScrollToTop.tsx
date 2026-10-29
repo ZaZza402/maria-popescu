@@ -1,22 +1,27 @@
-"use client";
-
 import { useLayoutEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
-  const pathname = usePathname();
+  const { pathname, hash } = useLocation();
 
   useLayoutEffect(() => {
-    const hash = window.location.hash;
+    // useLayoutEffect runs BEFORE browser paints - no visible scroll
     if (!hash) {
+      // No hash: jump to top IMMEDIATELY before paint
       window.scrollTo(0, 0);
-      return;
     }
-    const element = document.getElementById(hash.replace("#", ""));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  }, [pathname, hash]);
+
+  useLayoutEffect(() => {
+    // Separate effect for hash scrolling (after content renders)
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  }, [pathname]);
+  }, [hash]);
 
   return null;
 };

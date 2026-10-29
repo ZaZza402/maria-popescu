@@ -1,12 +1,8 @@
-"use client";
-
 import React from "react";
-import Link from "../components/Link";
+import { Link } from "react-router-dom";
 import { PageSchema } from "../components/PageSchema";
-import { useNow } from "../lib/useNow";
 
 const PrivacyPage: React.FC = () => {
-  const now = useNow();
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-light to-white">
       <PageSchema
@@ -37,10 +33,10 @@ const PrivacyPage: React.FC = () => {
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-8 lg:p-12 shadow-lg border-2 border-brand-accent/20">
           {/* Last Updated */}
           <div className="mb-8 pb-6 border-b border-brand-accent/20">
-            <p className="text-sm text-brand-text/60" suppressHydrationWarning>
+            <p className="text-sm text-brand-text/60">
               <i className="fas fa-calendar-alt mr-2 text-brand-accent"></i>
               Ultima actualizare:{" "}
-              {now.toLocaleDateString("ro-RO", {
+              {new Date().toLocaleDateString("ro-RO", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",

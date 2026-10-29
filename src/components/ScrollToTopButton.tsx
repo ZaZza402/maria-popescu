@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from 'react';
 
 const ScrollToTopButton = () => {
@@ -43,7 +41,7 @@ const ScrollToTopButton = () => {
             transform: isVisible ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(20px)',
             transition: 'all 0.3s ease-in-out'
           }}
-          aria-label="Înapoi sus"
+          aria-label="Scroll to top"
         >
           <svg 
             className="w-5 h-5 mx-auto" 

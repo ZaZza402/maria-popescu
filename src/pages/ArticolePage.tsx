@@ -1,7 +1,5 @@
-"use client";
-
 import React, { useEffect } from "react";
-import Link from "../components/Link";
+import { Link, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PageSchema } from "../components/PageSchema";
@@ -10,6 +8,8 @@ import { PageSchema } from "../components/PageSchema";
 gsap.registerPlugin(ScrollTrigger);
 
 const ArticolePage: React.FC = () => {
+  const location = useLocation();
+
   useEffect(() => {
     // Add gsap-loaded class to enable visibility after GSAP is ready
     document.body.classList.add("gsap-loaded");
@@ -75,7 +75,7 @@ const ArticolePage: React.FC = () => {
 
     // Handle hash navigation to specific articles
     const handleHashNavigation = () => {
-      const hash = window.location.hash;
+      const hash = location.hash;
       if (hash) {
         // Wait for the page to render and animations to start
         setTimeout(() => {
@@ -95,7 +95,7 @@ const ArticolePage: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -105,8 +105,8 @@ const ArticolePage: React.FC = () => {
           { name: "Articole", url: "https://www.popescumaria.ro/articole" },
         ]}
         type="CollectionPage"
-        title="Articole de Psihologie: Evaluare Copii, Somn, Alimentație"
-        description="Articole scrise de psiholog Maria Popescu despre evaluarea psihologică a copilului, tulburarea de alimentație compulsivă și igiena somnului."
+        title="Articole de Specialitate - Sănătate Mentală"
+        description="Articole despre sănătate mentală, dezvoltare personală, tehnici de terapie și strategii pentru gestionarea stresului și anxietății."
       />
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-stone-50">
@@ -134,7 +134,7 @@ const ArticolePage: React.FC = () => {
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                   <img
-                    src="/assets/kids-drawing.webp"
+                    src="./assets/kids-drawing.webp"
                     alt="Evaluarea psihologică la copil"
                     className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                   />
@@ -231,6 +231,8 @@ const ArticolePage: React.FC = () => {
                 </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                   <div className="flex items-center text-sm text-brand-text/60">
+                    <span>📅 5 octombrie 2025</span>
+                    <span className="mx-2">•</span>
                     <span>👤 Maria Popescu</span>
                   </div>
                 </div>
@@ -244,7 +246,7 @@ const ArticolePage: React.FC = () => {
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                   <img
-                    src="/assets/self-esteem.webp"
+                    src="./assets/self-esteem.webp"
                     alt="Tulburarea de alimentație compulsivă"
                     className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                   />
@@ -326,6 +328,8 @@ const ArticolePage: React.FC = () => {
                 </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                   <div className="flex items-center text-sm text-brand-text/60">
+                    <span>📅 3 octombrie 2025</span>
+                    <span className="mx-2">•</span>
                     <span>👤 Maria Popescu</span>
                   </div>
                 </div>
@@ -339,7 +343,7 @@ const ArticolePage: React.FC = () => {
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
                   <img
-                    src="/assets/sleep-struggle.jpg"
+                    src="./assets/sleep-struggle.jpg"
                     alt="Igiena somnului"
                     className="w-full h-auto object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                   />
@@ -428,6 +432,8 @@ const ArticolePage: React.FC = () => {
                 </div>
                 <div className="clear-both mt-4 pt-4 border-t border-stone-200">
                   <div className="flex items-center text-sm text-brand-text/60">
+                    <span>📅 1 octombrie 2025</span>
+                    <span className="mx-2">•</span>
                     <span>👤 Maria Popescu</span>
                   </div>
                 </div>

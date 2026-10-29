@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 
 const TIMEZONE = "Europe/Bucharest";
@@ -61,16 +59,14 @@ const getStatus = (date: Date) => {
 };
 
 const OpeningHours = () => {
-  const [now, setNow] = useState<Date | null>(null);
+  const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
-    setNow(new Date());
     const id = setInterval(() => setNow(new Date()), 30_000);
     return () => clearInterval(id);
   }, []);
 
-  // Time-dependent output is only rendered after mount to match the pre-rendered HTML
-  const status = now ? getStatus(now) : null;
+  const status = getStatus(now);
 
   return (
     <div className="mt-4 pt-3 border-t border-brand-accent/20">
@@ -81,20 +77,19 @@ const OpeningHours = () => {
         className="flex items-start gap-2 mb-3 text-xs font-medium"
         role="status"
         aria-live="polite"
-        style={status ? undefined : { visibility: "hidden" }}
       >
         <span className="relative flex h-2.5 w-2.5 mt-1 flex-none">
-          {status?.isOpen && (
+          {status.isOpen && (
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60"></span>
           )}
           <span
             className={`relative inline-flex h-2.5 w-2.5 rounded-full ${
-              status?.isOpen ? "bg-green-500" : "bg-red-500"
+              status.isOpen ? "bg-green-500" : "bg-red-500"
             }`}
           ></span>
         </span>
-        <span className={status?.isOpen ? "text-green-700" : "text-red-700"}>
-          {status?.text ?? "Închis · se deschide mâine la 08:00"}
+        <span className={status.isOpen ? "text-green-700" : "text-red-700"}>
+          {status.text}
         </span>
       </div>
       <ul className="space-y-1 text-xs">
@@ -102,7 +97,7 @@ const OpeningHours = () => {
           <li
             key={d}
             className={`flex justify-between gap-4 ${
-              status && d === status.day
+              d === status.day
                 ? "font-semibold text-brand-primary"
                 : "text-brand-text/80"
             }`}
