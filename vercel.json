@@ -11,7 +11,23 @@
   ],
   "rewrites": [
     {
-      "source": "/(despre|servicii|articole|intrebari-frecvente|privacy)/?",
+      "source": "/despre",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/servicii",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/articole",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/intrebari-frecvente",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy",
       "destination": "/index.html"
     }
   ],
@@ -26,7 +42,16 @@
       ]
     },
     {
-      "source": "/(llms|llms-full).txt",
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/llms-full.txt",
       "headers": [
         {
           "key": "Content-Type",
