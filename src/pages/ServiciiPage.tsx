@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
+import SectionCurve from "../components/SectionCurve";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -195,7 +196,7 @@ const ServiciiPage: React.FC = () => {
       icon: "fas fa-comments",
     },
     {
-      title: "Terapie cognitiv comportamentală aplicată (ABA)",
+      title: "Terapie ABA (Analiza Comportamentală Aplicată)",
       description:
         "Intervenții comportamentale structurate pentru dezvoltarea abilităților sociale și de comunicare.",
       price: "150 RON",
@@ -227,15 +228,16 @@ const ServiciiPage: React.FC = () => {
             Servicii de Specialitate
           </h1>
           <p className="hero-title text-lg lg:text-xl text-brand-text/80 max-w-3xl mx-auto leading-relaxed">
-            Oferim servicii psihologice complete, adaptate nevoilor individuale
-            ale fiecărui client. Toate ședințele sunt realizate cu empatie și
-            profesionalism, într-un mediu sigur și confidențial.
+            Ofer servicii de psihologie și psihoterapie pentru copii și adulți,
+            adaptate nevoilor fiecărei persoane, într-un cadru sigur și
+            confidențial.
           </p>
         </div>
       </section>
 
       {/* Services Grid Section */}
-      <section className="services-grid py-16 lg:py-24 bg-stone-100">
+      <section className="services-grid relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100">
+        <SectionCurve from="base" />
         <div className="container mx-auto max-w-6xl px-4">
           <div className="space-y-6">
             {services.map((service, index) => (
@@ -400,7 +402,8 @@ const ServiciiPage: React.FC = () => {
       </section>
 
       {/* Areas of Specialization */}
-      <section className="specialization-section py-16 lg:py-24 bg-stone-50">
+      <section className="specialization-section relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-50">
+        <SectionCurve from="band" flip />
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="spec-title text-4xl lg:text-5xl font-serif text-brand-text mb-8">
@@ -409,7 +412,7 @@ const ServiciiPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="spec-content bg-white rounded-3xl p-8 shadow-lg">
+            <div className="spec-content bg-white/80 rounded-2xl p-8 border border-stone-300/50">
               <h3 className="text-2xl lg:text-3xl font-serif text-brand-text mb-6 flex items-center">
                 <i className="fas fa-heart text-brand-accent mr-4"></i>
                 Sănătate Mentală
@@ -438,10 +441,10 @@ const ServiciiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="spec-content bg-white rounded-3xl p-8 shadow-lg border-2 border-brand-accent/20">
+            <div className="spec-content bg-white/80 rounded-2xl p-8 border border-stone-300/50">
               <h3 className="text-2xl lg:text-3xl font-serif text-brand-text mb-6 flex items-center">
                 <i className="fas fa-users text-brand-accent mr-4"></i>
-                Terapie Familială și de Cuplu
+                Psihoterapie de Cuplu și Familie
               </h3>
               <ul className="space-y-4 text-brand-text text-lg">
                 <li className="flex items-start">
@@ -471,15 +474,15 @@ const ServiciiPage: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 lg:py-24 bg-stone-100">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100">
+        <SectionCurve from="base" />
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-serif text-brand-text mb-8">
-            Începe Drumul Către Echilibru
+            Nu sunteți sigur ce serviciu vi se potrivește?
           </h2>
-          <blockquote className="text-lg lg:text-xl text-brand-text/80 mb-8 leading-relaxed italic border-l-2 border-brand-accent pl-6 max-w-2xl mx-auto">
-            "Primul pas către schimbare este cel mai important. Sunt aici să te
-            însoțesc cu empatie și profesionalism în această călătorie."
-          </blockquote>
+          <p className="text-lg lg:text-xl text-brand-text/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Sunați sau scrieți-mi, iar stabilim împreună de unde să începem.
+          </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="tel:+40772246316"

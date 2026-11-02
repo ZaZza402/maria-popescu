@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
+import SectionCurve from "../components/SectionCurve";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -128,14 +129,15 @@ const ArticolePage: React.FC = () => {
       </section>
 
       {/* Articles Section */}
-      <section className="articles-container py-16 lg:py-24 bg-stone-100">
+      <section className="articles-container relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100">
+        <SectionCurve from="base" />
         <div className="container mx-auto max-w-4xl px-4">
           {/* Articles List */}
           <div className="space-y-16">
             {/* Article 1 - Child Psychology Evaluation */}
             <article
               id="evaluarea-psihologica"
-              className="article-card bg-white rounded-3xl shadow-lg overflow-hidden"
+              className="article-card bg-white/80 rounded-2xl border border-stone-300/50 overflow-hidden"
             >
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
@@ -245,7 +247,7 @@ const ArticolePage: React.FC = () => {
             {/* Article 2 - Eating Disorder */}
             <article
               id="tulburarea-alimentatie"
-              className="article-card bg-white rounded-3xl shadow-lg overflow-hidden"
+              className="article-card bg-white/80 rounded-2xl border border-stone-300/50 overflow-hidden"
             >
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
@@ -340,7 +342,7 @@ const ArticolePage: React.FC = () => {
             {/* Article 3 - Sleep Hygiene */}
             <article
               id="igiena-somnului"
-              className="article-card bg-white rounded-3xl shadow-lg overflow-hidden"
+              className="article-card bg-white/80 rounded-2xl border border-stone-300/50 overflow-hidden"
             >
               <div className="p-6 lg:p-8">
                 <div className="lg:float-left lg:w-64 lg:mr-6 lg:mb-4">
@@ -444,7 +446,8 @@ const ArticolePage: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 lg:py-24 bg-stone-50">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-50">
+        <SectionCurve from="band" flip />
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-serif text-brand-text mb-8">
             Vrei să Afli Mai Mult?

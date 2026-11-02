@@ -86,7 +86,7 @@ export const localBusinessSchema = {
       ),
       service("Consiliere psihologică", "150", "Ședință de 50 de minute"),
       service(
-        "Terapie cognitiv comportamentală aplicată (ABA)",
+        "Terapie ABA (Analiza Comportamentală Aplicată)",
         "150",
         "Ședință de 50 de minute"
       ),

@@ -126,7 +126,7 @@ const NotFoundPage: React.FC = () => {
                 className="flex items-center text-brand-accent hover:text-brand-primary transition-colors font-medium"
               >
                 <i className="fas fa-phone mr-2"></i>
-                +40 (772) 246 316
+                0772 246 316
               </a>
             </div>
           </div>

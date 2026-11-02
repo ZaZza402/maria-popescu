@@ -17,6 +17,13 @@ export default {
           light: '#F8F2F1',        // Very light coral rose tint
           accent: '#E8A298',       // Primary (alias for consistency)
           soft: '#EAE6E3'          // Soft neutral tone
+        },
+        // Warm neutrals so surfaces sit naturally with the coral brand palette
+        stone: {
+          50: '#FBF8F5',
+          100: '#F6EEEA',
+          200: '#EFE5E0',
+          300: '#E3D5CE'
         }
       },
       fontFamily: {

@@ -215,7 +215,7 @@ const PrivacyPage: React.FC = () => {
                       href="tel:+40772246316"
                       className="text-brand-accent hover:underline"
                     >
-                      +40 (772) 246 316
+                      0772 246 316
                     </a>
                   </p>
                 </div>

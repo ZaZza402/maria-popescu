@@ -95,7 +95,7 @@ const Footer = () => {
               <li className="text-brand-text/80">Consiliere Psihologică</li>
               <li className="text-brand-text/80">Evaluări Psihologice</li>
               <li className="text-brand-text/80">Terapie ABA</li>
-              <li className="text-brand-text/80">Psihoterapie de Cuplu</li>
+              <li className="text-brand-text/80">Psihoterapie de Cuplu și Familie</li>
             </ul>
           </div>
 
@@ -117,7 +117,7 @@ const Footer = () => {
                     <i className="fas fa-phone text-[18px] leading-none"></i>
                   </span>
                   <span className="leading-none translate-y-[1px]">
-                    +40 (772) 246 316
+                    0772 246 316
                   </span>
                 </a>
               </li>

@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
+import SectionCurve from "../components/SectionCurve";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -54,26 +55,11 @@ const DesprePage: React.FC = () => {
     ScrollTrigger.create({
       trigger: ".about-section",
       start: "top 80%",
-      end: "bottom 20%",
-      animation: gsap
-        .timeline()
-        .fromTo(
-          ".about-title",
-          { opacity: 0, y: 40 },
-          { opacity: 1, y: 0, duration: 1 }
-        )
-        .fromTo(
-          ".about-content",
-          { opacity: 0, y: 30, scale: 0.95 },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.8,
-            ease: "back.out(1.1)",
-          },
-          0.3
-        ),
+      animation: gsap.fromTo(
+        ".about-content",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1 }
+      ),
     });
 
     // Experience Cards Animation
@@ -179,53 +165,44 @@ const DesprePage: React.FC = () => {
       </section>
 
       {/* About Me Section */}
-      <section className="about-section py-16 lg:py-24 bg-stone-100">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="about-title text-4xl lg:text-5xl font-serif text-brand-text mb-8">
-              Despre Mine
-            </h2>
-            <p className="about-title text-lg lg:text-xl text-brand-text/80 max-w-2xl mx-auto leading-relaxed">
-              Experiență și dedicare în psihologia clinică și psihoterapie
+      <section className="about-section relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100">
+        <SectionCurve from="base" />
+        <div className="container mx-auto max-w-3xl px-4">
+          <div className="about-content space-y-6 text-brand-text/85 leading-relaxed text-lg lg:text-xl text-center">
+            <p className="font-serif text-xl lg:text-2xl leading-relaxed text-brand-text">
+              Sunt psiholog clinician și psihoterapeut
+              cognitiv-comportamental, cu o vastă experiență în lucrul cu
+              copii și adulți în domeniul evaluării psihologice. Îmi doresc să
+              creez un spațiu sigur, cald și confidențial, unde fiecare
+              persoană să se simtă ascultată și înțeleasă.
             </p>
-          </div>
-
-          <div className="about-content bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
-            <div className="space-y-6 text-brand-text leading-relaxed text-lg">
-              <p>
-                Sunt psiholog clinician și psihoterapeut
-                cognitiv-comportamental, cu o vastă experiență în lucrul cu
-                copii și adulți în domeniul evaluării psihologice. Îmi doresc să
-                creez un spațiu sigur, cald și confidențial, unde fiecare
-                persoană să se simtă ascultată și înțeleasă.
-              </p>
-              <p>
-                Sunt dedicată sprijinirii clienților în explorarea emoțiilor,
-                descoperirea de sine și dezvoltarea unor modalități sănătoase de
-                a face față provocărilor vieții, cum ar fi anxietatea, depresia
-                sau tulburările de alimentație. Obiectivul meu este să ofer
-                suport empatic și să contribui la redescoperirea echilibrului și
-                a resurselor interioare.
-              </p>
-            </div>
+            <p>
+              Sunt dedicată sprijinirii clienților în explorarea emoțiilor,
+              descoperirea de sine și dezvoltarea unor modalități sănătoase de
+              a face față provocărilor vieții, cum ar fi anxietatea, depresia
+              sau tulburările de alimentație. Obiectivul meu este să ofer
+              suport empatic și să contribui la redescoperirea echilibrului și
+              a resurselor interioare.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Professional Formation Section */}
-      <section className="experience-section py-16 lg:py-24 bg-stone-50">
+      <section className="experience-section relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-50">
+        <SectionCurve from="band" flip />
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="experience-title text-4xl lg:text-5xl font-serif text-brand-text mb-8">
-              Formare și Pregătire Profesională
+              Formare Profesională
             </h2>
             <p className="experience-title text-lg lg:text-xl text-brand-text/80 max-w-2xl mx-auto leading-relaxed">
-              Parcursul meu educațional și profesional în psihologie
+              Studii și specializări
             </p>
           </div>
 
-          <div className="experience-card bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
-            <div className="space-y-6 text-brand-text leading-relaxed text-lg">
+          <div className="experience-card max-w-3xl mx-auto">
+            <div className="space-y-6 text-brand-text/85 leading-relaxed text-lg lg:text-xl">
               <p>
                 Întotdeauna m-a fascinat felul în care gândim, simțim și ne
                 construim relațiile. Alegerea Facultății de Psihologie a venit
@@ -258,19 +235,20 @@ const DesprePage: React.FC = () => {
       </section>
 
       {/* Approach & Philosophy Section */}
-      <section className="experience-section py-16 lg:py-24 bg-stone-100">
+      <section className="experience-section relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100">
+        <SectionCurve from="base" />
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="experience-title text-4xl lg:text-5xl font-serif text-brand-text mb-8">
               Abordarea Mea Terapeutică
             </h2>
             <p className="experience-title text-lg lg:text-xl text-brand-text/80 max-w-2xl mx-auto leading-relaxed">
-              Principii și specialități în psihoterapie
+              Principii și domenii de lucru
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="experience-card bg-white rounded-3xl p-8 shadow-lg">
+            <div className="experience-card bg-white/80 rounded-2xl p-8 border border-stone-300/50">
               <h3 className="text-2xl lg:text-3xl font-serif text-brand-text mb-6 flex items-center">
                 <i className="fas fa-heart text-brand-accent mr-4"></i>
                 Principii Fundamentale
@@ -295,7 +273,7 @@ const DesprePage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="experience-card bg-white rounded-3xl p-8 shadow-lg border-2 border-brand-accent/20">
+            <div className="experience-card bg-white/80 rounded-2xl p-8 border border-stone-300/50">
               <h3 className="text-2xl lg:text-3xl font-serif text-brand-text mb-6 flex items-center">
                 <i className="fas fa-brain text-brand-accent mr-4"></i>
                 Specialități
@@ -315,7 +293,7 @@ const DesprePage: React.FC = () => {
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-check-circle text-brand-accent mt-1 mr-4"></i>
-                  <span>Interventii ABA pentru dezvoltare</span>
+                  <span>Intervenții ABA pentru dezvoltare</span>
                 </li>
               </ul>
             </div>
@@ -324,16 +302,16 @@ const DesprePage: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 lg:py-24 bg-stone-50">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-50">
+        <SectionCurve from="band" flip />
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-serif text-brand-text mb-8">
-            Să Începem Împreună Această Călătorie
+            Să ne cunoaștem
           </h2>
-          <blockquote className="text-lg lg:text-xl text-brand-text/80 mb-8 leading-relaxed italic border-l-2 border-brand-accent pl-6 max-w-2xl mx-auto">
-            "Fiecare pas către schimbare contează. Sunt aici să te însoțesc cu
-            răbdare, empatie și profesionalism în drumul tău către echilibru și
-            dezvoltare personală."
-          </blockquote>
+          <p className="text-lg lg:text-xl text-brand-text/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Un prim contact nu vă obligă la nimic. Sunați sau scrieți-mi pe
+            WhatsApp pentru a stabili o programare.
+          </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="tel:+40772246316"

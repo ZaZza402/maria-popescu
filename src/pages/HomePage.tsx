@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Seo } from "../components/Seo";
+import Testimonials from "../components/Testimonials";
+import SectionCurve from "../components/SectionCurve";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -284,59 +286,54 @@ const HomePage: React.FC = () => {
       <section className="relative bg-stone-50 overflow-hidden">
         {/* Content Container */}
         <div className="relative z-10 lg:py-0">
-          {/* Mobile: Split Screen Vertical - Content Top, Video Bottom */}
-          <div className="lg:hidden flex flex-col min-h-screen">
-            {/* Top: Content on Solid Background */}
-            <div className="bg-stone-50 px-6 py-12 flex flex-col justify-center min-h-[55vh]">
-              <div className="hero-content-wrapper">
-                {/* Credentials */}
-                <div className="credentials space-y-2 mb-6">
-                  <div className="text-2xl font-bold text-brand-text leading-tight">
-                    Psihoterapeut Cognitiv-Comportamental
-                  </div>
-                </div>
+          {/* Mobile (temporary): text over the blurred video, whole hero in one screen */}
+          <div className="lg:hidden relative flex min-h-[calc(100svh-6.1rem)] items-center overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{
+                filter: "blur(2px)",
+              }}
+            >
+              <source src="/assets/header_vid.mp4" type="video/mp4" />
+            </video>
+            {/* Light veil keeps the dark text readable; bottom fade blends into the next section */}
+            <div className="absolute inset-0 bg-stone-50/80"></div>
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-stone-50 to-transparent"></div>
 
-                {/* Divider */}
-                <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-6"></div>
-
-                {/* Quote */}
-                <blockquote className="text-base text-brand-text/80 mb-8 leading-relaxed italic">
-                  "Sunt psiholog clinician și psihoterapeut
-                  cognitiv-comportamental, cu o vastă experiență în lucrul cu
-                  copii și adulți în domeniul evaluării psihologice. Îmi doresc
-                  să creez un spațiu sigur, cald și confidențial, unde fiecare
-                  persoană să se simtă ascultată și înțeleasă."
-                </blockquote>
-
-                {/* CTA Button */}
-                <div>
-                  <Link
-                    to="/despre"
-                    className="inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
-                  >
-                    Află mai multe
-                  </Link>
+            <div className="hero-content-wrapper relative z-10 px-6 py-12">
+              {/* Credentials */}
+              <div className="credentials space-y-2 mb-6">
+                <div className="text-2xl font-bold text-brand-text leading-tight">
+                  Psihoterapeut Cognitiv-Comportamental
                 </div>
               </div>
-            </div>
 
-            {/* Bottom: Video Section */}
-            <div className="relative min-h-[45vh] overflow-hidden">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  filter: "blur(2px)",
-                }}
-              >
-                <source src="/assets/header_vid.mp4" type="video/mp4" />
-              </video>
-              {/* Gradient overlay blending up into content */}
-              <div className="absolute inset-0 bg-gradient-to-b from-stone-50 via-transparent to-transparent"></div>
+              {/* Divider */}
+              <div className="w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent mb-6"></div>
+
+              {/* Quote */}
+              <blockquote className="text-base text-brand-text/90 mb-8 leading-relaxed italic">
+                "Sunt psiholog clinician și psihoterapeut
+                cognitiv-comportamental, cu o vastă experiență în lucrul cu
+                copii și adulți în domeniul evaluării psihologice. Îmi doresc
+                să creez un spațiu sigur, cald și confidențial, unde fiecare
+                persoană să se simtă ascultată și înțeleasă."
+              </blockquote>
+
+              {/* CTA Button */}
+              <div>
+                <Link
+                  to="/despre"
+                  className="inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
+                >
+                  Află mai multe
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -399,12 +396,13 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Services Section - Desktop Two-Column Layout */}
-      <section className="services-section py-16 lg:py-24 bg-stone-200">
+      <section className="services-section relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100">
+        <SectionCurve from="base" />
         <div className="container mx-auto max-w-6xl px-4">
           {/* Main Title */}
           <div className="text-center lg:text-left mb-12">
             <h2 className="services-title text-4xl lg:text-5xl font-serif text-brand-text mb-8">
-              Servicii - Terapie
+              Servicii
             </h2>
           </div>
 
@@ -414,7 +412,7 @@ const HomePage: React.FC = () => {
               {/* Left Column - Services List */}
               <div className="order-2 lg:order-1">
                 <h3 className="text-2xl lg:text-3xl font-serif text-brand-text mb-8 border-b border-gray-300 pb-4">
-                  Terapie La Cabinet
+                  Ședințe la cabinet
                 </h3>
 
                 <div className="space-y-6">
@@ -431,7 +429,7 @@ const HomePage: React.FC = () => {
                       -
                     </span>
                     <h4 className="text-lg lg:text-xl text-gray-600">
-                      Psihoterapie de Cuplu
+                      Psihoterapie de Cuplu și Familie
                     </h4>
                   </div>
                   <div className="service-item flex items-center">
@@ -495,7 +493,8 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Scalable Minimalist Gallery */}
-      <section className="py-12 lg:py-20 bg-stone-50">
+      <section className="relative pt-20 pb-12 lg:pt-28 lg:pb-20 bg-stone-50">
+        <SectionCurve from="band" flip />
         <div className="container mx-auto max-w-6xl px-4">
           {/* Gallery Title */}
           <div className="text-center mb-8">
@@ -648,8 +647,11 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      <Testimonials />
+
       {/* Articles Section */}
-      <section className="py-16 lg:py-24 bg-stone-200">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100">
+        <SectionCurve from="base" />
         <div className="container mx-auto max-w-6xl px-4">
           {/* Section Title */}
           <div className="text-center mb-12">
@@ -664,7 +666,7 @@ const HomePage: React.FC = () => {
           {/* Articles Grid - Mobile Optimized */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Article 1 - Child Psychology Evaluation */}
-            <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
+            <div className="bg-white/80 rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:-translate-y-0.5 border border-stone-300/50">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
                   src="/assets/kids-drawing.webp"
@@ -691,7 +693,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Article 2 - Eating Disorder */}
-            <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
+            <div className="bg-white/80 rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:-translate-y-0.5 border border-stone-300/50">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
                   src="/assets/self-esteem.webp"
@@ -718,7 +720,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Article 3 - Sleep Hygiene */}
-            <div className="bg-stone-200 rounded-xl p-6 shadow-inner hover:shadow-inner transition-all duration-300 hover:bg-stone-300/50 border border-stone-300/30">
+            <div className="bg-white/80 rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:-translate-y-0.5 border border-stone-300/50">
               <div className="aspect-[4/3] sm:aspect-video lg:aspect-[5/4] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
                 <img
                   src="/assets/sleep-struggle.jpg"
@@ -758,7 +760,8 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* FAQ Section - Preview */}
-      <section className="faq-preview-section py-16 lg:py-24 bg-stone-50">
+      <section className="faq-preview-section relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-50">
+        <SectionCurve from="band" flip />
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-serif text-brand-text mb-4">
@@ -875,23 +878,23 @@ const HomePage: React.FC = () => {
       {/* Contact Section */}
       <section
         id="contact"
-        className="contact-section py-16 lg:py-24 bg-stone-200"
+        className="contact-section relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-100"
       >
+        <SectionCurve from="base" />
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="contact-title text-4xl lg:text-5xl font-serif text-brand-text mb-4">
               Contact
             </h2>
             <p className="text-lg text-brand-text/70">
-              Programează o ședință sau contactează-mă pentru mai multe
-              informații
+              Programări și informații
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="contact-info-card bg-stone-200 p-6 rounded-2xl shadow-inner border border-stone-300/30">
+              <div className="contact-info-card bg-white/80 p-6 rounded-2xl border border-stone-300/50">
                 <h3 className="text-xl font-serif text-brand-text mb-4">
                   Informații de Contact
                 </h3>
@@ -905,7 +908,7 @@ const HomePage: React.FC = () => {
                         href="tel:+40772246316"
                         className="text-brand-text/70 hover:text-brand-primary transition-colors"
                       >
-                        +40 (772) 246 316
+                        0772 246 316
                       </a>
                     </div>
                   </div>
@@ -924,12 +927,12 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="contact-programare-card bg-stone-200 p-6 rounded-2xl shadow-inner border border-stone-300/30">
+              <div className="contact-programare-card bg-white/80 p-6 rounded-2xl border border-stone-300/50">
                 <h3 className="text-xl font-serif text-brand-text mb-4">
-                  Programare Rapidă
+                  Programări
                 </h3>
                 <p className="text-brand-text/70 mb-4">
-                  Sună pentru o programare rapidă sau trimite un mesaj WhatsApp.
+                  Sunați sau scrieți-mi pe WhatsApp pentru a stabili o ședință.
                 </p>
                 <div className="flex gap-4">
                   <a
