@@ -119,6 +119,31 @@ const ProgramarePage: React.FC = () => {
     window.setTimeout(() => setCopied(false), 2500);
   };
 
+  const shareUrl = "https://www.popescumaria.ro/programare";
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  const sharePage = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: "Programare rapidă – Maria Popescu",
+          text: "Programează-te rapid la psiholog:",
+          url: shareUrl,
+        });
+        return;
+      } catch (err) {
+        if ((err as DOMException).name === "AbortError") return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setLinkCopied(true);
+      window.setTimeout(() => setLinkCopied(false), 2500);
+    } catch {
+      window.prompt("Copiază linkul:", shareUrl);
+    }
+  };
+
   const toggle = (current: string, value: string, set: (v: string) => void) =>
     set(current === value ? "" : value);
 
@@ -376,6 +401,20 @@ const ProgramarePage: React.FC = () => {
                   .
                 </p>
               </div>
+
+              <button
+                type="button"
+                onClick={sharePage}
+                className="w-full h-12 rounded-xl bg-white/90 border border-stone-300/50 text-brand-text font-medium hover:border-brand-accent/60 transition-colors"
+              >
+                <i
+                  className={`fas ${linkCopied ? "fa-check" : "fa-share-nodes"} mr-2 text-brand-accent`}
+                  aria-hidden="true"
+                ></i>
+                <span aria-live="polite">
+                  {linkCopied ? "Link copiat" : "Distribuie această pagină"}
+                </span>
+              </button>
             </aside>
           </div>
         </div>
