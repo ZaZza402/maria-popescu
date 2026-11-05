@@ -41,4 +41,12 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Booking Page -->
+  <url>
+    <loc>https://www.popescumaria.ro/programare</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

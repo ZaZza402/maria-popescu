@@ -11,7 +11,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(despre|servicii|articole|intrebari-frecvente|privacy)",
+      "source": "/(despre|servicii|articole|intrebari-frecvente|programare|privacy)",
       "destination": "/index.html"
     }
   ],

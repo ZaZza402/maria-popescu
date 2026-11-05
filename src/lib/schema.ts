@@ -1,15 +1,30 @@
+import { slugForTitle } from "./services";
+
 const mapsUrl = "https://maps.app.goo.gl/RYYFQdPKQteuzu8B9";
+
+const SITE = "https://www.popescumaria.ro";
 
 const service = (
   name: string,
   price: string,
   description: string
-) => ({
-  "@type": "Offer",
-  price,
-  priceCurrency: "RON",
-  itemOffered: { "@type": "Service", name, description },
-});
+) => {
+  const slug = slugForTitle(name);
+  return {
+    "@type": "Offer",
+    price,
+    priceCurrency: "RON",
+    url: `${SITE}/servicii#${slug}`,
+    itemOffered: {
+      "@type": "Service",
+      name,
+      description,
+      url: `${SITE}/servicii#${slug}`,
+      provider: { "@id": `${SITE}/#cabinet` },
+      areaServed: { "@type": "City", name: "București" },
+    },
+  };
+};
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -40,6 +55,18 @@ export const localBusinessSchema = {
     "@type": "GeoCoordinates",
     latitude: "44.4087696",
     longitude: "26.1770265",
+  },
+  potentialAction: {
+    "@type": "ReserveAction",
+    name: "Programare rapidă",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE}/programare`,
+      actionPlatform: [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform",
+      ],
+    },
   },
   hasMap: mapsUrl,
   sameAs: [mapsUrl],

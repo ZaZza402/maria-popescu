@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Seo } from "../components/Seo";
 import { PageSchema } from "../components/PageSchema";
 import SectionCurve from "../components/SectionCurve";
+import { slugForTitle } from "../lib/services";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -241,7 +242,11 @@ const ServiciiPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl px-4">
           <div className="space-y-6">
             {services.map((service, index) => (
-              <div key={index} className="service-card group">
+              <div
+                key={index}
+                id={slugForTitle(service.title)}
+                className="service-card group scroll-mt-32"
+              >
                 <div className="relative bg-white border border-stone-200/50 hover:border-brand-accent/30 transition-all duration-500 hover:shadow-soft rounded-lg overflow-hidden">
                   <div className="p-8 lg:p-10">
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
@@ -356,6 +361,15 @@ const ServiciiPage: React.FC = () => {
                         <p className="text-sm text-brand-text/70 mb-5">
                           Pentru „{service.title}”
                         </p>
+
+                        <Link
+                          to={`/programare?serviciu=${slugForTitle(service.title)}`}
+                          className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-accent px-4 py-3 text-white hover:bg-brand-accent/90 transition"
+                          onClick={closeModal}
+                        >
+                          <i className="far fa-calendar-check" aria-hidden></i>
+                          <span>Programare rapidă</span>
+                        </Link>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <a

@@ -333,6 +333,12 @@ const HomePage: React.FC = () => {
                 >
                   Află mai multe
                 </Link>
+                <Link
+                  to="/programare"
+                  className="inline-block ml-3 px-8 py-3 border border-brand-text text-brand-text font-serif text-lg hover:bg-brand-text hover:text-white transition-all duration-300"
+                >
+                  Programează-te
+                </Link>
               </div>
             </div>
           </div>
@@ -368,6 +374,12 @@ const HomePage: React.FC = () => {
                     className="inline-block px-10 py-3 bg-brand-text text-white font-serif text-lg hover:bg-brand-text/90 transition-all duration-300 shadow-lg"
                   >
                     Află mai multe
+                  </Link>
+                  <Link
+                    to="/programare"
+                    className="inline-block ml-4 px-8 py-3 border border-brand-text text-brand-text font-serif text-lg hover:bg-brand-text hover:text-white transition-all duration-300"
+                  >
+                    Programează-te
                   </Link>
                 </div>
               </div>
@@ -934,6 +946,13 @@ const HomePage: React.FC = () => {
                 <p className="text-brand-text/70 mb-4">
                   Sunați sau scrieți-mi pe WhatsApp pentru a stabili o ședință.
                 </p>
+                <Link
+                  to="/programare"
+                  className="block mb-4 bg-brand-accent text-white py-3 px-6 rounded-lg font-semibold text-center hover:bg-brand-accent/90 transition-colors duration-300"
+                >
+                  <i className="far fa-calendar-check mr-2"></i>
+                  Programare rapidă
+                </Link>
                 <div className="flex gap-4">
                   <a
                     href="tel:+40772246316"

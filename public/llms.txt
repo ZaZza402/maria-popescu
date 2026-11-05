@@ -15,6 +15,7 @@ Informații esențiale:
 - [Acasă](https://www.popescumaria.ro/): prezentarea cabinetului, servicii, contact și hartă
 - [Servicii și tarife](https://www.popescumaria.ro/servicii): lista completă a serviciilor, durata ședințelor și prețurile în RON
 - [Despre Maria Popescu](https://www.popescumaria.ro/despre): formare, abordare terapeutică și specialități
+- [Programare rapidă](https://www.popescumaria.ro/programare): alegi serviciul și ziua preferată, iar mesajul de programare pe WhatsApp este gata scris; confirmarea vine direct de la Maria Popescu
 - [Întrebări frecvente](https://www.popescumaria.ro/intrebari-frecvente): durata ședințelor, prima ședință, confidențialitate, tarife, anulări, CBT, ABA
 - [Articole](https://www.popescumaria.ro/articole): evaluarea psihologică la copil, tulburarea de alimentație compulsivă, igiena somnului
 

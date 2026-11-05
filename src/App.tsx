@@ -13,6 +13,7 @@ import ServiciiPage from "./pages/ServiciiPage";
 import DesprePage from "./pages/DesprePage";
 import ArticolePage from "./pages/ArticolePage";
 import FAQPage from "./pages/FAQPage";
+import ProgramarePage from "./pages/ProgramarePage";
 import PrivacyPage from "./pages/PrivacyPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -59,6 +60,14 @@ function AnimatedRoutes() {
           element={
             <div className="page-content animate-fade-in">
               <FAQPage />
+            </div>
+          }
+        />
+        <Route
+          path="/programare"
+          element={
+            <div className="page-content animate-fade-in">
+              <ProgramarePage />
             </div>
           }
         />

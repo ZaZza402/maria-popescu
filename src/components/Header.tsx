@@ -217,7 +217,14 @@ const Header = () => {
           </nav>
 
           {/* Contact Info */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-6">
+            <Link
+              to="/programare"
+              className="px-5 py-2 rounded-full bg-brand-accent text-white text-base font-medium hover:bg-brand-accent/90 transition-colors"
+              style={{ outline: "none", boxShadow: "none" }}
+            >
+              Programare
+            </Link>
             {/* Phone Number - Enhanced styling */}
             <div className="hidden lg:flex items-center gap-3 text-brand-text">
               <div className="flex items-center justify-center w-10 h-10 bg-brand-accent/10 rounded-full">
@@ -343,6 +350,16 @@ const Header = () => {
 
             {/* Navigation Links */}
             <nav className="space-y-3 max-w-xs w-full">
+              <div ref={addToMenuRefs} style={{ opacity: 0 }}>
+                <Link
+                  to="/programare"
+                  onClick={closeMobileMenu}
+                  className="block py-4 px-6 text-xl font-medium text-white bg-brand-accent rounded-xl text-center shadow-md"
+                >
+                  Programare rapidă
+                </Link>
+              </div>
+
               <div ref={addToMenuRefs} style={{ opacity: 0 }}>
                 <Link
                   to="/"
